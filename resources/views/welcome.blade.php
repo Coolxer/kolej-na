@@ -6,7 +6,7 @@
 
         <title>Kolej-na</title>
 
-        @vite('resources/css/app.css')
+        @vite('resources/sass/app.scss')
 
     </head>
     <body class="antialiased">
@@ -117,5 +117,6 @@
                 </div>
             </div>
         </div>
+        <h2 class="text-sky-500 underline">Elo elo</h2>
     </body>
 </html>
