@@ -1,0 +1,19 @@
+{
+    "printWidth": 80,
+    "tabWidth": 4,
+    "bracketSpacing": true,
+    "singleQuote": true,
+    "arrowParens": "always",
+    "phpVersion": "8.1",
+
+    "overrides": [
+        {
+            "files": ["*.blade.php"],
+            "options": {
+                "parser": "blade",
+                "wrapAttributes": "auto",
+                "sortTailwindcssClasses": true
+            }
+        }
+    ]
+}
