@@ -1,7 +1,20 @@
 // Font awesome
-@import "@fortawesome/fontawesome-free/css/all.css";
+@import '@fortawesome/fontawesome-free/css/all.css';
 
 // Tailwind css
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+// Reset styles
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
