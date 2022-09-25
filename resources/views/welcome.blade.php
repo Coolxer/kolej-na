@@ -117,6 +117,5 @@
                 </div>
             </div>
         </div>
-        <h2 class="text-sky-500 underline">Elo elo</h2>
     </body>
 </html>
