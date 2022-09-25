@@ -3,6 +3,6 @@
         Gucia
     </x-slot:title>
 
-    Hello world!
+    Welcome Page-content
 
 </x-layouts.landing>
