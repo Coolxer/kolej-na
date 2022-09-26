@@ -1,9 +1,9 @@
-<header class="sticky top-0 flex h-20 w-full flex-row justify-between">
+<header class="sticky top-0 z-50 flex h-20 w-full flex-row justify-between">
     <img src="logo.svg" alt="kolej-na" class="p-3">
-    <nav>
 
-    </nav>
-    <div class="p-3 text-5xl text-secondary">
+    <x-menu />
+
+    <button class="p-3 text-5xl text-secondary md:hidden">
         <i class="fa-solid fa-bars"></i>
-    </div>
+    </button>
 </header>
