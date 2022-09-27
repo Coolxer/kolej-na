@@ -12,9 +12,9 @@ $menuItems = ['Opis', 'Cennik', 'FAQ', 'Kontakt', 'Logowanie', 'Rejestracja'];
     <nav class="navbar__nav">
         <h1 class="navbar__heading">KOLEJ <br \> -NA ...</h1>
 
-        <menu class="navbar__menu">
+        <menu class="menu">
             @foreach ($menuItems as $item)
-                <li class="navbar__menu__item">
+                <li class="menu__item">
                     <a href="{{ $item }}"">
                         {{ $item }}
                     </a>

@@ -1,3 +1,6 @@
+@use './partials/colors';
+@use './partials/mixins';
+
 // Font awesome
 @import '@fortawesome/fontawesome-free/css/all.css';
 
@@ -21,6 +24,7 @@ html {
 
 body {
     font-size: 1.6rem; // restore basic 16px font-size
+    color: colors.$secondary;
 }
 
 a {

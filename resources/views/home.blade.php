@@ -1,3 +1,3 @@
 <x-landing>
-    {{-- <x-hero /> --}}
+    <x-hero />
 </x-landing>

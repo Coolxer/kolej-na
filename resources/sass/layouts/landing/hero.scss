@@ -1,22 +1,98 @@
 // Partials
 @use '../../partials/colors';
+@use '../../partials/sizes';
 @use '../../partials/mixins';
 
 .hero {
     width: 100%;
     height: 100vh;
 
+    @include mixins.flex-center;
+    flex-direction: column;
+
     background-color: colors.$accent;
 
-    .users-icon {
+    &__container {
+        width: 100%;
+        max-width: 1280px;
+
+        @include mixins.flex-center;
+        flex-direction: column;
+    }
+
+    &__users-icon {
         position: absolute;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
 
-        color: colors.$secondary;
-        opacity: 0.1;
+        font-size: 30rem;
 
-        font-size: 20rem;
+        opacity: 0.1;
+    }
+
+    &__header {
+        @include mixins.flex-center;
+        flex-direction: column;
+
+        h1 {
+            font-size: sizes.$xxxl;
+            color: colors.$dominant;
+        }
+
+        p {
+            width: 75%;
+
+            font-size: sizes.$xs;
+            text-align: center;
+        }
+    }
+
+    &__services-list {
+        width: 100%;
+        margin-top: 20px;
+
+        @include mixins.flex-center;
+    }
+
+    &__join-btn {
+        width: 60%;
+
+        margin-top: 20px;
+        padding: 10px;
+
+        @include mixins.flex-center;
+
+        border: 3px solid colors.$secondary;
+        border-radius: 25px;
+
+        font-size: sizes.$xs;
+
+        background-color: colors.$secondary;
+        color: colors.$dominant;
+
+        box-shadow: 0 0 2px 2px colors.$shadow;
+
+        transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+
+        &:hover {
+            background-color: colors.$dominant;
+            color: colors.$secondary;
+        }
+    }
+}
+
+.service {
+    @include mixins.flex-center;
+    flex-direction: column;
+
+    padding: 20px 30px;
+
+    &__icon {
+        font-size: sizes.$xxl;
+    }
+
+    &__name {
+        font-size: sizes.$xs;
     }
 }
