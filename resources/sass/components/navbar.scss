@@ -1,0 +1,148 @@
+// Partials
+@use '../partials/colors';
+@use '../partials/mixins';
+
+.navbar {
+    position: sticky;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background: colors.$accent;
+    color: colors.$secondary;
+
+    z-index: 99;
+
+    &__logo {
+        padding: 10px;
+    }
+
+    &__nav {
+        position: absolute;
+        left: 0;
+        top: 80px;
+
+        width: 100%;
+        height: calc(100vh - 80px);
+
+        transform: translateX(-100%);
+
+        @include mixins.flex-center;
+        flex-direction: column;
+
+        background-color: colors.$secondary;
+        transition: transform 0.5s ease-in-out;
+
+        @include mixins.devices(laptop) {
+            position: static;
+            height: 80px;
+            transform: translateX(0);
+
+            align-items: flex-end;
+
+            background-color: transparent;
+        }
+
+        &--open {
+            transform: translateX(0);
+        }
+    }
+
+    &__heading {
+        margin-bottom: 30px;
+
+        font-size: 7rem;
+        color: colors.$dominant;
+
+        @include mixins.devices(laptop) {
+            display: none;
+        }
+    }
+
+    &__menu {
+        width: 100%;
+
+        @include mixins.flex-center;
+        flex-direction: column;
+        gap: 20px;
+
+        @include mixins.devices(laptop) {
+            width: 75%;
+            flex-direction: row;
+        }
+
+        @include mixins.devices(desktop) {
+            width: 50%;
+        }
+
+        &__item {
+            width: 75%;
+            padding: 10px;
+
+            border: 3px solid colors.$dominant;
+            border-radius: 15px;
+
+            color: colors.$dominant;
+
+            box-shadow: 1px 1px 10px 2px #262626;
+            opacity: 0.75;
+
+            transition: opacity 0.25s ease-in-out;
+
+            &:active {
+                border-color: colors.$accent;
+                color: colors.$accent;
+                opacity: 1;
+            }
+
+            @include mixins.devices(laptop) {
+                border: none;
+                box-shadow: none;
+
+                color: colors.$secondary;
+
+                &:hover {
+                    opacity: 1;
+                }
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+
+                @include mixins.flex-center;
+
+                font-size: 2.4rem;
+
+                @include mixins.devices(laptop) {
+                    font-size: 1.6rem;
+
+                    &:hover {
+                        text-decoration: underline;
+                        text-underline-offset: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    &__hamburger {
+        padding: 10px;
+        font-size: 4rem;
+
+        transition: transform 0.25s ease-in-out;
+
+        @include mixins.devices(laptop) {
+            display: none;
+        }
+
+        &--open {
+            transform: rotate(90deg);
+        }
+    }
+}

@@ -9,7 +9,7 @@
         content="Wirtualna kolejka deficytowych towarów i długotrwałych usług">
     <meta name="author" content="Łukasz Miłoś, Sebastian Miłoś">
 
-    <title>Kolej-na - {{ $title }}</title>
+    <title>Kolej-na ...</title>
 
     @vite('resources/sass/app.scss')
 </head>
