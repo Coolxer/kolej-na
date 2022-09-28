@@ -19,6 +19,8 @@
     }
 
     &__container {
+        position: relative;
+
         width: 100%;
         max-width: 1280px;
 
@@ -32,41 +34,13 @@
         }
     }
 
-    &__box {
+    &__informations {
         width: 80%;
 
         //transition: width 0.25s;
 
         @include mixins.devices(tablet) {
             width: 70%;
-        }
-    }
-
-    &__users-icon {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-
-        font-size: 30rem;
-
-        opacity: 0.1;
-        order: 2;
-
-        //transition: font-size 0.25s, opacity 0.25s;
-
-        @include mixins.devices(laptop) {
-            position: static;
-            transform: translate(0);
-
-            font-size: 40rem;
-
-            color: colors.$dominant;
-            opacity: 0.75;
-        }
-
-        @include mixins.devices(desktop) {
-            font-size: 50rem;
         }
     }
 
@@ -142,6 +116,35 @@
         @include mixins.devices(desktop) {
             padding: 0.3em;
             font-size: sizes.$s;
+        }
+    }
+
+    &__users-icon {
+        position: absolute;
+        top: -25%;
+
+        width: 100%;
+        height: 100%;
+
+        @include mixins.flex-center;
+
+        font-size: 30rem;
+        opacity: 0.1;
+
+        //transition: font-size 0.25s, opacity 0.25s;
+
+        @include mixins.devices(laptop) {
+            position: static;
+            transform: translate(0);
+
+            font-size: 40rem;
+
+            color: colors.$dominant;
+            opacity: 0.75;
+        }
+
+        @include mixins.devices(desktop) {
+            font-size: 50rem;
         }
     }
 }

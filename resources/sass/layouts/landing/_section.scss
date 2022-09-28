@@ -1,0 +1,81 @@
+// Partials
+@use '../../partials/colors';
+@use '../../partials/sizes';
+@use '../../partials/mixins';
+
+.section {
+    width: 100%;
+    margin-bottom: 2em;
+
+    @include mixins.flex-center;
+
+    background-color: colors.$dominant;
+
+    &__container {
+        position: relative;
+
+        width: 100%;
+        max-width: 1280px;
+
+        @include mixins.flex-center;
+        gap: 50px;
+
+        overflow: hidden;
+
+        @include mixins.devices(laptop) {
+            padding: 2em;
+        }
+    }
+
+    &__informations {
+        width: 80%;
+
+        z-index: 2;
+
+        @include mixins.devices(tablet) {
+            width: 60%;
+        }
+
+        @include mixins.devices(laptop) {
+            position: static;
+            width: 100%;
+        }
+    }
+
+    &__header {
+        @include mixins.flex-center;
+        flex-direction: column;
+
+        font-size: sizes.$xl;
+        font-weight: 300;
+
+        padding: 0.5em;
+    }
+
+    &__article {
+        @include mixins.flex-center;
+        flex-direction: column;
+        gap: 1em;
+
+        text-align: justify;
+    }
+
+    &__paragraph {
+        font-size: sizes.$xxs;
+    }
+
+    &__image {
+        position: absolute;
+
+        width: 100%;
+
+        @include mixins.flex-center;
+
+        opacity: 0.5;
+        z-index: 1;
+
+        @include mixins.devices(laptop) {
+            position: static;
+        }
+    }
+}

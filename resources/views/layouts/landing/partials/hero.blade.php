@@ -2,9 +2,7 @@
 
 <section class="hero">
     <div class="hero__container">
-        <i class="fa-solid fa-users hero__users-icon"></i>
-
-        <div class="hero__box">
+        <div class="hero__informations">
             <header class="hero__header">
                 <h1>KOLEJ <br /> - NA ... </h1>
                 <p>Wirtualny system kolejkowy deficytowych towarów
@@ -28,6 +26,8 @@
                 Dołącz!
             </a>
         </div>
+
+        <i class="fa-solid fa-users hero__users-icon"></i>
 
     </div>
 </section>
