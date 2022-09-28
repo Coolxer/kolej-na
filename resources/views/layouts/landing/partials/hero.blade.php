@@ -4,7 +4,7 @@
     <div class="hero__container">
         <i class="fa-solid fa-users hero__users-icon"></i>
 
-        <div>
+        <div class="hero__box">
             <header class="hero__header">
                 <h1>KOLEJ <br /> - NA ... </h1>
                 <p>Wirtualny system kolejkowy deficytowych towarów
@@ -24,10 +24,10 @@
                     <span class="service__name">Ciebie</span>
                 </div>
             </div>
+            <a href="#" class="hero__join-btn">
+                Dołącz!
+            </a>
         </div>
 
-        <a href="#" class="hero__join-btn">
-            Dołącz!
-        </a>
     </div>
 </section>

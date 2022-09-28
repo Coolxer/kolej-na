@@ -8,16 +8,38 @@
     height: 100vh;
 
     @include mixins.flex-center;
-    flex-direction: column;
 
     background-color: colors.$accent;
+
+    //transition: width 0.25s, height 0.25s;
+
+    @include mixins.devices(desktop) {
+        align-items: flex-start;
+        padding-top: 3em;
+    }
 
     &__container {
         width: 100%;
         max-width: 1280px;
 
         @include mixins.flex-center;
-        flex-direction: column;
+        gap: 50px;
+
+        //transition: width 0.25s;
+
+        @include mixins.devices(laptop) {
+            padding: 0 3em;
+        }
+    }
+
+    &__box {
+        width: 80%;
+
+        //transition: width 0.25s;
+
+        @include mixins.devices(tablet) {
+            width: 70%;
+        }
     }
 
     &__users-icon {
@@ -29,6 +51,23 @@
         font-size: 30rem;
 
         opacity: 0.1;
+        order: 2;
+
+        //transition: font-size 0.25s, opacity 0.25s;
+
+        @include mixins.devices(laptop) {
+            position: static;
+            transform: translate(0);
+
+            font-size: 40rem;
+
+            color: colors.$dominant;
+            opacity: 0.75;
+        }
+
+        @include mixins.devices(desktop) {
+            font-size: 50rem;
+        }
     }
 
     &__header {
@@ -36,15 +75,31 @@
         flex-direction: column;
 
         h1 {
-            font-size: sizes.$xxxl;
+            font-size: sizes.$xxxxl;
+            line-height: 100%;
+
             color: colors.$dominant;
+
+            //transition: font-size 0.25s;
+
+            @include mixins.devices(desktop) {
+                font-size: sizes.$xxxxxl;
+            }
         }
 
         p {
-            width: 75%;
+            width: 100%;
+
+            margin-top: 1.2em;
 
             font-size: sizes.$xs;
             text-align: center;
+
+            //transition: width 0.25s, font-size 0.25s;
+
+            @include mixins.devices(desktop) {
+                font-size: sizes.$s;
+            }
         }
     }
 
@@ -53,13 +108,16 @@
         margin-top: 20px;
 
         @include mixins.flex-center;
+
+        //transition: width 0.25s;
     }
 
     &__join-btn {
-        width: 60%;
+        width: 100%;
 
+        margin: 0 auto;
         margin-top: 20px;
-        padding: 10px;
+        padding: 0.5em;
 
         @include mixins.flex-center;
 
@@ -73,11 +131,17 @@
 
         box-shadow: 0 0 2px 2px colors.$shadow;
 
-        transition: background-color 0.25s ease-in-out, color 0.25s ease-in-out;
+        //transition: font-size 0.25s, background-color 0.25s, color 0.25s;
+        transition: background-color 0.25s, color 0.25s;
 
         &:hover {
             background-color: colors.$dominant;
             color: colors.$secondary;
+        }
+
+        @include mixins.devices(desktop) {
+            padding: 0.3em;
+            font-size: sizes.$s;
         }
     }
 }
@@ -86,13 +150,25 @@
     @include mixins.flex-center;
     flex-direction: column;
 
-    padding: 20px 30px;
+    padding: 1.2em 2em;
 
     &__icon {
         font-size: sizes.$xxl;
+
+        //transition: font-size 0.25s;
+
+        @include mixins.devices(desktop) {
+            font-size: sizes.$xxxl;
+        }
     }
 
     &__name {
         font-size: sizes.$xs;
+
+        //transition: font-size 0.25s;
+
+        @include mixins.devices(desktop) {
+            font-size: sizes.$s;
+        }
     }
 }
