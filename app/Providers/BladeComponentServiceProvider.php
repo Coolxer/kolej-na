@@ -34,6 +34,7 @@ class BladeComponentServiceProvider extends ServiceProvider
 
         Blade::component('layouts.landing.partials._section', 'section');
         Blade::component('layouts.landing.partials.why', 'why');
+        Blade::component('layouts.landing.partials.solution', 'solution');
 
         Blade::component('layouts.dashboard.dashboard', 'dashboard');
 

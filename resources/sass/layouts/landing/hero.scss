@@ -11,8 +11,6 @@
 
     background-color: colors.$accent;
 
-    //transition: width 0.25s, height 0.25s;
-
     @include mixins.devices(desktop) {
         align-items: flex-start;
         padding-top: 3em;
@@ -27,8 +25,6 @@
         @include mixins.flex-center;
         gap: 50px;
 
-        //transition: width 0.25s;
-
         @include mixins.devices(laptop) {
             padding: 0 3em;
         }
@@ -36,8 +32,6 @@
 
     &__informations {
         width: 80%;
-
-        //transition: width 0.25s;
 
         @include mixins.devices(tablet) {
             width: 70%;
@@ -54,8 +48,6 @@
 
             color: colors.$dominant;
 
-            //transition: font-size 0.25s;
-
             @include mixins.devices(desktop) {
                 font-size: sizes.$xxxxxl;
             }
@@ -69,8 +61,6 @@
             font-size: sizes.$xs;
             text-align: center;
 
-            //transition: width 0.25s, font-size 0.25s;
-
             @include mixins.devices(desktop) {
                 font-size: sizes.$s;
             }
@@ -82,8 +72,6 @@
         margin-top: 20px;
 
         @include mixins.flex-center;
-
-        //transition: width 0.25s;
     }
 
     &__join-btn {
@@ -105,7 +93,6 @@
 
         box-shadow: 0 0 2px 2px colors.$shadow;
 
-        //transition: font-size 0.25s, background-color 0.25s, color 0.25s;
         transition: background-color 0.25s, color 0.25s;
 
         &:hover {
@@ -130,8 +117,6 @@
 
         font-size: 30rem;
         opacity: 0.1;
-
-        //transition: font-size 0.25s, opacity 0.25s;
 
         @include mixins.devices(laptop) {
             position: static;
@@ -158,8 +143,6 @@
     &__icon {
         font-size: sizes.$xxl;
 
-        //transition: font-size 0.25s;
-
         @include mixins.devices(desktop) {
             font-size: sizes.$xxxl;
         }
@@ -167,8 +150,6 @@
 
     &__name {
         font-size: sizes.$xs;
-
-        //transition: font-size 0.25s;
 
         @include mixins.devices(desktop) {
             font-size: sizes.$s;

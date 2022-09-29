@@ -14,7 +14,9 @@
     display: flex;
     justify-content: space-between;
 
-    background: colors.$accent;
+    background-color: colors.$secondary;
+
+    @apply shadow-xl #{!important};
 
     z-index: 99;
 
@@ -29,7 +31,6 @@
 
         width: 100%;
         height: calc(100vh - 80px);
-
         transform: translateX(-100%);
 
         @include mixins.flex-center;
@@ -37,7 +38,6 @@
 
         background-color: colors.$secondary;
 
-        //transition: width 0.25s, height 0.25s, transform 0.5s;
         transition: transform 0.5s;
 
         @include mixins.devices(laptop) {
@@ -68,7 +68,9 @@
 
     &__hamburger {
         padding: 10px;
+
         font-size: sizes.$l;
+        color: colors.$dominant;
 
         transition: transform 0.25s;
 
@@ -88,8 +90,6 @@
     @include mixins.flex-center;
     flex-direction: column;
     gap: 20px;
-
-    //transition: width 0.25s;
 
     @include mixins.devices(laptop) {
         width: 75%;
@@ -112,7 +112,6 @@
         box-shadow: 1px 1px 10px 2px #262626;
         opacity: 0.75;
 
-        //transition: width 0.25s, color 0.25s, opacity 0.25s;
         transition: color 0.25s, opacity 0.25s;
 
         &:active {
@@ -139,8 +138,7 @@
             @include mixins.flex-center;
 
             font-size: sizes.$xs;
-
-            //transition: font-size 0.25s;
+            color: colors.$dominant;
 
             @include mixins.devices(laptop) {
                 font-size: sizes.$xxs;

@@ -21,16 +21,32 @@ class LandingSection extends Component
     public $sentences;
 
     /**
+     *dark
+     *
+     * @var boolean
+     */
+    public $dark;
+
+    /**
+     * Is image on left side?
+     *
+     * @var boolean
+     */
+    public $imageOnLeftSide;
+
+    /**
      * Create a new component instance.
      *
      * @param  string  $title
      * @param array $sentences
      * @return void
      */
-    public function __construct($title, $sentences)
+    public function __construct($title, $sentences, $dark, $imageOnLeftSide)
     {
         $this->title = $title;
         $this->sentences = $sentences;
+        $this->dark = $dark;
+        $this->imageOnLeftSide = $imageOnLeftSide;
     }
 
     /**
