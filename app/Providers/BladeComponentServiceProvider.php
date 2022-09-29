@@ -4,7 +4,6 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Blade;
-use VendorPackage\View\Layouts\Landing\Partials\LandingSection;
 
 class BladeComponentServiceProvider extends ServiceProvider
 {
@@ -41,7 +40,5 @@ class BladeComponentServiceProvider extends ServiceProvider
         );
 
         Blade::component('layouts.dashboard.dashboard', 'dashboard');
-
-        Blade::component('layouts.home', LandingSection::class);
     }
 }
