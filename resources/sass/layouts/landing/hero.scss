@@ -41,29 +41,29 @@
     &__header {
         @include mixins.flex-center;
         flex-direction: column;
+    }
 
-        h1 {
-            font-size: sizes.$xxxxl;
-            line-height: 100%;
+    &__heading {
+        font-size: sizes.$xxxxl;
+        line-height: 100%;
 
-            color: colors.$dominant;
+        color: colors.$dominant;
 
-            @include mixins.devices(desktop) {
-                font-size: sizes.$xxxxxl;
-            }
+        @include mixins.devices(desktop) {
+            font-size: sizes.$xxxxxl;
         }
+    }
 
-        p {
-            width: 100%;
+    &__description {
+        width: 100%;
 
-            margin-top: 1.2em;
+        margin-top: 1.2em;
 
-            font-size: sizes.$xs;
-            text-align: center;
+        font-size: sizes.$xs;
+        text-align: center;
 
-            @include mixins.devices(desktop) {
-                font-size: sizes.$s;
-            }
+        @include mixins.devices(desktop) {
+            font-size: sizes.$s;
         }
     }
 
@@ -91,7 +91,7 @@
         background-color: colors.$secondary;
         color: colors.$dominant;
 
-        box-shadow: 0 0 2px 2px colors.$shadow;
+        @apply shadow-xl #{!important};
 
         transition: background-color 0.25s, color 0.25s;
 

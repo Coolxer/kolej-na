@@ -4,8 +4,9 @@
     <div class="hero__container">
         <div class="hero__informations">
             <header class="hero__header">
-                <h1>KOLEJ <br /> - NA ... </h1>
-                <p>Wirtualny system kolejkowy deficytowych towarów
+                <h1 class="hero__heading">KOLEJ <br /> - NA ... </h1>
+                <p class="hero__description">Wirtualny system kolejkowy
+                    deficytowych towarów
                     i&nbsp;długotrwałych usług</p>
             </header>
             <div class="hero__services-list">

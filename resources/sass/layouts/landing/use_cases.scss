@@ -5,15 +5,23 @@
 
 .use-cases {
     @include mixins.flex-center;
+    gap: 0 !important;
     flex-direction: column;
+    flex: 1;
+
+    @include mixins.devices(laptop) {
+        gap: 50px;
+        flex-direction: row;
+    }
 
     &__other-sentence {
         padding: 0 2em;
+        flex: 1;
 
         font-style: italic;
         text-align: justify;
 
         opacity: 0.75;
-        order: 2;
+        order: 3;
     }
 }

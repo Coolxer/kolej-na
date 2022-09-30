@@ -34,12 +34,13 @@
     &__article {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         gap: 1em;
-        align-items: center;
 
         text-align: justify;
 
         &--center {
+            align-items: center;
             text-align: center;
         }
     }
@@ -97,6 +98,8 @@
         &--light {
             background-color: colors.$dominant;
             border-radius: 50px;
+
+            @apply shadow-xl #{!important};
         }
     }
 }
