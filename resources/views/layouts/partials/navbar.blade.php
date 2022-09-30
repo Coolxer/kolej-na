@@ -7,7 +7,8 @@ $menuItems = ['Opis', 'Cennik', 'FAQ', 'Kontakt', 'Logowanie', 'Rejestracja'];
 @endphp
 
 <header class="navbar">
-    <img src="logo.svg" alt="kolej-na" class="navbar__logo">
+    <img src="{{ Vite::asset('resources/images/logo.svg') }}" alt="kolej-na"
+        class="navbar__logo">
 
     <nav class="navbar__nav">
         <h1 class="navbar__heading">KOLEJ <br \> -NA ...</h1>

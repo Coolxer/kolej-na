@@ -32,12 +32,18 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('layouts.landing.partials.hero', 'hero');
 
         Blade::component('layouts.landing.partials._section', 'section');
+        Blade::component(
+            'layouts.landing.partials._section_box',
+            'section-box',
+        );
+
         Blade::component('layouts.landing.partials.why', 'why');
         Blade::component('layouts.landing.partials.solution', 'solution');
         Blade::component(
             'layouts.landing.partials.how_it_works',
-            'how_it_works',
+            'how-it-works',
         );
+        Blade::component('layouts.landing.partials.advantages', 'advantages');
 
         Blade::component('layouts.dashboard.dashboard', 'dashboard');
     }

@@ -1,29 +1,25 @@
-@vite('resources/sass/layouts/landing/_section.scss')
+@vite('resources/sass/layouts/landing/advantages.scss')
 
-{{-- full width container (provides full background color on big devices) --}}
-<section id="advantages" @class(['section', 'section--dark' => $attributes->dark])>
-    {{-- container limited to 1280px (max-width) --}}
-    <div class="section__container">
-        {{--  main box including informations (header and text) --}}
-        <div class="section__informations">
-            <h2 class="section__header">{{ $attributes->ititle }}</h2>
-            <article class="section__article">
-                @foreach ($attributes->sentences as $sentence)
-                    <p class="section__paragraph">
-                        {{ $sentence }}
-                    </p>
-                @endforeach
-            </article>
-        </div>
+@php
+$id = 'advantages';
+$sellerAdvantages = ['Większa kontrola nad listą i biznesem', 'Sprawne informowanie klientów', 'Więcej zadowolonych klientów', 'Optymalizacja pracy', 'Oszczędność czasu'];
+$clientAdvantages = ['Świadomość postępu lub jego braku', 'Znajomość aktualnego statusu zamówenia', 'Szybkie i wygodne monitorowanie zlecenia', 'Możliwość szacowania czasu świadczenia usług innych klientów', 'Oszczędność czasu, nerwów i pieniędzy'];
+@endphp
 
-        {{--  section image wrapper --}}
-        <div @class([
-            'section__image',
-            'section__image--left' => $attributes->imageOnLeftSide,
-            'section__image--right' => !$atributes->imageOnLeftSide,
-        ])>
+<x-section :id="$id" :dark="true" className="advantages">
+    <x-section-box title="Korzyści dla sprzedawcy" :sentences="$sellerAdvantages"
+        imagePlacement="inner" className="advantages__seller">
+        <x-slot:image>
+            <img
+                src="{{ Vite::asset('resources/images/illustrations/seller_advantages.svg') }}">
+        </x-slot:image>
+    </x-section-box>
 
-            {{ $image }}
-        </div>
-    </div>
-</section>
+    <x-section-box title="Korzyści dla klientów" :sentences="$clientAdvantages"
+        imagePlacement="inner" className="advantages__client">
+        <x-slot:image>
+            <img
+                src="{{ Vite::asset('resources/images/illustrations/client_advantages.svg') }}">
+        </x-slot:image>
+    </x-section-box>
+</x-section>

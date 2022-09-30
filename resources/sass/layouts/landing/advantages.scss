@@ -1,0 +1,34 @@
+// Partials
+@use '../../partials/colors';
+@use '../../partials/sizes';
+@use '../../partials/mixins';
+
+.advantages {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    color: colors.$dominant;
+
+    @include mixins.devices(laptop) {
+        flex-direction: row;
+    }
+
+    &__seller {
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__client {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .section {
+        &__article {
+            text-align: center;
+
+            margin-top: 2em;
+        }
+    }
+}

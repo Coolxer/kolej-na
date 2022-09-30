@@ -2,5 +2,6 @@
     <x-hero />
     <x-why />
     <x-solution />
-    <x-how_it_works />
+    <x-how-it-works />
+    <x-advantages />
 </x-landing>
