@@ -1,0 +1,19 @@
+// Partials
+@use '../../partials/colors';
+@use '../../partials/sizes';
+@use '../../partials/mixins';
+
+.use-cases {
+    @include mixins.flex-center;
+    flex-direction: column;
+
+    &__other-sentence {
+        padding: 0 2em;
+
+        font-style: italic;
+        text-align: justify;
+
+        opacity: 0.75;
+        order: 2;
+    }
+}

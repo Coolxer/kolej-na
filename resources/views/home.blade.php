@@ -4,4 +4,5 @@
     <x-solution />
     <x-how-it-works />
     <x-advantages />
+    <x-use-cases />
 </x-landing>

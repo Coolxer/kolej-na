@@ -44,7 +44,8 @@ class BladeComponentServiceProvider extends ServiceProvider
             'how-it-works',
         );
         Blade::component('layouts.landing.partials.advantages', 'advantages');
+        Blade::component('layouts.landing.partials.use_cases', 'use-cases');
 
-        Blade::component('layouts.dashboard.dashboard', 'dashboard');
+        //Blade::component('layouts.dashboard.dashboard', 'dashboard');
     }
 }

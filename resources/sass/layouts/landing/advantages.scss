@@ -4,31 +4,23 @@
 @use '../../partials/mixins';
 
 .advantages {
+    padding: 2.4em;
+
     display: flex;
     flex-direction: column;
-    gap: 50px;
 
     color: colors.$dominant;
 
     @include mixins.devices(laptop) {
+        padding: 0;
+
         flex-direction: row;
+        align-items: flex-start !important;
     }
 
-    &__seller {
-        position: relative;
-        overflow: hidden;
-    }
-
+    &__seller,
     &__client {
         position: relative;
         overflow: hidden;
-    }
-
-    .section {
-        &__article {
-            text-align: center;
-
-            margin-top: 2em;
-        }
     }
 }

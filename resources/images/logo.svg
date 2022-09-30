@@ -2,71 +2,64 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="29.333"
-   height="40"
-   viewBox="0 0 7.7610228 10.583333"
+   width="60.000004"
+   height="43.519478"
+   viewBox="0 0 15.875001 11.514529"
    version="1.1"
-   id="svg7043"
-   xml:space="preserve"
+   id="svg5"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg"><defs
-     id="defs7040" /><g
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
      id="layer1"
-     style="stroke:#ebf2fa"><g
-       transform="matrix(0.66665028,0,0,0.66665028,-1.3669764,3.3179103e-6)"
-       fill="none"
-       stroke="#23ce6b"
-       stroke-linecap="round"
-       stroke-linejoin="round"
-       stroke-width="0.52917"
-       id="g6940"
-       style="stroke:#ebf2fa"><rect
-         x="6.5483999"
-         y="0.26458001"
-         width="2.6458001"
-         height="2.6458001"
-         ry="0.61058003"
-         id="rect6926"
-         style="stroke:#ebf2fa" /><rect
-         x="6.5483999"
-         y="4.4979"
-         width="2.6458001"
-         height="2.6458001"
-         ry="0.61058003"
-         id="rect6928"
-         style="stroke:#ebf2fa" /><rect
-         x="2.3151"
-         y="4.4979"
-         width="2.6458001"
-         height="2.6458001"
-         ry="0.61058003"
-         id="rect6930"
-         style="stroke:#ebf2fa" /><rect
-         x="10.782"
-         y="4.4979"
-         width="2.6458001"
-         height="2.6458001"
-         ry="0.61058003"
-         id="rect6932"
-         style="stroke:#ebf2fa" /><rect
-         x="2.3151"
-         y="8.7312002"
-         width="6.8792"
-         height="2.6458001"
-         ry="1.3229001"
-         id="rect6934"
-         style="stroke:#ebf2fa" /><rect
-         x="10.782"
-         y="8.7312002"
-         width="2.6458001"
-         height="2.6458001"
-         ry="1.3229001"
-         id="rect6936"
-         style="stroke:#ebf2fa" /><rect
-         x="2.3151"
-         y="12.965"
-         width="11.112"
-         height="2.6458001"
-         ry="1.3229001"
-         id="rect6938"
-         style="stroke:#ebf2fa" /></g></g></svg>
+     transform="translate(-2.3841858e-7,-2.3082445)">
+    <g
+       id="g1101">
+      <g
+         id="g1084">
+        <path
+           style="fill:none;stroke:#ebf2fa;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 2.3673288,10.663509 2.785086,2.785086 2.785088,-2.785086 2.7850862,2.785086 2.785088,-2.785086"
+           id="path3038" />
+        <path
+           style="fill:none;stroke:#ebf2fa;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 12.115134,12.056052 1.392543,1.392543"
+           id="path3040" />
+        <path
+           style="fill:none;stroke:#ebf2fa;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="m 3.7598718,12.056052 1.392543,-1.392543"
+           id="path3042" />
+        <path
+           style="fill:none;stroke:#ebf2fa;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 7.9375028,10.663509 V 6.4858778"
+           id="path3044" />
+        <path
+           style="fill:none;stroke:#ebf2fa;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+           d="M 7.9375028,8.5746902 H 9.9068373"
+           id="path3046" />
+      </g>
+      <g
+         id="g1089">
+        <circle
+           style="fill:#ebf2fa;stroke:none;stroke-width:0.835524;stroke-linecap:round;stroke-linejoin:round"
+           id="circle3099"
+           cx="7.9375033"
+           cy="4.3970599"
+           r="2.0888155" />
+        <circle
+           style="fill:#ebf2fa;stroke:none;stroke-width:0.557017;stroke-linecap:round;stroke-linejoin:round"
+           id="circle3101"
+           cx="14.482457"
+           cy="9.6887236"
+           r="1.3925437" />
+        <circle
+           style="fill:#ebf2fa;stroke:none;stroke-width:0.557017;stroke-linecap:round;stroke-linejoin:round"
+           id="circle3333"
+           cx="1.3925439"
+           cy="9.6887236"
+           r="1.3925437" />
+      </g>
+    </g>
+  </g>
+</svg>
