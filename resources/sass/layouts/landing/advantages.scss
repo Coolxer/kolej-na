@@ -1,27 +1,27 @@
-// Partials
-@use '../../partials/colors';
-@use '../../partials/sizes';
-@use '../../partials/mixins';
+@import '../../partials/partials';
 
-.advantages {
-    padding: 2.4em;
+.section__container {
+    &.advantages {
+        $self: '.advantages';
 
-    display: flex;
-    flex-direction: column;
+        padding: 2.4em;
 
-    color: colors.$dominant;
+        flex-direction: column;
 
-    @include mixins.devices(laptop) {
-        padding: 0;
+        color: $dominant;
 
-        flex-direction: row;
-        align-items: flex-start !important;
-    }
+        @include devices(laptop) {
+            padding: 0;
 
-    &__seller,
-    &__client {
-        position: relative;
+            flex-direction: row;
+            align-items: flex-start;
+        }
 
-        width: 100%;
+        #{$self}__seller,
+        #{$self}__client {
+            position: relative;
+
+            width: 100%;
+        }
     }
 }

@@ -1,27 +1,32 @@
-// Partials
-@use '../../partials/colors';
-@use '../../partials/sizes';
-@use '../../partials/mixins';
+@import '../../partials/partials';
 
-.use-cases {
-    @include mixins.flex-center;
-    gap: 0 !important;
-    flex-direction: column;
-    flex: 1;
-
-    @include mixins.devices(laptop) {
-        gap: 50px;
-        flex-direction: row;
-    }
-
-    &__other-sentence {
-        padding: 0 2em;
+.section__container {
+    &.use-cases {
+        $self: '.use-cases';
+        @include flex-center;
+        gap: 0;
+        flex-direction: column;
         flex: 1;
 
-        font-style: italic;
-        text-align: justify;
+        @include devices(laptop) {
+            gap: 50px;
+            flex-direction: row;
+        }
 
-        opacity: 0.75;
-        order: 3;
+        #{$self}__other-sentence {
+            width: 100%;
+            padding: 0 2em;
+            flex: 1;
+
+            font-style: italic;
+            text-align: justify;
+
+            opacity: 0.75;
+            order: 3;
+
+            @include devices(tablet) {
+                width: 75%;
+            }
+        }
     }
 }

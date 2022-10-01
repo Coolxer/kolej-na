@@ -1,0 +1,30 @@
+@import '../../partials/partials';
+
+.section__container {
+    &.pricing {
+        $self: '.pricing';
+
+        gap: 0;
+
+        @include devices(laptop) {
+            flex-direction: column;
+        }
+
+        #{$self}__box {
+            width: 100%;
+
+            @include flex-center;
+            flex-direction: column;
+            gap: 50px;
+
+            @include devices(laptop) {
+                flex-direction: row;
+            }
+
+            &:first-child {
+                margin-top: 0;
+                padding-top: 0;
+            }
+        }
+    }
+}

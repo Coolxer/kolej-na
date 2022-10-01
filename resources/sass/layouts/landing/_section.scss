@@ -1,33 +1,31 @@
-// Partials
-@use '../../partials/colors';
-@use '../../partials/sizes';
-@use '../../partials/mixins';
+@import '../../partials/partials';
 
 .section {
-    @include mixins.flex-center;
+    @include flex-center;
 
-    background-color: colors.$dominant;
+    background-color: $dominant;
 
     &--dark {
-        background-color: colors.$secondary;
+        background-color: $secondary;
     }
 
     &__container {
         position: relative;
 
+        width: 100%;
         max-width: 1280px;
 
-        //overflow: hidden;
-
-        @include mixins.flex-center;
+        @include flex-center;
+        flex-direction: column;
         gap: 50px;
 
-        @include mixins.devices(tablet) {
+        @include devices(tablet) {
             width: 80%;
         }
 
-        @include mixins.devices(laptop) {
+        @include devices(laptop) {
             width: 90%;
+            flex-direction: row;
         }
     }
 }

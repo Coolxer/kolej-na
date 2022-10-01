@@ -5,4 +5,5 @@
     <x-how-it-works />
     <x-advantages />
     <x-use-cases />
+    <x-pricing />
 </x-landing>

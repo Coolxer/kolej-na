@@ -36,6 +36,10 @@ class BladeComponentServiceProvider extends ServiceProvider
             'layouts.landing.partials._section_box',
             'section-box',
         );
+        Blade::component(
+            'layouts.landing.partials._pricing_card',
+            'pricing-card',
+        );
 
         Blade::component('layouts.landing.partials.why', 'why');
         Blade::component('layouts.landing.partials.solution', 'solution');
@@ -45,6 +49,7 @@ class BladeComponentServiceProvider extends ServiceProvider
         );
         Blade::component('layouts.landing.partials.advantages', 'advantages');
         Blade::component('layouts.landing.partials.use_cases', 'use-cases');
+        Blade::component('layouts.landing.partials.pricing', 'pricing');
 
         //Blade::component('layouts.dashboard.dashboard', 'dashboard');
     }

@@ -1,0 +1,97 @@
+@import '../../partials/partials';
+
+.pricing-card {
+    width: 80%;
+    padding: 2em;
+
+    border-radius: 25px;
+
+    @include flex-center;
+    flex-direction: column;
+
+    background-color: $secondary;
+    color: $dominant;
+
+    box-shadow: $shadow-2xl;
+
+    @include devices(laptop) {
+        width: 50%;
+    }
+
+    &__heading {
+        padding: 0.5em;
+
+        font-size: $m;
+        font-weight: 300;
+
+        text-align: center;
+
+        @include devices(desktop) {
+            font-size: $l;
+        }
+    }
+
+    &__properties-list {
+        color: $accent;
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__property-item {
+        font-size: $xs;
+    }
+
+    &__select-btn {
+        width: 75%;
+
+        margin: 1em auto;
+        padding: 0.5em;
+
+        @include flex-center;
+
+        border-radius: 25px;
+
+        font-size: $xs;
+
+        background-color: $accent;
+        color: $secondary;
+
+        box-shadow: $shadow-xl;
+
+        transition: background-color 0.25s, color 0.25s;
+
+        &:hover {
+            background-color: $dominant;
+            color: $secondary;
+        }
+
+        @include devices(desktop) {
+            padding: 0.3em;
+            font-size: $s;
+        }
+    }
+}
+
+.price {
+    color: $accent;
+
+    @include flex-center;
+
+    &__full {
+        font-size: $xxxxxl;
+        line-height: 100%;
+    }
+
+    &__rest-wrapper {
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__rest {
+        font-size: $l;
+    }
+
+    &__currency {
+        font-size: $l;
+    }
+}

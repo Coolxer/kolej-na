@@ -1,17 +1,14 @@
-// Partials
-@use '../../partials/colors';
-@use '../../partials/sizes';
-@use '../../partials/mixins';
+@import '../../partials/partials';
 
 .hero {
     width: 100%;
     height: 100vh;
 
-    @include mixins.flex-center;
+    @include flex-center;
 
-    background-color: colors.$accent;
+    background-color: $accent;
 
-    @include mixins.devices(desktop) {
+    @include devices(desktop) {
         align-items: flex-start;
         padding-top: 3em;
     }
@@ -22,10 +19,10 @@
         width: 100%;
         max-width: 1280px;
 
-        @include mixins.flex-center;
+        @include flex-center;
         gap: 50px;
 
-        @include mixins.devices(laptop) {
+        @include devices(laptop) {
             padding: 0 3em;
         }
     }
@@ -33,24 +30,24 @@
     &__informations {
         width: 80%;
 
-        @include mixins.devices(tablet) {
+        @include devices(tablet) {
             width: 70%;
         }
     }
 
     &__header {
-        @include mixins.flex-center;
+        @include flex-center;
         flex-direction: column;
     }
 
     &__heading {
-        font-size: sizes.$xxxxl;
+        font-size: $xxxxl;
         line-height: 100%;
 
-        color: colors.$dominant;
+        color: $dominant;
 
-        @include mixins.devices(desktop) {
-            font-size: sizes.$xxxxxl;
+        @include devices(desktop) {
+            font-size: $xxxxxl;
         }
     }
 
@@ -59,11 +56,11 @@
 
         margin-top: 1.2em;
 
-        font-size: sizes.$xs;
+        font-size: $xs;
         text-align: center;
 
-        @include mixins.devices(desktop) {
-            font-size: sizes.$s;
+        @include devices(desktop) {
+            font-size: $s;
         }
     }
 
@@ -71,7 +68,7 @@
         width: 100%;
         margin-top: 20px;
 
-        @include mixins.flex-center;
+        @include flex-center;
     }
 
     &__join-btn {
@@ -81,28 +78,28 @@
         margin-top: 20px;
         padding: 0.5em;
 
-        @include mixins.flex-center;
+        @include flex-center;
 
-        border: 3px solid colors.$secondary;
+        border: 3px solid $secondary;
         border-radius: 25px;
 
-        font-size: sizes.$xs;
+        font-size: $xs;
 
-        background-color: colors.$secondary;
-        color: colors.$dominant;
+        background-color: $secondary;
+        color: $dominant;
 
-        @apply shadow-xl #{!important};
+        box-shadow: $shadow-xl;
 
         transition: background-color 0.25s, color 0.25s;
 
         &:hover {
-            background-color: colors.$dominant;
-            color: colors.$secondary;
+            background-color: $dominant;
+            color: $secondary;
         }
 
-        @include mixins.devices(desktop) {
+        @include devices(desktop) {
             padding: 0.3em;
-            font-size: sizes.$s;
+            font-size: $s;
         }
     }
 
@@ -113,46 +110,46 @@
         width: 100%;
         height: 100%;
 
-        @include mixins.flex-center;
+        @include flex-center;
 
         font-size: 30rem;
         opacity: 0.1;
 
-        @include mixins.devices(laptop) {
+        @include devices(laptop) {
             position: static;
             transform: translate(0);
 
             font-size: 40rem;
 
-            color: colors.$dominant;
+            color: $dominant;
             opacity: 0.75;
         }
 
-        @include mixins.devices(desktop) {
+        @include devices(desktop) {
             font-size: 50rem;
         }
     }
 }
 
 .service {
-    @include mixins.flex-center;
+    @include flex-center;
     flex-direction: column;
 
     padding: 1.2em 2em;
 
     &__icon {
-        font-size: sizes.$xxl;
+        font-size: $xxl;
 
-        @include mixins.devices(desktop) {
-            font-size: sizes.$xxxl;
+        @include devices(desktop) {
+            font-size: $xxxl;
         }
     }
 
     &__name {
-        font-size: sizes.$xs;
+        font-size: $xs;
 
-        @include mixins.devices(desktop) {
-            font-size: sizes.$s;
+        @include devices(desktop) {
+            font-size: $s;
         }
     }
 }

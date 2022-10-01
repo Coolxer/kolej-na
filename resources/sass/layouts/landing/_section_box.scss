@@ -1,11 +1,10 @@
-// Partials
-@use '../../partials/colors';
-@use '../../partials/sizes';
-@use '../../partials/mixins';
+@import '../../partials/partials';
 
 .section {
+    padding-top: 20px;
+
     &__box {
-        @include mixins.flex-center;
+        @include flex-center;
         flex-direction: column;
 
         padding: 0.5em 2.4em 2em 2.4em;
@@ -13,7 +12,7 @@
         order: 2;
         z-index: 2;
 
-        @include mixins.devices(laptop) {
+        @include devices(laptop) {
             flex: 1;
         }
     }
@@ -21,13 +20,13 @@
     &__heading {
         margin-bottom: 20px;
 
-        font-size: sizes.$xl;
+        font-size: $xl;
         font-weight: 300;
 
         text-align: center;
 
-        @include mixins.devices(desktop) {
-            font-size: sizes.$xxl;
+        @include devices(desktop) {
+            font-size: $xxl;
         }
     }
 
@@ -46,10 +45,10 @@
     }
 
     &__paragraph {
-        font-size: sizes.$xxs;
+        font-size: $xxs;
 
-        @include mixins.devices(laptop) {
-            font-size: sizes.$xs;
+        @include devices(laptop) {
+            font-size: $xs;
         }
     }
 
@@ -62,12 +61,12 @@
 
         padding: 1em;
 
-        @include mixins.flex-center;
+        @include flex-center;
 
         opacity: 0.3;
         z-index: 1;
 
-        @include mixins.devices(laptop) {
+        @include devices(laptop) {
             position: static;
             flex: 1;
 
@@ -84,7 +83,7 @@
         }
 
         &--inner {
-            @include mixins.devices(laptop) {
+            @include devices(laptop) {
                 width: 75%;
                 margin: 0 auto;
                 margin-bottom: 2em;
@@ -96,10 +95,10 @@
         }
 
         &--light {
-            background-color: colors.$dominant;
+            background-color: $dominant;
             border-radius: 50px;
 
-            @apply shadow-xl #{!important};
+            box-shadow: $shadow-xl;
         }
     }
 }
