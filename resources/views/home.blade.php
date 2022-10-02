@@ -6,4 +6,5 @@
     <x-advantages />
     <x-use-cases />
     <x-pricing />
+    <x-faq />
 </x-landing>

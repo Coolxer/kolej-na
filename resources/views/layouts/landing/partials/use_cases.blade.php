@@ -14,16 +14,22 @@ $others = '... i wiele innych sytuacji, gdzie występuje problem oczekiwania z
 powodów deficytowych lub długotrwałego procesu realizacji.';
 @endphp
 
-<x-section :id="$id" className="use-cases">
-    <x-section-box :title="$title" :sentences="$sentences" :textCenter="true"
-        imagePlacement="right">
-        <x-slot:image>
-            <img
-                src="{{ Vite::asset('resources/images/illustrations/use_cases.svg') }}">
-        </x-slot:image>
-    </x-section-box>
+<x-section :id="$id" :title="$title" :imageOnLeft="false"
+    className="use-cases">
+    <x-slot:content>
+        <x-article :sentences="$sentences" :textCenter="true" />
 
-    <p class="section__paragraph use-cases__other-sentence">
-        {{ $others }}
-    </p>
+    </x-slot:content>
+
+    <x-slot:subcontent>
+        <p class="section__paragraph use-cases__other-sentence">
+            {{ $others }}
+        </p>
+    </x-slot:subcontent>
+
+    <x-slot:image>
+        <img src="{{ Vite::asset('resources/images/illustrations/use_cases.svg') }}"
+            alt="">
+    </x-slot:image>
+
 </x-section>

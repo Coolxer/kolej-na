@@ -1,0 +1,11 @@
+@import '../../partials/partials';
+
+.faq {
+    &__list {
+        @include flex-center;
+        flex-direction: column;
+        gap: 1em;
+
+        z-index: 2;
+    }
+}

@@ -15,11 +15,12 @@ nawet do zerwania współpracy!',
 ];
 @endphp
 
-<x-section :id="$id">
-    <x-section-box :title="$title" :sentences="$sentences">
-        <x-slot:image>
-            <img
-                src="{{ Vite::asset('resources/images/illustrations/lost.svg') }}">
-        </x-slot:image>
-    </x-section-box>
+<x-section :id="$id" :title="$title" :imageOnLeft="false">
+    <x-slot:content>
+        <x-article :sentences="$sentences" />
+    </x-slot:content>
+    <x-slot:image>
+        <img src="{{ Vite::asset('resources/images/illustrations/lost.svg') }}"
+            alt="">
+    </x-slot:image>
 </x-section>

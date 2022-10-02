@@ -1,0 +1,44 @@
+@import '../../partials/partials';
+
+.faq-card {
+    width: 100%;
+    padding: 0.75em;
+
+    @include flex-center;
+    flex-direction: column;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    box-shadow: $shadow-xl;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &[open] summary ~ * {
+        animation: toggle 0.5s;
+    }
+
+    &__question {
+        font-size: $m;
+        color: $dominant;
+    }
+
+    &__answer {
+        font-size: $s;
+        color: $secondary;
+    }
+}
+
+@keyframes toggle {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}

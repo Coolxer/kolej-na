@@ -1,32 +1,21 @@
 @import '../../partials/partials';
 
-.section__container {
-    &.use-cases {
-        $self: '.use-cases';
-        @include flex-center;
-        gap: 0;
-        flex-direction: column;
+.use-cases {
+    &__other-sentence {
+        width: 100%;
+        padding: 1em;
+        padding-top: 0;
         flex: 1;
 
+        font-size: $xxs;
+        font-style: italic;
+        text-align: justify;
+
+        opacity: 0.75;
+        order: 3;
+
         @include devices(laptop) {
-            gap: 50px;
-            flex-direction: row;
-        }
-
-        #{$self}__other-sentence {
-            width: 100%;
-            padding: 0 2em;
-            flex: 1;
-
-            font-style: italic;
-            text-align: justify;
-
-            opacity: 0.75;
-            order: 3;
-
-            @include devices(tablet) {
-                width: 75%;
-            }
+            font-size: $xs;
         }
     }
 }

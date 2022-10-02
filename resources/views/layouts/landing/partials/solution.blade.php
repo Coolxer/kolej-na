@@ -15,11 +15,12 @@ nie telefonuje do sprzedawcy.',
 ];
 @endphp
 
-<x-section :id="$id">
-    <x-section-box :title="$title" :sentences="$sentences" imagePlacement="right">
-        <x-slot:image>
-            <img
-                src="{{ Vite::asset('resources/images/illustrations/solution.svg') }}">
-        </x-slot:image>
-    </x-section-box>
+<x-section :id="$id" :title="$title" imagePlacement="right">
+    <x-slot:content>
+        <x-article :sentences="$sentences" />
+    </x-slot:content>
+    <x-slot:image>
+        <img src="{{ Vite::asset('resources/images/illustrations/solution.svg') }}"
+            alt="">
+    </x-slot:image>
 </x-section>

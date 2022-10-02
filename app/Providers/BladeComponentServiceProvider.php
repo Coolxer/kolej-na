@@ -32,14 +32,12 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('layouts.landing.partials.hero', 'hero');
 
         Blade::component('layouts.landing.partials._section', 'section');
-        Blade::component(
-            'layouts.landing.partials._section_box',
-            'section-box',
-        );
+        Blade::component('layouts.landing.partials._article', 'article');
         Blade::component(
             'layouts.landing.partials._pricing_card',
             'pricing-card',
         );
+        Blade::component('layouts.landing.partials._faq_card', 'faq-card');
 
         Blade::component('layouts.landing.partials.why', 'why');
         Blade::component('layouts.landing.partials.solution', 'solution');
@@ -50,6 +48,7 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('layouts.landing.partials.advantages', 'advantages');
         Blade::component('layouts.landing.partials.use_cases', 'use-cases');
         Blade::component('layouts.landing.partials.pricing', 'pricing');
+        Blade::component('layouts.landing.partials.faq', 'faq');
 
         //Blade::component('layouts.dashboard.dashboard', 'dashboard');
     }

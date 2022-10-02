@@ -1,27 +1,29 @@
 @import '../../partials/partials';
 
-.section__container {
-    &.advantages {
-        $self: '.advantages';
+.advantages-wrapper {
+    @include flex-center;
+    flex-direction: column;
+    gap: 50px;
 
-        padding: 2.4em;
+    @include devices(laptop) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
 
+    &__side {
+        position: relative;
+
+        width: 100%;
+        padding: 2em;
+
+        @include flex-center;
         flex-direction: column;
+        gap: 1em;
 
         color: $dominant;
 
-        @include devices(laptop) {
-            padding: 0;
-
-            flex-direction: row;
-            align-items: flex-start;
-        }
-
-        #{$self}__seller,
-        #{$self}__client {
-            position: relative;
-
-            width: 100%;
+        & > .article {
+            order: 2;
         }
     }
 }

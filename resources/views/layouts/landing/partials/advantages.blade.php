@@ -24,13 +24,13 @@ i pieniędzy',
 ];
 @endphp
 
-<x-section :id="$id" :dark="true" className="advantages">
+{{-- <x-section :id="$id" :dark="true" className="advantages">
     <x-section-box :onDark="true" title="Korzyści dla sprzedawcy"
         :sentences="$sellerAdvantages" :textCenter="true" imagePlacement="inner"
         className="advantages__seller">
         <x-slot:image>
-            <img
-                src="{{ Vite::asset('resources/images/illustrations/seller_advantages.svg') }}">
+            <img src="{{ Vite::asset('resources/images/illustrations/seller_advantages.svg') }}"
+                alt="">
         </x-slot:image>
     </x-section-box>
 
@@ -38,8 +38,32 @@ i pieniędzy',
         :sentences="$clientAdvantages" :textCenter="true" imagePlacement="inner"
         className="advantages__client">
         <x-slot:image>
-            <img
-                src="{{ Vite::asset('resources/images/illustrations/client_advantages.svg') }}">
+            <img src="{{ Vite::asset('resources/images/illustrations/client_advantages.svg') }}"
+                alt="">
         </x-slot:image>
     </x-section-box>
+</x-section> --}}
+
+<x-section :id="$id" theme="dark">
+    <x-slot:content>
+        <div class="advantages-wrapper">
+            <div class="advantages-wrapper__side">
+                <h2 class="section__heading">Korzyści dla sprzedawcy</h2>
+                <div class='section__image section__image--light'>
+                    <img src="{{ Vite::asset('resources/images/illustrations/seller_advantages.svg') }}"
+                        alt="">
+                </div>
+                <x-article :sentences="$sellerAdvantages" :textCenter="true" />
+            </div>
+
+            <div class="advantages-wrapper__side">
+                <h2 class="section__heading">Korzyści dla klientów</h2>
+                <div class='section__image section__image--light'>
+                    <img src="{{ Vite::asset('resources/images/illustrations/client_advantages.svg') }}"
+                        alt="">
+                </div>
+                <x-article :sentences="$clientAdvantages" :textCenter="true" />
+            </div>
+        </div>
+    </x-slot:content>
 </x-section>

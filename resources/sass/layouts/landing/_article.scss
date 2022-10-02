@@ -1,0 +1,23 @@
+@import '../../partials/partials';
+
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1em;
+
+    text-align: justify;
+
+    &--center {
+        align-items: center;
+        text-align: center;
+    }
+
+    &__paragraph {
+        font-size: $xxs;
+
+        @include devices(laptop) {
+            font-size: $xs;
+        }
+    }
+}

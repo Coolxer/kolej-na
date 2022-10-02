@@ -1,30 +1,14 @@
 @import '../../partials/partials';
 
-.section__container {
-    &.pricing {
-        $self: '.pricing';
-        gap: 0;
+.pricing {
+    &__box {
+        @include flex-center;
+        flex-direction: column;
+        gap: 50px;
 
         @include devices(laptop) {
-            flex-direction: column;
-        }
-
-        #{$self}__box {
-            width: 100%;
-
-            @include flex-center;
-            flex-direction: column;
-            gap: 50px;
-
-            @include devices(laptop) {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-
-            &:first-child {
-                margin-top: 0;
-                padding-top: 0;
-            }
+            flex-direction: row;
+            align-items: flex-start;
         }
     }
 }
