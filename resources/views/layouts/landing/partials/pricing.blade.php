@@ -4,9 +4,6 @@
 $id = 'pricing';
 $title = 'Cennik';
 
-//$cardTitles = ['Bazowy', 'Rozszerzony', 'Pro'];
-//$cardPrices = [49.99, 79.99 . 129.99];
-
 $baseSentences = ['Warto', '3 kolejki', 'Bedzie git'];
 
 @endphp
