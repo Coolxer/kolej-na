@@ -5,8 +5,7 @@ $id = 'faq';
 $title = 'Najczęściej zadawane pytania (FAQ)';
 @endphp
 
-<x-section :id="$id" :title="$title" theme="color" :imageOnLeft="true"
-    className="faq">
+<x-section :id="$id" :title="$title" theme="color" className="faq">
 
     <x-slot:content>
         <div class="faq__list">

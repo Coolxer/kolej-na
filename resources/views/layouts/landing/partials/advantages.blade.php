@@ -24,26 +24,6 @@ i pieniędzy',
 ];
 @endphp
 
-{{-- <x-section :id="$id" :dark="true" className="advantages">
-    <x-section-box :onDark="true" title="Korzyści dla sprzedawcy"
-        :sentences="$sellerAdvantages" :textCenter="true" imagePlacement="inner"
-        className="advantages__seller">
-        <x-slot:image>
-            <img src="{{ Vite::asset('resources/images/illustrations/seller_advantages.svg') }}"
-                alt="">
-        </x-slot:image>
-    </x-section-box>
-
-    <x-section-box :onDark="true" title="Korzyści dla klientów"
-        :sentences="$clientAdvantages" :textCenter="true" imagePlacement="inner"
-        className="advantages__client">
-        <x-slot:image>
-            <img src="{{ Vite::asset('resources/images/illustrations/client_advantages.svg') }}"
-                alt="">
-        </x-slot:image>
-    </x-section-box>
-</x-section> --}}
-
 <x-section :id="$id" theme="dark">
     <x-slot:content>
         <div class="advantages-wrapper">

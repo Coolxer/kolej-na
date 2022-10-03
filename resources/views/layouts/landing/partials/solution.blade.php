@@ -15,7 +15,7 @@ nie telefonuje do sprzedawcy.',
 ];
 @endphp
 
-<x-section :id="$id" :title="$title" imagePlacement="right">
+<x-section :id="$id" :title="$title">
     <x-slot:content>
         <x-article :sentences="$sentences" />
     </x-slot:content>

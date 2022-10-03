@@ -19,7 +19,7 @@ transparentne.',
 ];
 @endphp
 
-<x-section :id="$id" :title="$title" :imageOnLeft="false">
+<x-section :id="$id" :title="$title" imageOnRight>
     <x-slot:content>
         <x-article :sentences="$sentences" />
     </x-slot:content>

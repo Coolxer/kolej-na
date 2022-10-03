@@ -23,9 +23,11 @@
                     <span class="service__name">Ciebie</span>
                 </div>
             </div>
-            <a href="#" class="hero__join-btn">
-                Dołącz!
-            </a>
+            <x-button secondary>
+                <a href="#">
+                    Dołącz!
+                </a>
+            </x-button>
         </div>
 
         <i class="fa-solid fa-users hero__users-icon"></i>

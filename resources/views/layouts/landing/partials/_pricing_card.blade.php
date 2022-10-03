@@ -18,5 +18,8 @@
             </p>
         @endforeach
     </ul>
-    <a href="{{ $href }}"class="pricing-card__select-btn">Wybierz</a>
+    <x-button className="pricing-card__select-btn">
+        <a href="{{ $href }}">Wybierz</a>
+    </x-button>
+
 </div>

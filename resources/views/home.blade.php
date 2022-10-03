@@ -7,4 +7,5 @@
     <x-use-cases />
     <x-pricing />
     <x-faq />
+    <x-contact />
 </x-landing>

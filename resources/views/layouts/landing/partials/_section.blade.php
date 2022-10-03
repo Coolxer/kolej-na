@@ -1,6 +1,6 @@
 @vite('resources/sass/layouts/landing/_section.scss')
 
-@props(['id', 'title' => '', 'theme' => 'light', 'imageOnLeft' => true, 'className' => ''])
+@props(['id', 'title' => '', 'theme' => 'light', 'imageOnRight' => false, 'className' => ''])
 
 {{-- full width container (provides full background color on big devices) --}}
 <section id={{ $id }} @class([
@@ -22,7 +22,7 @@
 
         {{-- possible place for left or right side image --}}
         @if (isset($image) && $image != null)
-            <div @class(['section__image', 'section__image--right' => !$imageOnLeft])>
+            <div @class(['section__image', 'section__image--right' => $imageOnRight])>
                 {{ $image }}
             </div>
         @endif

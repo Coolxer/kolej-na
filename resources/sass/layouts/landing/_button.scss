@@ -1,0 +1,50 @@
+@import '../../partials/partials';
+
+.button {
+    @include flex-center;
+
+    :first-child {
+        width: 100%;
+
+        margin: 1em auto;
+        padding: 0.5em;
+
+        @include flex-center;
+
+        font-size: $xs;
+
+        background-color: $accent;
+        color: $secondary;
+
+        border-radius: 25px;
+        box-shadow: $shadow-xl;
+
+        transition: background-color 0.25s, color 0.25s;
+
+        &:hover {
+            background-color: $dominant;
+            color: $secondary;
+
+            cursor: pointer;
+        }
+
+        @include devices(desktop) {
+            padding: 0.3em;
+            font-size: $s;
+        }
+    }
+
+    &--secondary {
+        :first-child {
+            background-color: $secondary;
+            color: $dominant;
+
+            border: 3px solid $secondary;
+
+            &:hover {
+                // background-color: $dominant;
+                // color: $secondary;
+            }
+        }
+    }
+}

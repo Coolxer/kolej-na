@@ -44,33 +44,7 @@
     }
 
     &__select-btn {
-        width: 75%;
-
-        margin: 1em auto;
-        padding: 0.5em;
-
-        @include flex-center;
-
-        border-radius: 25px;
-
-        font-size: $xs;
-
-        background-color: $accent;
-        color: $secondary;
-
-        box-shadow: $shadow-xl;
-
-        transition: background-color 0.25s, color 0.25s;
-
-        &:hover {
-            background-color: $dominant;
-            color: $secondary;
-        }
-
-        @include devices(desktop) {
-            padding: 0.3em;
-            font-size: $s;
-        }
+        width: 100%;
     }
 }
 

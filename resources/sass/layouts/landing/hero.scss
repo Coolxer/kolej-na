@@ -71,38 +71,6 @@
         @include flex-center;
     }
 
-    &__join-btn {
-        width: 100%;
-
-        margin: 0 auto;
-        margin-top: 20px;
-        padding: 0.5em;
-
-        @include flex-center;
-
-        border: 3px solid $secondary;
-        border-radius: 25px;
-
-        font-size: $xs;
-
-        background-color: $secondary;
-        color: $dominant;
-
-        box-shadow: $shadow-xl;
-
-        transition: background-color 0.25s, color 0.25s;
-
-        &:hover {
-            background-color: $dominant;
-            color: $secondary;
-        }
-
-        @include devices(desktop) {
-            padding: 0.3em;
-            font-size: $s;
-        }
-    }
-
     &__users-icon {
         position: absolute;
         top: -25%;
