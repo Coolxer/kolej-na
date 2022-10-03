@@ -1,4 +1,4 @@
-@vite('resources/sass/layouts/landing/_section.scss')
+@vite('resources/sass/layouts/landing/components/section.scss')
 
 @props(['id', 'title' => '', 'theme' => 'light', 'imageOnRight' => false, 'className' => ''])
 

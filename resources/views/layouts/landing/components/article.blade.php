@@ -1,4 +1,4 @@
-@vite('resources/sass/layouts/landing/_article.scss')
+@vite('resources/sass/layouts/landing/components/article.scss')
 
 @props(['sentences', 'textCenter' => false])
 

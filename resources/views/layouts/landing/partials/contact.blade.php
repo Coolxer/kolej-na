@@ -1,4 +1,4 @@
-@vite('resources/sass/layouts/landing/contact.scss')
+@vite('resources/sass/layouts/landing/partials/contact.scss')
 
 @php
 $id = 'contact';

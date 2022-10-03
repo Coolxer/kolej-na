@@ -1,4 +1,4 @@
-@vite('resources/sass/layouts/landing/hero.scss')
+@vite('resources/sass/layouts/landing/partials/hero.scss')
 
 <section class="hero">
     <div class="hero__container">

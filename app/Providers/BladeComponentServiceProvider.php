@@ -24,18 +24,19 @@ class BladeComponentServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        Blade::component('layouts.partials.navbar', 'navbar');
-        Blade::component('layouts.partials.footer', 'footer');
-        Blade::component('layouts.default', 'default');
+        // Base website common things, like navbar and footer
+        Blade::component('layouts.common.navbar', 'navbar');
+        Blade::component('layouts.common.footer', 'footer');
 
-        Blade::component('layouts.landing.partials._article', 'article');
-        Blade::component('layouts.landing.partials._button', 'button');
+        // Widely used components
+        Blade::component('layouts.landing.components.article', 'article');
+        Blade::component('layouts.landing.components.button', 'button');
         Blade::component(
-            'layouts.landing.partials._pricing_card',
+            'layouts.landing.components.pricing_card',
             'pricing-card',
         );
-        Blade::component('layouts.landing.partials._faq_card', 'faq-card');
-        Blade::component('layouts.landing.partials._section', 'section');
+        Blade::component('layouts.landing.components.faq_card', 'faq-card');
+        Blade::component('layouts.landing.components.section', 'section');
 
         Blade::component('layouts.landing.partials.hero', 'hero');
         Blade::component('layouts.landing.partials.why', 'why');
@@ -50,6 +51,7 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('layouts.landing.partials.faq', 'faq');
         Blade::component('layouts.landing.partials.contact', 'contact');
 
+        Blade::component('layouts.default', 'default');
         Blade::component('layouts.landing.landing', 'landing');
         //Blade::component('layouts.dashboard.dashboard', 'dashboard');
     }

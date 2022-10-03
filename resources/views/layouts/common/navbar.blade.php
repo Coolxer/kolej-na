@@ -1,4 +1,4 @@
-@vite('resources/sass/components/navbar.scss')
+@vite('resources/sass/layouts/common/navbar.scss')
 
 @php
 

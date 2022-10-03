@@ -1,4 +1,4 @@
-@vite('resources/sass/layouts/landing/_faq_card.scss')
+@vite('resources/sass/layouts/landing/components/faq_card.scss')
 
 @props(['question', 'answer'])
 

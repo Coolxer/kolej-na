@@ -1,4 +1,4 @@
-@vite('resources/sass/layouts/landing/pricing.scss')
+@vite('resources/sass/layouts/landing/partials/pricing.scss')
 
 @php
 $id = 'pricing';

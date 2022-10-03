@@ -1,4 +1,4 @@
-@vite('resources/sass/layouts/landing/use_cases.scss')
+@vite('resources/sass/layouts/landing/partials/use_cases.scss')
 
 @php
 $id = 'use-cases';

@@ -1,4 +1,4 @@
-@vite('resources/sass/layouts/landing/_button.scss')
+@vite('resources/sass/layouts/landing/components/button.scss')
 
 @props(['secondary' => false, 'className' => ''])
 

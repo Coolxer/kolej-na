@@ -1,4 +1,4 @@
-@vite('resources/sass/layouts/landing/_pricing_card.scss')
+@vite('resources/sass/layouts/landing/components/pricing_card.scss')
 
 @props(['title', 'price', 'sentences', 'href' => '#'])
 
