@@ -24,9 +24,8 @@
                 </div>
             </div>
             <x-button secondary>
-                <a href="#">
-                    Dołącz!
-                </a>
+                <a href="#">Dołącz!</a>
+                <i class="fa-solid fa-signature"></i>
             </x-button>
         </div>
 

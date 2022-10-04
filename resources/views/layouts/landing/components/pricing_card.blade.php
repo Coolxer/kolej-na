@@ -20,6 +20,7 @@
     </ul>
     <x-button className="pricing-card__select-btn">
         <a href="{{ $href }}">Wybierz</a>
+        <i class="fa-solid fa-check"></i>
     </x-button>
 
 </div>

@@ -26,6 +26,7 @@ $title = 'Kontakt';
 
                 <x-button className="form__send-btn">
                     <input type="submit" value="Wyślij" />
+                    <i class="fa-solid fa-paper-plane"></i>
                 </x-button>
 
             </fieldset>
