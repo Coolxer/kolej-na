@@ -29,6 +29,7 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('layouts.common.footer', 'footer');
 
         // Widely used components
+        Blade::component('layouts.landing.components.logo', 'logo');
         Blade::component('layouts.landing.components.article', 'article');
         Blade::component('layouts.landing.components.button', 'button');
         Blade::component(

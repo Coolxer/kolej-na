@@ -1,0 +1,14 @@
+@import '../../../partials/partials';
+
+.logo {
+    @include flex-center;
+    padding: 10px;
+
+    opacity: 0.75;
+
+    transition: opacity 0.75;
+
+    &:hover {
+        opacity: 1;
+    }
+}

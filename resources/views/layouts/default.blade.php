@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div class="w-screen">
+    <div style="width: 100%;">
         {{ $slot }}
     </div>
 </body>
