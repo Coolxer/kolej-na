@@ -13,8 +13,15 @@
 
     box-shadow: $shadow-xl;
 
+    transition: background-color 0.25s, color 0.25s;
+
     &:hover {
+        background-color: $dominant;
         cursor: pointer;
+
+        .faq-card__question {
+            color: $accent;
+        }
     }
 
     &[open] summary ~ * {
@@ -22,13 +29,21 @@
     }
 
     &__question {
-        font-size: $m;
+        font-size: $s;
         color: $dominant;
+
+        @include devices(laptop) {
+            font-size: $m;
+        }
     }
 
     &__answer {
-        font-size: $s;
+        font-size: $xs;
         color: $secondary;
+
+        @include devices(laptop) {
+            font-size: $s;
+        }
     }
 }
 

@@ -39,7 +39,7 @@
 
             <div class="footer__info">
                 <div class="footer__contact-box">
-                    <i class="fa-solid fa-at"></i>
+                    <i class="fa-regular fa-envelope"></i>
                     <span>kontakt@kolej-na.pl</span>
                 </div>
 
@@ -56,8 +56,4 @@
         Copyright &copy; {{ date('Y') }} Kolej-na. Wszelkie prawa
         zastrzeżone.
     </p>
-
-    {{-- Regularmin / RODO, etc.? => jest polityka prywatności --}}
-    {{-- Font-awesome attribution? -> chyba nie trzeba bo już w plikach coś jest? --}}
-    {{-- unDraw attribution ?  => chyba nie --}}
 </footer>

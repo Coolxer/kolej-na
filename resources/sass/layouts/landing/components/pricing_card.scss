@@ -40,11 +40,11 @@
     }
 
     &__property-item {
-        font-size: $xs;
-    }
+        font-size: $xxs;
 
-    &__select-btn {
-        width: 100%;
+        @include devices(laptop) {
+            font-size: $xs;
+        }
     }
 }
 
@@ -54,7 +54,7 @@
     @include flex-center;
 
     &__full {
-        font-size: $xxxxxl;
+        font-size: $xxxxl;
         line-height: 100%;
     }
 
@@ -63,11 +63,12 @@
         flex-direction: column;
     }
 
-    &__rest {
-        font-size: $l;
-    }
-
+    &__rest,
     &__currency {
         font-size: $l;
+
+        @include devices(laptop) {
+            font-size: $m;
+        }
     }
 }

@@ -25,7 +25,7 @@
             </div>
             <x-button secondary>
                 <a href="#">Dołącz!</a>
-                <i class="fa-solid fa-signature"></i>
+                <i class="fa-solid fa-right-to-bracket"></i>
             </x-button>
         </div>
 

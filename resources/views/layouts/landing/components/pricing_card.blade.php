@@ -18,7 +18,7 @@
             </p>
         @endforeach
     </ul>
-    <x-button className="pricing-card__select-btn">
+    <x-button>
         <a href="{{ $href }}">Wybierz</a>
         <i class="fa-solid fa-check"></i>
     </x-button>
