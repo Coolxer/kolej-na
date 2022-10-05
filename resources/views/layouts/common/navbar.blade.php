@@ -30,7 +30,8 @@ $menuItems = ['Opis', 'Cennik', 'FAQ', 'Kontakt', 'Logowanie', 'Rejestracja'];
 
 <script>
     const nav = document.getElementsByClassName('navbar__nav')[0];
-    const hamburger = document.getElementsByClassName('navbar__hamburger')[0];
+    const hamburger = document.getElementsByClassName(
+        'navbar__hamburger')[0];
 
     let isOpen = false;
 
@@ -38,9 +39,11 @@ $menuItems = ['Opis', 'Cennik', 'FAQ', 'Kontakt', 'Logowanie', 'Rejestracja'];
         isOpen = !isOpen;
 
         if (isOpen) {
+            document.body.style.overflow = "hidden";
             nav.classList.add("navbar__nav--open");
             hamburger.classList.add("navbar__hamburger--open")
         } else {
+            document.body.style.overflow = "scroll";
             nav.classList.remove("navbar__nav--open");
             hamburger.classList.remove("navbar__hamburger--open")
         }

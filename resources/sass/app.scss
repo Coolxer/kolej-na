@@ -24,6 +24,15 @@ html {
 body {
     font-size: 1.6rem; // restore basic 16px font-size
     color: $secondary;
+
+    // be sure that scroll is enablled when switches from mobile to desktop
+    @include devices(laptop) {
+        overflow: scroll !important;
+    }
+}
+
+#app-container {
+    width: 100%;
 }
 
 a {

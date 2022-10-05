@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div style="width: 100%;">
+    <div id="app-container">
         {{ $slot }}
     </div>
 </body>
