@@ -6,7 +6,7 @@ $sentences = [
 powstawanie kolejek.',
     'Nawet jeśli towar nie jest deficytowy, to istnieją
 długotrwałe usługi, na które trzeba długo czekać, a aktualny status nie jest
-znany',
+znany.',
     'Jeśli nie ma systemu monitorowania postępu, to kontakt między stronami
 kuleje.',
     'Brak informowania klienta o statusie i postępie kolejki prowadzi do

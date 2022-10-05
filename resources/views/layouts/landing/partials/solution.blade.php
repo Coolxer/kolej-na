@@ -3,7 +3,7 @@ $id = 'solution';
 $title = 'Rozwiązanie';
 $sentences = [
     'Udostępniamy wirtualny system kolejkowy deficytowych towarów i
-długotrwałych usług',
+długotrwałych usług.',
     'Od teraz lista zamówień nie jest zapisana na kartce i
 schowana w szufladzie, ale jest dostępna dla klientów w formie aplikacji
 internetowej.',

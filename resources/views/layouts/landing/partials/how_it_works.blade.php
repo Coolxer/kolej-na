@@ -7,7 +7,7 @@ dotychczas.',
     '2. Klient odnajduje aukcję i kontaktuje się w celu złożenia
 zamówienia.',
     '3. Sprzedawca zapisuje klienta do kolejki i przekazuje mu adres
-kolejki oraz identyfikator klienta.',
+kolejki oraz unikalny identyfikator klienta.',
     '4. Sprzedawca zajmuje się procesem
 obsługi zamówienia i na bieżąco aktualizuje statusy kolejki.',
     '5. Klient w

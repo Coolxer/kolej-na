@@ -15,10 +15,10 @@ informowanie klientów',
 $clientAdvantages = [
     'Świadomość postępu lub jego braku',
     'Znajomość aktualnego
-statusu zamówenia',
+statusu zamówienia',
     'Szybkie i wygodne monitorowanie zlecenia',
     'Możliwość
-szacowania czasu świadczenia usług innych klientów',
+szacowania czasu świadczenia usług',
     'Oszczędność czasu, nerwów
 i pieniędzy',
 ];
