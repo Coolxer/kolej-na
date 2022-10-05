@@ -87,6 +87,8 @@
     @include devices(laptop) {
         width: 75%;
         flex-direction: row;
+
+        margin-right: 30px;
     }
 
     @include devices(desktop) {
@@ -114,6 +116,32 @@
         }
 
         @include devices(laptop) {
+            position: relative;
+            overflow: hidden;
+
+            &:after {
+                content: '';
+
+                position: absolute;
+                bottom: 10%;
+                left: 0;
+
+                width: 100%;
+                height: 2px;
+                transform: translateX(-100%);
+
+                opacity: 1;
+                background-color: $dominant;
+
+                transition: opacity 0.25s, transform 0.25s;
+            }
+
+            &:hover::after {
+                transform: translateX(0);
+            }
+        }
+
+        @include devices(laptop) {
             border: none;
             box-shadow: none;
 
@@ -135,11 +163,6 @@
 
             @include devices(laptop) {
                 font-size: $xxs;
-
-                &:hover {
-                    text-decoration: underline;
-                    text-underline-offset: 5px;
-                }
             }
         }
     }

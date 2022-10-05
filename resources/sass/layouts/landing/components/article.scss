@@ -16,7 +16,7 @@
     &__paragraph {
         font-size: $xxs;
 
-        @include devices(laptop) {
+        @include devices(desktop) {
             font-size: $xs;
         }
     }

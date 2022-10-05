@@ -53,8 +53,14 @@
         border-radius: 15px;
         box-shadow: $shadow-xl;
 
+        outline: none;
+
         @include devices(desktop) {
             font-size: $xs;
+        }
+
+        &:focus {
+            border-color: $accent;
         }
     }
 }

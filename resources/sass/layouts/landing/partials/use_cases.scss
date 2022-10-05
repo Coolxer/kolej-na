@@ -14,7 +14,7 @@
         opacity: 0.75;
         order: 3;
 
-        @include devices(laptop) {
+        @include devices(desktop) {
             font-size: $xs;
         }
     }

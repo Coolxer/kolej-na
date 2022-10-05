@@ -32,7 +32,7 @@
         font-size: $s;
         color: $dominant;
 
-        @include devices(laptop) {
+        @include devices(desktop) {
             font-size: $m;
         }
     }
@@ -41,7 +41,7 @@
         font-size: $xs;
         color: $secondary;
 
-        @include devices(laptop) {
+        @include devices(desktop) {
             font-size: $s;
         }
     }

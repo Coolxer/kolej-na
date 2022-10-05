@@ -42,7 +42,7 @@
     &__property-item {
         font-size: $xxs;
 
-        @include devices(laptop) {
+        @include devices(desktop) {
             font-size: $xs;
         }
     }
@@ -67,7 +67,7 @@
     &__currency {
         font-size: $l;
 
-        @include devices(laptop) {
+        @include devices(desktop) {
             font-size: $m;
         }
     }
