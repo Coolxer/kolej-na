@@ -52,5 +52,14 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('landing.partials.footer', 'footer');
 
         Blade::component('landing.landing', 'landing');
+
+        // ################   AUTH   ################ //
+
+        Blade::component('auth.confirm_password', 'confirm-password');
+        Blade::component('auth.forgot_password', 'forgot-password');
+        Blade::component('auth.login', 'login');
+        Blade::component('auth.register', 'register');
+        Blade::component('auth.reset_password', 'reset-password');
+        Blade::component('auth.verify_email;', 'verify-email');
     }
 }
