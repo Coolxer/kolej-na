@@ -1,0 +1,104 @@
+@import '../../partials/partials';
+
+.section {
+    @include flex-center;
+    padding: 1.5em 0;
+
+    background-color: $dominant;
+
+    &--dark {
+        background-color: $secondary;
+    }
+
+    &--color {
+        background-color: $accent;
+    }
+
+    &__container {
+        position: relative;
+
+        width: 100%;
+        max-width: 1280px;
+
+        @include flex-center;
+        flex-direction: column;
+        gap: 50px;
+
+        @include devices(tablet) {
+            width: 80%;
+        }
+
+        @include devices(laptop) {
+            width: 90%;
+            flex-direction: row;
+        }
+    }
+
+    &__content {
+        padding: 0 2em;
+
+        flex: 1;
+
+        order: 2;
+        z-index: 2;
+    }
+
+    &__subcontent {
+        flex: 1;
+
+        order: 3;
+        z-index: 2;
+    }
+
+    &__heading {
+        margin-bottom: 20px;
+
+        font-size: $xl;
+        font-weight: 300;
+
+        text-align: center;
+
+        @include devices(desktop) {
+            font-size: $xxl;
+        }
+    }
+
+    &__image {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        padding: 1em;
+
+        @include flex-center;
+        flex: 1;
+        order: 1;
+
+        opacity: 0.3;
+        z-index: 1;
+
+        @include devices(laptop) {
+            position: static;
+
+            opacity: 1;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        &--right {
+            order: 3;
+        }
+
+        &--light {
+            background-color: $dominant;
+            border-radius: 50px;
+
+            box-shadow: $shadow-xl;
+        }
+    }
+}

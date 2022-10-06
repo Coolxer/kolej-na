@@ -1,0 +1,123 @@
+@import '../../partials/partials';
+
+.hero {
+    width: 100%;
+    height: 100vh;
+
+    @include flex-center;
+
+    background-color: $accent;
+
+    @include devices(desktop) {
+        align-items: flex-start;
+        padding-top: 3em;
+    }
+
+    &__container {
+        position: relative;
+
+        width: 100%;
+        max-width: 1280px;
+
+        @include flex-center;
+        gap: 50px;
+
+        @include devices(laptop) {
+            padding: 0 3em;
+        }
+    }
+
+    &__informations {
+        width: 80%;
+
+        @include devices(tablet) {
+            width: 70%;
+        }
+    }
+
+    &__header {
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__heading {
+        font-size: $xxxxl;
+        line-height: 100%;
+
+        color: $dominant;
+
+        @include devices(desktop) {
+            font-size: $xxxxxl;
+        }
+    }
+
+    &__description {
+        width: 100%;
+
+        margin-top: 1.2em;
+
+        font-size: $xs;
+        text-align: center;
+
+        @include devices(desktop) {
+            font-size: $s;
+        }
+    }
+
+    &__services-list {
+        width: 100%;
+        margin-top: 20px;
+
+        @include flex-center;
+    }
+
+    &__users-icon {
+        position: absolute;
+        top: -25%;
+
+        width: 100%;
+        height: 100%;
+
+        @include flex-center;
+
+        font-size: 30rem;
+        opacity: 0.1;
+
+        @include devices(laptop) {
+            position: static;
+            transform: translate(0);
+
+            font-size: 40rem;
+
+            color: $dominant;
+            opacity: 0.75;
+        }
+
+        @include devices(desktop) {
+            font-size: 50rem;
+        }
+    }
+}
+
+.service {
+    @include flex-center;
+    flex-direction: column;
+
+    padding: 1.2em 2em;
+
+    &__icon {
+        font-size: $xxl;
+
+        @include devices(desktop) {
+            font-size: $xxxl;
+        }
+    }
+
+    &__name {
+        font-size: $xs;
+
+        @include devices(desktop) {
+            font-size: $s;
+        }
+    }
+}

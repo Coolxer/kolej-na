@@ -1,0 +1,70 @@
+@import '../../partials/partials';
+
+.contact {
+    &__question {
+        font-size: $s;
+        font-weight: 300;
+        text-align: center;
+
+        color: $accent;
+
+        @include devices(desktop) {
+            font-size: $m;
+        }
+    }
+}
+
+.form {
+    &__fieldset {
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__legend {
+        width: 100%;
+
+        font-size: $xs;
+        font-weight: 300;
+
+        text-align: center;
+
+        @include devices(desktop) {
+            font-size: $s;
+        }
+    }
+
+    &__label {
+        margin-top: 1em;
+        font-size: $xs;
+
+        @include devices(desktop) {
+            font-size: $s;
+        }
+    }
+
+    &__input {
+        width: 90%;
+        padding: 0.5em;
+
+        font-size: $xxs;
+        text-align: center;
+
+        border: 3px solid $secondary;
+        border-radius: 15px;
+        box-shadow: $shadow-xl;
+
+        outline: none;
+
+        @include devices(desktop) {
+            font-size: $xs;
+        }
+
+        &:focus {
+            border-color: $accent;
+        }
+    }
+}
+
+.button.form__send-btn {
+    width: 90%;
+}
