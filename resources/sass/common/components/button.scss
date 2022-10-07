@@ -11,7 +11,7 @@
 
     @include flex-center;
 
-    font-size: $xs;
+    font-size: $xxs;
 
     background-color: $accent;
     color: $secondary;
@@ -21,9 +21,8 @@
 
     transition: background-color 0.25s, color 0.25s;
 
-    @include devices(desktop) {
-        padding: 0.3em;
-        font-size: $s;
+    @include devices(laptop) {
+        font-size: $xs;
     }
 
     &:hover {
@@ -40,7 +39,11 @@
 
         transform: translateY(-50%);
 
-        font-size: $m;
+        font-size: $s;
+
+        @include devices(laptop) {
+            font-size: $m;
+        }
     }
 
     &--secondary {
@@ -48,5 +51,12 @@
         color: $dominant;
 
         border: 3px solid $secondary;
+    }
+
+    &--big {
+        @include devices(desktop) {
+            padding: 0.3em;
+            font-size: $s;
+        }
     }
 }

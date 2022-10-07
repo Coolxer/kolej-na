@@ -51,8 +51,12 @@
     &__heading {
         margin-bottom: 30px;
 
-        font-size: $xxxl;
+        font-size: $xl;
         color: $dominant;
+
+        @include devices(tablet) {
+            font-size: $xxl;
+        }
 
         @include devices(laptop) {
             display: none;
@@ -82,7 +86,7 @@
 
     @include flex-center;
     flex-direction: column;
-    gap: 20px;
+    gap: 1em;
 
     @include devices(laptop) {
         width: 75%;
@@ -97,7 +101,7 @@
 
     &__item {
         width: 75%;
-        padding: 0.5em;
+        padding: 0.25em;
 
         border: 3px solid $dominant;
         border-radius: 15px;
@@ -113,6 +117,10 @@
             border-color: $accent;
             color: $accent;
             opacity: 1;
+        }
+
+        @include devices(tablet) {
+            padding: 0.75em;
         }
 
         @include devices(laptop) {

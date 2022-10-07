@@ -2,14 +2,14 @@
 
 .contact {
     &__question {
-        font-size: $s;
+        font-size: $xs;
         font-weight: 300;
         text-align: center;
 
         color: $accent;
 
-        @include devices(desktop) {
-            font-size: $m;
+        @include devices(tablet) {
+            font-size: $s;
         }
     }
 }
@@ -23,30 +23,22 @@
     &__legend {
         width: 100%;
 
-        font-size: $xs;
+        font-size: $xxs;
         font-weight: 300;
 
         text-align: center;
-
-        @include devices(desktop) {
-            font-size: $s;
-        }
     }
 
     &__label {
         margin-top: 1em;
         font-size: $xs;
-
-        @include devices(desktop) {
-            font-size: $s;
-        }
     }
 
     &__input {
         width: 90%;
         padding: 0.5em;
 
-        font-size: $xxs;
+        font-size: $xxxs;
         text-align: center;
 
         border: 3px solid $secondary;
@@ -55,8 +47,8 @@
 
         outline: none;
 
-        @include devices(desktop) {
-            font-size: $xs;
+        @include devices(tablet) {
+            font-size: $xxs;
         }
 
         &:focus {

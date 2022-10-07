@@ -20,6 +20,8 @@
     }
 
     &__divider {
+        display: none;
+
         position: absolute;
         left: 50%;
         top: 10%;
@@ -33,6 +35,10 @@
         color: $dominant;
 
         opacity: 0.5;
+
+        @include devices(tablet) {
+            display: block;
+        }
     }
 
     &__interactive {
@@ -62,10 +68,10 @@
         justify-content: flex-start;
         gap: 10px;
 
-        font-size: $xxxs;
+        font-size: $xxxxs;
 
         i {
-            font-size: $xs;
+            font-size: $xxs;
         }
     }
 
@@ -116,7 +122,11 @@
     }
 
     &__name {
-        font-size: $s;
+        font-size: $xs;
+
+        @include devices(tablet) {
+            font-size: $s;
+        }
 
         @include devices(desktop) {
             font-size: $m;
@@ -126,9 +136,13 @@
     &__description {
         margin-top: 10px;
 
-        font-size: $xxxs;
+        font-size: $xxxxs;
         text-align: center;
         color: $accent;
+
+        @include devices(tablet) {
+            font-size: $xxxs;
+        }
 
         @include devices(laptop) {
             width: 75%;

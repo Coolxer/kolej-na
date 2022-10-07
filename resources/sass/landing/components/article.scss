@@ -14,10 +14,10 @@
     }
 
     &__paragraph {
-        font-size: $xxs;
+        font-size: $xxxs;
 
-        @include devices(desktop) {
-            font-size: $xs;
+        @include devices(tablet) {
+            font-size: $xxs;
         }
     }
 }

@@ -23,7 +23,7 @@
                     <span class="service__name">Ciebie</span>
                 </div>
             </div>
-            <x-button secondary>
+            <x-button secondary big>
                 <a href="#">Dołącz!</a>
                 <i class="fa-solid fa-right-to-bracket"></i>
             </x-button>

@@ -38,28 +38,25 @@
         padding: 0 2em;
 
         flex: 1;
-
         order: 2;
         z-index: 2;
     }
 
     &__subcontent {
         flex: 1;
-
         order: 3;
         z-index: 2;
     }
 
     &__heading {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
 
-        font-size: $xl;
+        font-size: $l;
         font-weight: 300;
-
         text-align: center;
 
-        @include devices(desktop) {
-            font-size: $xxl;
+        @include devices(tablet) {
+            font-size: $xl;
         }
     }
 

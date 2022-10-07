@@ -22,38 +22,13 @@
         padding: 0.25em;
         padding-top: 0;
 
-        font-size: $m;
+        font-size: $s;
         font-weight: 300;
 
         text-align: center;
 
         @include devices(desktop) {
             font-size: $l;
-        }
-    }
-
-    .price {
-        color: $accent;
-
-        @include flex-center;
-
-        &__full {
-            font-size: $xxxxl;
-            line-height: 100%;
-        }
-
-        &__rest-wrapper {
-            @include flex-center;
-            flex-direction: column;
-        }
-
-        &__rest,
-        &__currency {
-            font-size: $l;
-
-            @include devices(desktop) {
-                font-size: $m;
-            }
         }
     }
 
@@ -69,6 +44,35 @@
 
         @include devices(desktop) {
             font-size: $xs;
+        }
+    }
+}
+
+.price {
+    color: $accent;
+
+    @include flex-center;
+
+    &__full {
+        font-size: $xxxl;
+        line-height: 100%;
+
+        @include devices(tablet) {
+            font-size: $xxxxl;
+        }
+    }
+
+    &__rest-wrapper {
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__rest,
+    &__currency {
+        font-size: $s;
+
+        @include devices(tablet) {
+            font-size: $m;
         }
     }
 }
