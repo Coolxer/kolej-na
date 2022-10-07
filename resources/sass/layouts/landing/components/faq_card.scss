@@ -29,20 +29,20 @@
     }
 
     &__question {
-        font-size: $s;
+        font-size: $xs;
         color: $dominant;
 
-        @include devices(desktop) {
-            font-size: $m;
+        @include devices(tablet) {
+            font-size: $s;
         }
     }
 
     &__answer {
-        font-size: $xs;
+        font-size: $xxs;
         color: $secondary;
 
-        @include devices(desktop) {
-            font-size: $s;
+        @include devices(tablet) {
+            font-size: $xs;
         }
     }
 }

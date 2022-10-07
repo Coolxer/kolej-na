@@ -41,23 +41,31 @@
     }
 
     &__heading {
-        font-size: $xxxxl;
+        font-size: $xxl;
         line-height: 100%;
 
         color: $dominant;
 
+        @include devices(tablet) {
+            font-size: $xxxl;
+        }
+
         @include devices(desktop) {
-            font-size: $xxxxxl;
+            font-size: $xxxxl;
         }
     }
 
     &__description {
         width: 100%;
 
-        margin-top: 1.2em;
+        margin: 5vh 0;
 
-        font-size: $xs;
+        font-size: $xxs;
         text-align: center;
+
+        @include devices(tablet) {
+            font-size: $xs;
+        }
 
         @include devices(desktop) {
             font-size: $s;
@@ -66,7 +74,7 @@
 
     &__services-list {
         width: 100%;
-        margin-top: 20px;
+        margin-bottom: 5vh;
 
         @include flex-center;
     }
@@ -80,8 +88,12 @@
 
         @include flex-center;
 
-        font-size: 30rem;
+        font-size: 25rem;
         opacity: 0.1;
+
+        @include devices(tablet) {
+            font-size: 30rem;
+        }
 
         @include devices(laptop) {
             position: static;
@@ -103,10 +115,18 @@
     @include flex-center;
     flex-direction: column;
 
-    padding: 1.2em 2em;
+    padding: 0em 1.5em;
+
+    @include devices(tablet) {
+        padding: 1.2em 2em;
+    }
 
     &__icon {
         font-size: $xxl;
+
+        @include devices(tablet) {
+            font-size: $xxxl;
+        }
 
         @include devices(desktop) {
             font-size: $xxxl;
@@ -114,7 +134,11 @@
     }
 
     &__name {
-        font-size: $xs;
+        font-size: $xxs;
+
+        @include devices(tablet) {
+            font-size: $xs;
+        }
 
         @include devices(desktop) {
             font-size: $s;

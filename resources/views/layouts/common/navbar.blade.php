@@ -9,7 +9,7 @@ $menuItems = ['Opis', 'Cennik', 'FAQ', 'Kontakt', 'Logowanie', 'Rejestracja'];
 <header class="navbar">
     <x-logo />
     <nav class="navbar__nav">
-        <h1 class="navbar__heading">KOLEJ <br \> -NA ...</h1>
+        <h1 class="navbar__heading">KOLEJ - NA</h1>
 
         <menu class="menu">
             @foreach ($menuItems as $item)

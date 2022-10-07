@@ -25,5 +25,11 @@
         & > .article {
             order: 2;
         }
+
+        & > .section__image {
+            @include devices(laptop) {
+                width: 70%;
+            }
+        }
     }
 }
