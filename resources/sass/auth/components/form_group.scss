@@ -1,0 +1,43 @@
+@import '../../partials/partials';
+
+.form-group {
+    width: 100%;
+
+    @include flex-center;
+    flex-direction: column;
+
+    padding: 10px;
+
+    &__label {
+        font-size: $xs;
+    }
+
+    &__input {
+        padding: 10px;
+
+        border: 3px solid $secondary;
+        border-radius: 25px;
+
+        outline: none;
+
+        font-size: $xxxs;
+        text-align: center;
+
+        box-shadow: $shadow-md;
+
+        &:focus-visible {
+            border-color: $accent;
+            box-shadow: none;
+        }
+
+        &:checked {
+            color: $accent;
+        }
+    }
+
+    &__errors-list {
+    }
+
+    &__error {
+    }
+}

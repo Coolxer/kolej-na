@@ -5,7 +5,7 @@ $id = 'contact';
 $title = 'Kontakt';
 @endphp
 
-<x-section :id="$id" :title="$title" imageOnRight className="contact">
+<x-section :id="$id" :title="$title" imageOnRight class="contact">
     <x-slot:content>
         <h3 class="contact__question">Masz inne pytania?</h3>
 
@@ -24,7 +24,7 @@ $title = 'Kontakt';
                     placeholder="Twoja wiadomość. Czekamy na nią!"
                     class="form__input @error('message') is-invalid @else is-valid @enderror"></textarea>
 
-                <x-button className="form__send-btn">
+                <x-button class="form__send-btn">
                     <input type="submit" value="Wyślij" />
                     <i class="fa-solid fa-paper-plane"></i>
                 </x-button>

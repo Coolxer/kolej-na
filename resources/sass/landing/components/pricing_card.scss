@@ -32,6 +32,31 @@
         }
     }
 
+    .price {
+        color: $accent;
+
+        @include flex-center;
+
+        &__full {
+            font-size: $xxxxl;
+            line-height: 100%;
+        }
+
+        &__rest-wrapper {
+            @include flex-center;
+            flex-direction: column;
+        }
+
+        &__rest,
+        &__currency {
+            font-size: $l;
+
+            @include devices(desktop) {
+                font-size: $m;
+            }
+        }
+    }
+
     &__properties-list {
         @include flex-center;
         flex-direction: column;
@@ -44,31 +69,6 @@
 
         @include devices(desktop) {
             font-size: $xs;
-        }
-    }
-}
-
-.price {
-    color: $accent;
-
-    @include flex-center;
-
-    &__full {
-        font-size: $xxxxl;
-        line-height: 100%;
-    }
-
-    &__rest-wrapper {
-        @include flex-center;
-        flex-direction: column;
-    }
-
-    &__rest,
-    &__currency {
-        font-size: $l;
-
-        @include devices(desktop) {
-            font-size: $m;
         }
     }
 }

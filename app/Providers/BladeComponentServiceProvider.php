@@ -25,15 +25,15 @@ class BladeComponentServiceProvider extends ServiceProvider
     public function boot()
     {
         // Common things
+        Blade::component('common.components.logo', 'logo');
+        Blade::component('common.components.button', 'button');
         Blade::component('common.components.copyright', 'copyright');
         Blade::component('common.layout', 'layout');
 
         // ################   LANDING   ################ //
 
         // Widely used in landing components
-        Blade::component('landing.components.logo', 'logo');
         Blade::component('landing.components.article', 'article');
-        Blade::component('landing.components.button', 'button');
         Blade::component('landing.components.pricing_card', 'pricing-card');
         Blade::component('landing.components.faq_card', 'faq-card');
         Blade::component('landing.components.section', 'section');
@@ -54,6 +54,8 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('landing.landing', 'landing');
 
         // ################   AUTH   ################ //
+
+        Blade::component('auth.components.form_group', 'form-group');
 
         Blade::component('auth.confirm_password', 'confirm-password');
         Blade::component('auth.forgot_password', 'forgot-password');

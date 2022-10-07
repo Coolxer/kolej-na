@@ -14,8 +14,7 @@ $others = '... i wiele innych sytuacji, gdzie występuje problem oczekiwania z
 powodów deficytowych lub długotrwałego procesu realizacji.';
 @endphp
 
-<x-section :id="$id" :title="$title" imageOnRight
-    className="use-cases">
+<x-section :id="$id" :title="$title" imageOnRight class="use-cases">
     <x-slot:content>
         <x-article :sentences="$sentences" :textCenter="true" />
 

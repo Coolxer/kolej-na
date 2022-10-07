@@ -1,13 +1,14 @@
 @vite('resources/sass/landing/components/section.scss')
 
-@props(['id', 'title' => '', 'theme' => 'light', 'imageOnRight' => false, 'className' => ''])
+@props(['id', 'title' => '', 'theme' => 'light', 'imageOnRight' => false])
 
 {{-- full width container (provides full background color on big devices) --}}
-<section id={{ $id }} @class([
-    'section {{ $className }}',
-    'section--dark' => $theme === 'dark',
-    'section--color' => $theme === 'color',
-])>
+<section id={{ $id }}
+    {{ $attributes->class([
+        'section',
+        'section--dark' => $theme === 'dark',
+        'section--color' => $theme === 'color',
+    ]) }}>
     {{-- container limited to 1280px (max-width) --}}
     <div class="section__container">
         {{-- main section content including header and article / cards / info, etc. --}}

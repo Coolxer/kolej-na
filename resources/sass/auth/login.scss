@@ -1,0 +1,54 @@
+@import '../partials/partials';
+
+.login {
+    width: 100%;
+
+    @include flex-center;
+    flex-direction: column;
+
+    &__logo {
+        width: 50%;
+        margin: 1em;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .form {
+        @include flex-center;
+        flex-direction: column;
+
+        width: 100%;
+
+        &__legend {
+            margin-bottom: 1em;
+
+            font-size: $s;
+            text-align: center;
+        }
+
+        &__remember-me {
+            flex-direction: row;
+
+            gap: 10%;
+
+            .form-group__label {
+                font-size: $xxs;
+            }
+        }
+
+        &__forgot-password {
+            color: $accent;
+
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: 5px;
+            }
+        }
+
+        &__btn {
+            width: 80%;
+        }
+    }
+}

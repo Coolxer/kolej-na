@@ -1,65 +1,51 @@
-{{-- <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo
-                    class="h-20 w-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@vite('resources/sass/auth/login.scss')
+
+<x-layout>
+    <div class="login">
+        <x-logo dark class="login__logo" />
 
         <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+        {{-- <x-auth-session-status class="mb-4" :status="session('status')" /> --}}
 
-        <form method="POST" action="{{ route('login') }}">
+        <form class="form" method="POST" action="{{ route('login') }}">
             @csrf
 
+            {{ count($errors) }}
+
+            <legend class="form__legend">Logowanie</legend>
+
+            {{-- -
+                :messages="$errors->get('email')"
+                :messages="$errors->get('password')"
+            --}}
+
             <!-- Email Address -->
-            <div>
-                <x-input-label for="email" :value="__('Email')" />
-
-                <x-text-input id="email" class="mt-1 block w-full"
-                    type="email" name="email" :value="old('email')" required
-                    autofocus />
-
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
-            </div>
+            <x-form-group id="email" label="Email" type="email"
+                :value="old('email')" required autofocus :errors="$errors->get('email')" />
 
             <!-- Password -->
-            <div class="mt-4">
-                <x-input-label for="password" :value="__('Password')" />
-
-                <x-text-input id="password" class="mt-1 block w-full"
-                    type="password" name="password" required
-                    autocomplete="current-password" />
-
-                <x-input-error :messages="$errors->get('password')" class="mt-2" />
-            </div>
+            <x-form-group id="password" label="Hasło" type="password"
+                :value="old('email')" required autocomplete="current-password" />
 
             <!-- Remember Me -->
-            <div class="mt-4 block">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox"
-                        class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                        name="remember">
-                    <span
-                        class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+            <x-form-group id="remember" label="Zapamiętaj mnie" type="checkbox"
+                class="form__remember-me" />
 
-            <div class="mt-4 flex items-center justify-end">
-                @if (Route::has('password.request'))
-                    <a class="text-sm text-gray-600 underline hover:text-gray-900"
-                        href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
+            <!-- Forgot Password ? -->
+            @if (Route::has('password.request'))
+                <a class="form__forgot-password"
+                    href="{{ route('password.request') }}">
+                    Zapomniałem hasła
+                </a>
+            @endif
 
-                <x-primary-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-primary-button>
-            </div>
+            <!-- Submit button -->
+            <x-button class="form__btn">
+                <input type="submit" value="Zaloguj" />
+            </x-button>
         </form>
-    </x-auth-card>
-</x-guest-layout> --}}
 
-LOGOWANIE
+        <x-copyright />
+
+    </div>
+</x-layout>
