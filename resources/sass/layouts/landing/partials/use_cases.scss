@@ -9,12 +9,16 @@
         padding-top: 0;
         flex: 1;
 
-        font-size: $xxs;
+        font-size: $xxxs;
         font-style: italic;
         text-align: justify;
 
         opacity: 0.75;
         order: 3;
+
+        @include devices(tablet) {
+            font-size: $xxs;
+        }
 
         @include devices(desktop) {
             font-size: $xs;

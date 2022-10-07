@@ -63,7 +63,7 @@
         font-size: $xxs;
         text-align: center;
 
-        @include devices(laptop) {
+        @include devices(tablet) {
             font-size: $xs;
         }
 
