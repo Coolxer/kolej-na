@@ -10,6 +10,16 @@
         <form class="form" method="POST" action="{{ route('login') }}">
             @csrf
 
+            @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
             {{ count($errors) }}
 
             <legend class="form__legend">Logowanie</legend>
