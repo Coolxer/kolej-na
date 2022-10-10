@@ -28,10 +28,10 @@ class AuthenticatedSessionController extends Controller
      */
     public function store(LoginRequest $request)
     {
-        $request->validate([
-            'email' => ['required', 'string', 'email', 'max:255'],
-            //'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        ]);
+        // $request->validate([
+        //     'email' => ['required', 'string', 'email', 'max:255'],
+        //     //'password' => ['required', 'confirmed', Rules\Password::defaults()],
+        // ]);
 
         $request->authenticate();
 
