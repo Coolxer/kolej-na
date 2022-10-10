@@ -27,7 +27,7 @@ return [
     |
     */
 
-    'env' => env('APP_ENV', 'production'),
+    'env' => env('APP_ENV', 'local'),
 
     /*
     |--------------------------------------------------------------------------
@@ -68,7 +68,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Warsaw',
 
     /*
     |--------------------------------------------------------------------------
@@ -81,7 +81,6 @@ return [
     |
     */
 
-    //'locale' => 'en',
     'locale' => 'pl',
 
     /*
@@ -95,8 +94,7 @@ return [
     |
     */
 
-    // 'fallback_locale' => 'en',
-    'fallback_locale' => 'pl',
+    'fallback_locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -195,6 +193,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         App\Providers\BladeComponentServiceProvider::class,
+
+        Arcanedev\LaravelLang\LaravelLangServiceProvider::class,
     ],
 
     /*
