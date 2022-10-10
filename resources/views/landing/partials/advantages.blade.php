@@ -3,7 +3,7 @@
 @php
 $id = 'advantages';
 
-$sellerAdvantages = [
+$dealerAdvantages = [
     'Większa kontrola nad listą i biznesem',
     'Sprawne
 informowanie klientów',
@@ -12,7 +12,7 @@ informowanie klientów',
     'Oszczędność czasu',
 ];
 
-$clientAdvantages = [
+$customerAdvantages = [
     'Świadomość postępu lub jego braku',
     'Znajomość aktualnego
 statusu zamówienia',
@@ -30,19 +30,19 @@ i pieniędzy',
             <div class="advantages-wrapper__side">
                 <h2 class="section__heading">Korzyści dla sprzedawcy</h2>
                 <div class='section__image section__image--light'>
-                    <img src="{{ Vite::asset('resources/images/illustrations/seller_advantages.svg') }}"
+                    <img src="{{ Vite::asset('resources/images/illustrations/dealer_advantages.svg') }}"
                         alt="">
                 </div>
-                <x-article :sentences="$sellerAdvantages" :textCenter="true" />
+                <x-article :sentences="$dealerAdvantages" :textCenter="true" />
             </div>
 
             <div class="advantages-wrapper__side">
                 <h2 class="section__heading">Korzyści dla klientów</h2>
                 <div class='section__image section__image--light'>
-                    <img src="{{ Vite::asset('resources/images/illustrations/client_advantages.svg') }}"
+                    <img src="{{ Vite::asset('resources/images/illustrations/customer_advantages.svg') }}"
                         alt="">
                 </div>
-                <x-article :sentences="$clientAdvantages" :textCenter="true" />
+                <x-article :sentences="$customerAdvantages" :textCenter="true" />
             </div>
         </div>
     </x-slot:content>
