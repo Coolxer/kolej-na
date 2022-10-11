@@ -2,10 +2,15 @@
 
 namespace App\Models;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Database\Eloquent\Model;
 
-class Dealer extends Model
+class Dealer extends Authenticatable
 {
+    use HasApiTokens, Notifiable;
+
     /**
      * The attributes that should be hidden for serialization.
      *

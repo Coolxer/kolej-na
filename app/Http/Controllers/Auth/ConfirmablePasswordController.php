@@ -21,7 +21,7 @@ class ConfirmablePasswordController extends Controller
     }
 
     /**
-     * Confirm the user's password.
+     * Confirm the dealer's password.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return mixed
@@ -30,7 +30,7 @@ class ConfirmablePasswordController extends Controller
     {
         if (
             !Auth::guard('web')->validate([
-                'email' => $request->user()->email,
+                'email' => $request->dealer()->email,
                 'password' => $request->password,
             ])
         ) {

@@ -22,7 +22,7 @@ return new class extends Migration {
             $table->string('company', 50)->nullable();
 
             $table->string('email', 50);
-            $table->string('password', 50);
+            $table->string('password');
 
             $table
                 ->enum('subscription_type', ['basic', 'extended', 'pro'])

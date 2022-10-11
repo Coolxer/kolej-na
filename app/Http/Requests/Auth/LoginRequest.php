@@ -13,7 +13,7 @@ use Illuminate\Validation\Validator;
 class LoginRequest extends FormRequest
 {
     /**
-     * Determine if the user is authorized to make this request.
+     * Determine if the dealer is authorized to make this request.
      *
      * @return bool
      */
