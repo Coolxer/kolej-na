@@ -14,6 +14,6 @@ class DealerSeeder extends Seeder
      */
     public function run()
     {
-        Dealer::save();
+        Dealer::save(new Dealer());
     }
 }
