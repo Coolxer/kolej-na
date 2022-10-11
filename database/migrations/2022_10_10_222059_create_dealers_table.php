@@ -13,7 +13,8 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('dealers', function (Blueprint $table) {
-            $table->increments('id');
+            //$table->increments('id');
+            $table->id();
 
             // first_name + last_name OR/AND company
             $table->string('first_name')->nullable();

@@ -13,7 +13,9 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('queues', function (Blueprint $table) {
-            $table->increments('id');
+            //$table->increments('id');
+            $table->id();
+
             $table->foreignId('dealer_id');
             $table->string('name');
             $table->string('link');

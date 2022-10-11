@@ -13,7 +13,8 @@ return new class extends Migration {
     public function up()
     {
         Schema::create('customers', function (Blueprint $table) {
-            $table->increments('id');
+            //$table->increments('id');
+            $table->id();
 
             $table->foreignId('queue_id');
             $table->string('identify')->unique();
