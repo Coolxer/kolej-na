@@ -17,21 +17,16 @@ return new class extends Migration {
             $table->id();
 
             // first_name + last_name OR/AND company
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
-            $table->string('company')->nullable();
+            $table->string('first_name', 50)->nullable();
+            $table->string('last_name', 50)->nullable();
+            $table->string('company', 50)->nullable();
 
-            $table->string('email');
-            $table->string('password');
+            $table->string('email', 50);
+            $table->string('password', 50);
 
             $table
-                ->enum('subscription_type', [
-                    'none',
-                    'basic',
-                    'extended',
-                    'pro',
-                ])
-                ->default('none');
+                ->enum('subscription_type', ['basic', 'extended', 'pro'])
+                ->nullable();
             $table->timestamp('subscription_expiring')->nullable();
 
             $table->rememberToken();
