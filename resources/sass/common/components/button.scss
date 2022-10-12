@@ -27,8 +27,6 @@
     &:hover {
         background-color: $dominant;
         color: $secondary;
-
-        cursor: pointer;
     }
 
     :first-child {
@@ -36,6 +34,11 @@
         height: 100%;
 
         padding: 0.5em;
+        text-align: center;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     i {

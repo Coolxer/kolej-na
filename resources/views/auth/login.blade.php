@@ -2,56 +2,71 @@
 
 <x-layout>
     <div class="login">
-        <x-logo dark class="login__logo" />
+        <div class="login__brand-box">
+            <x-logo class="login__logo" withBrandName />
+        </div>
 
-        <!-- Session Status -->
-        {{-- <x-auth-session-status class="mb-4" :status="session('status')" /> --}}
+        <div class="login__content">
+            <img src="{{ Vite::asset('resources/images/illustrations/login.svg') }}"
+                class="login__image" alt="">
 
-        <form class="form" method="POST" action="{{ route('login') }}">
-            @csrf
+            <form class="form" method="POST" action="{{ route('login') }}">
+                @csrf
 
-            {{ $errors }}
+                <legend class="form__legend">LOGOWANIE</legend>
 
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
+                @error('failed')
+                    <span class="login--failed">{{ $message }}</span>
+                @enderror
+
+                {{--  Email --}}
+                <x-form-group id="email" label="Email" :value="old('email')"
+                    :errors="$errors->get('email')">
+                    <x-slot:icon>
+                        <i class="fa-solid fa-at"></i>
+                    </x-slot:icon>
+
+                </x-form-group>
+
+                {{-- Password  --}}
+                <x-form-group id="password" label="Hasło" type="password"
+                    :value="old('email')" autocomplete="current-password"
+                    :errors="$errors->get('password')">
+                    <x-slot:icon>
+                        <i class="fa-solid fa-lock"></i>
+                    </x-slot:icon>
+                </x-form-group>
+
+                <div class="form__forgot-remember">
+
+                    {{-- Forgot Password ? --}}
+                    @if (Route::has('password.request'))
+                        <a class="form__forgot-password"
+                            href="{{ route('password.request') }}">
+                            Przypomnij hasło
+                        </a>
+                    @endif
+
+                    {{-- Remember me --}}
+                    <x-form-group id="remember" label="Zapamiętaj"
+                        type="checkbox" class="form__remember-me"
+                        :errors="[]" />
+
                 </div>
-            @endif
 
-            <legend class="form__legend">Logowanie</legend>
+                {{-- Submit button --}}
+                <x-button>
+                    <input type="submit" value="Zaloguj" />
+                    <i class="fa-solid fa-right-to-bracket"></i>
+                </x-button>
 
-            <!-- Email Address -->
-            <x-form-group id="email" label="Email" type="email"
-                :value="old('email')" autofocus :errors="$errors->get('email')" />
-
-            <!-- Password -->
-            <x-form-group id="password" label="Hasło" type="password"
-                :value="old('email')" autocomplete="current-password"
-                :errors="$errors->get('password')" />
-
-            <!-- Remember Me -->
-            <x-form-group id="remember" label="Zapamiętaj mnie" type="checkbox"
-                class="form__remember-me" />
-
-            <!-- Forgot Password ? -->
-            @if (Route::has('password.request'))
-                <a class="form__forgot-password"
-                    href="{{ route('password.request') }}">
-                    Zapomniałem hasła
-                </a>
-            @endif
-
-            <!-- Submit button -->
-            <x-button class="form__btn">
-                <input type="submit" value="Zaloguj" />
-            </x-button>
-        </form>
+                <a href="/rejestracja" class="form__registration-link">
+                    Nie mam konta!</a>
+            </form>
+        </div>
 
         <x-copyright />
 
     </div>
+
 </x-layout>

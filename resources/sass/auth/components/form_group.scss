@@ -2,30 +2,53 @@
 
 .form-group {
     width: 100%;
+    margin-bottom: 20px;
 
     @include flex-center;
     flex-direction: column;
 
-    padding: 10px;
-
     &__label {
-        font-size: $xs;
+        padding-bottom: 5px;
+
+        font-size: $xxs;
+    }
+
+    &__row {
+        position: relative;
+
+        width: 100%;
+        @include flex-center;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 0;
+        margin-left: 15px;
+
+        font-size: $s;
     }
 
     &__input {
+        width: 100%;
         padding: 10px;
 
+        outline: none;
         border: 3px solid $secondary;
         border-radius: 25px;
-
-        outline: none;
 
         font-size: $xxxs;
         text-align: center;
 
         box-shadow: $shadow-md;
 
+        &:hover {
+            cursor: pointer;
+            border-color: $accent;
+            box-shadow: none;
+        }
+
         &:focus-visible {
+            background-color: $accent;
             border-color: $accent;
             box-shadow: none;
         }
@@ -33,11 +56,24 @@
         &:checked {
             color: $accent;
         }
+
+        &--checkbox {
+            width: auto;
+        }
+
+        &--error {
+            border-color: red;
+        }
     }
 
     &__errors-list {
+        margin-top: 5px;
+
+        @include flex-center;
+        flex-direction: column;
     }
 
     &__error {
+        color: red;
     }
 }

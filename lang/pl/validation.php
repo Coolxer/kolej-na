@@ -151,5 +151,15 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'email' => [
+            'required' => 'Musimy znać Twój adres e-mail!',
+            'email' => 'Niepoprawny adres e-mail!',
+        ],
+        'password' => [
+            'required' => 'Musisz podać swoje hasło!',
+        ],
+    ],
+    'attributes' => [
+        'password' => 'hasło',
     ],
 ];
