@@ -7,17 +7,6 @@
         color: red;
     }
 
-    &__image {
-        display: none;
-
-        width: 35%;
-        padding: 2em;
-
-        @include devices(laptop) {
-            @include flex-center;
-        }
-    }
-
     .login-form {
         &__forgot-remember {
             width: 100%;

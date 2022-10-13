@@ -1,16 +1,6 @@
 {{-- <x-guest-layout>
     <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo
-                    class="h-20 w-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
-
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
-        </div>
-
+       
         <!-- Session Status -->
         <x-auth-session-status class="mb-4" :status="session('status')" />
 
@@ -36,3 +26,40 @@
         </form>
     </x-auth-card>
 </x-guest-layout> --}}
+
+{{-- ###################################################################### --}}
+
+<x-auth-layout>
+    <x-slot:image>
+        <img src="{{ Vite::asset('resources/images/illustrations/forgot_password.svg') }}"
+            alt="">
+    </x-slot:image>
+
+    <x-slot:form>
+        <x-form action="{{ route('login') }}" title="PRZYPOMINANIE HASŁA">
+
+            <p style="text-align: justify; margin-bottom: 20px;">Jeśli
+                zapomniałeś
+                hasła - nie
+                przejmuj się. Podaj swojego
+                e-maila, a wyślemy ci link do zresetowania hasła.</p>
+
+            {{--  Email --}}
+            <x-form-group id="email" label="Email" :value="old('email')"
+                :errors="$errors->get('email')">
+                <x-slot:icon>
+                    <i class="fa-solid fa-at"></i>
+                </x-slot:icon>
+            </x-form-group>
+
+            {{-- Submit button --}}
+            <x-button>
+                <input type="submit" value="Resetuj hasło" />
+                <i class="fa-solid fa-key"></i>
+
+            </x-button>
+
+        </x-form>
+    </x-slot:form>
+
+</x-auth-layout>

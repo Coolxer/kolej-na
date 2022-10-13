@@ -1,5 +1,7 @@
 @vite('resources/sass/auth/_layout.scss')
 
+@props(['image' => null, 'form' => null])
+
 <x-layout>
     <div {{ $attributes->merge(['class' => 'auth']) }}>
 
@@ -8,6 +10,13 @@
         </div>
 
         <div class="auth__content">
+
+            <div class="auth__image">
+                {{ $image }}
+            </div>
+
+            {{ $form }}
+
             {{ $slot }}
         </div>
 

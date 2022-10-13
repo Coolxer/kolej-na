@@ -34,4 +34,15 @@
 
         @include flex-center;
     }
+
+    &__image {
+        display: none;
+
+        width: 35%;
+        padding: 2em;
+
+        @include devices(laptop) {
+            @include flex-center;
+        }
+    }
 }
