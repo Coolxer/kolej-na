@@ -1,35 +1,34 @@
-{{-- <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo
-                    class="h-20 w-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<x-auth-layout>
+    <x-slot:image>
+        <img src="{{ Vite::asset('resources/images/illustrations/forgot_password.svg') }}"
+            alt="">
+    </x-slot:image>
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('This is a secure area of the application. Please confirm your password before continuing.') }}
-        </div>
+    <x-slot:form>
+        <x-form action="{{ route('password.confirm') }}"
+            title="POTWIERDZANIE HASŁA">
 
-        <form method="POST" action="{{ route('password.confirm') }}">
-            @csrf
+            <p style="text-align: justify; margin-bottom: 20px;">Jeśli
+                To jest bezpieczny obszar aplikacji. Potwierdź hasło, zanim
+                przejdziesz dalej.
+            </p>
 
-            <!-- Password -->
-            <div>
-                <x-input-label for="password" :value="__('Password')" />
+            {{-- Password  --}}
+            <x-form-group id="password" label="Hasło" type="password"
+                autocomplete="current-password" :errors="$errors->get('password')">
+                <x-slot:icon>
+                    <i class="fa-solid fa-lock"></i>
+                </x-slot:icon>
+            </x-form-group>
 
-                <x-text-input id="password" class="mt-1 block w-full"
-                    type="password" name="password" required
-                    autocomplete="current-password" />
+            {{-- Submit button --}}
+            <x-button>
+                <input type="submit" value="Potwierdź hasło" />
+                <i class="fa-solid fa-key"></i>
 
-                <x-input-error :messages="$errors->get('password')" class="mt-2" />
-            </div>
+            </x-button>
 
-            <div class="mt-4 flex justify-end">
-                <x-primary-button>
-                    {{ __('Confirm') }}
-                </x-primary-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout> --}}
+        </x-form>
+    </x-slot:form>
+
+</x-auth-layout>

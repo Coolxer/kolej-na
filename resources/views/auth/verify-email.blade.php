@@ -1,41 +1,42 @@
-{{-- <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo
-                    class="h-20 w-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<x-auth-layout>
+    <x-slot:image>
+        <img src="{{ Vite::asset('resources/images/illustrations/verify_email.svg') }}"
+            alt="">
+    </x-slot:image>
 
-        <div class="mb-4 text-sm text-gray-600">
-            {{ __('Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.') }}
-        </div>
+    <x-slot:form>
+        <x-form action="{{ route('verification.send') }}"
+            title="WERYFIKACJA EMAIL">
 
-        @if (session('status') == 'verification-link-sent')
-            <div class="mb-4 text-sm font-medium text-green-600">
-                {{ __('A new verification link has been sent to the email address you provided during registration.') }}
-            </div>
-        @endif
+            <p style="text-align: justify; margin-bottom: 20px;">Dziękujęmy za
+                rejestrację! Zanim rozpoczniesz, proszę zweryfikuj adres email,
+                klikając w link w wiadomości, którą do Ciebie wysłaliśmy.
+            </p>
 
-        <div class="mt-4 flex items-center justify-between">
-            <form method="POST" action="{{ route('verification.send') }}">
-                @csrf
+            <p style="text-align: justify; margin-bottom: 20px;">Jeśli nie
+                dostałeś wiadomości, to wyślemy ją ponownie. Kliknij przycisk
+                "Wyślij ponownie"
+            </p>
 
-                <div>
-                    <x-primary-button>
-                        {{ __('Resend Verification Email') }}
-                    </x-primary-button>
-                </div>
-            </form>
+            @if (session('status') == 'verification-link-sent')
+                <p>Link aktywacyjny został wysłany na twojego email'a.</p>
+            @endif
 
-            <form method="POST" action="{{ route('logout') }}">
-                @csrf
+            {{-- Submit button --}}
+            <x-button>
+                <input type="submit" value="Wyślj ponownie" />
+                <i class="fa-solid fa-paper-plane"></i>
+            </x-button>
+        </x-form>
 
-                <button type="submit"
-                    class="text-sm text-gray-600 underline hover:text-gray-900">
-                    {{ __('Log Out') }}
-                </button>
-            </form>
-        </div>
-    </x-auth-card>
-</x-guest-layout> --}}
+        <x-form action="{{ route('logout') }}" title="">
+
+            {{-- Submit button --}}
+            <x-button>
+                <input type="submit" value="Wyloguj" />
+                <i class="fa-solid fa-power-off"></i>
+            </x-button>
+        </x-form>
+    </x-slot:form>
+
+</x-auth-layout>

@@ -1,56 +1,48 @@
-{{-- <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo
-                    class="h-20 w-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<x-auth-layout>
+    <x-slot:image>
+        <img src="{{ Vite::asset('resources/images/illustrations/forgot_password.svg') }}"
+            alt="">
+    </x-slot:image>
 
-        <form method="POST" action="{{ route('password.update') }}">
-            @csrf
+    <x-slot:form>
+        <x-form action="{{ route('password.update') }}" title="RESETOWANIE HASŁA">
 
-            <!-- Password Reset Token -->
+            {{--   Password Reset Token --}}
             <input type="hidden" name="token"
                 value="{{ $request->route('token') }}">
 
-            <!-- Email Address -->
-            <div>
-                <x-input-label for="email" :value="__('Email')" />
+            {{--  Email --}}
+            <x-form-group id="email" label="Email" ::value="old('email', $request - > email)"
+                autofocus :errors="$errors->get('email')">
+                <x-slot:icon>
+                    <i class="fa-solid fa-at"></i>
+                </x-slot:icon>
+            </x-form-group>
 
-                <x-text-input id="email" class="mt-1 block w-full"
-                    type="email" name="email" :value="old('email', $request->email)" required
-                    autofocus />
+            {{-- Password  --}}
+            <x-form-group id="password" label="Hasło" type="password"
+                :errors="$errors->get('password')">
+                <x-slot:icon>
+                    <i class="fa-solid fa-lock"></i>
+                </x-slot:icon>
+            </x-form-group>
 
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
-            </div>
+            {{-- Confirm Password  --}}
+            <x-form-group id="password_confirmation" label="Potwierdzenie hasła"
+                type="password" :errors="$errors->get('password_confirmation')">
+                <x-slot:icon>
+                    <i class="fa-solid fa-lock"></i>
+                </x-slot:icon>
+            </x-form-group>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-input-label for="password" :value="__('Password')" />
+            {{-- Submit button --}}
+            <x-button>
+                <input type="submit" value="Resetuj hasło" />
+                <i class="fa-solid fa-key"></i>
 
-                <x-text-input id="password" class="mt-1 block w-full"
-                    type="password" name="password" required />
+            </x-button>
 
-                <x-input-error :messages="$errors->get('password')" class="mt-2" />
-            </div>
+        </x-form>
+    </x-slot:form>
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
-
-                <x-text-input id="password_confirmation"
-                    class="mt-1 block w-full" type="password"
-                    name="password_confirmation" required />
-
-                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-            </div>
-
-            <div class="mt-4 flex items-center justify-end">
-                <x-primary-button>
-                    {{ __('Reset Password') }}
-                </x-primary-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout> --}}
+</x-auth-layout>
