@@ -1,0 +1,25 @@
+@import '../../partials/partials';
+
+.auth-form {
+    width: 80%;
+
+    @include flex-center;
+    flex-direction: column;
+
+    @include devices(tablet) {
+        width: 50%;
+    }
+
+    @include devices(laptop) {
+        width: 35%;
+    }
+
+    &__legend {
+        margin-bottom: 20px;
+
+        font-size: $m;
+        font-weight: 300;
+        color: $secondary;
+        text-align: center;
+    }
+}
