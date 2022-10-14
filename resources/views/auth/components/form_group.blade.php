@@ -2,17 +2,11 @@
 
 @props(['id', 'label', 'icon' => null, 'type' => 'text', 'disabled' => false, 'errors' => []])
 
-<div {{ $attributes->class(['form-group ']) }}">
+<div {{ $attributes->merge(['class' => 'form-group']) }}">
     <label class="form-group__label"
         for="{{ $id }}">{{ $label }}</label>
 
     <div class="form-group__row">
-
-        @if ($icon)
-            <div class="form-group__icon">
-                {{ $icon }}
-            </div>
-        @endif
 
         <input @class([
             'form-group__input',
@@ -21,6 +15,12 @@
         ]) id="{{ $id }}"
             type="{{ $type }}" name="{{ $id }}"
             {{ $disabled ? 'disabled' : '' }} {{ $attributes }} />
+
+        @if ($icon)
+            <div class="form-group__icon">
+                {{ $icon }}
+            </div>
+        @endif
 
     </div>
 

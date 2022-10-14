@@ -11,12 +11,11 @@
     @include flex-center;
 
     font-size: $xxs;
+    border-radius: 25px;
+    box-shadow: $shadow-xl;
 
     background-color: $accent;
     color: $secondary;
-
-    border-radius: 25px;
-    box-shadow: $shadow-xl;
 
     transition: background-color 0.25s, color 0.25s;
 
@@ -58,14 +57,23 @@
     &--secondary {
         background-color: $secondary;
         color: $dominant;
-
-        border: 3px solid $secondary;
     }
 
     &--big {
         @include devices(desktop) {
             padding: 0.3em;
             font-size: $s;
+        }
+    }
+
+    &--small {
+        width: auto;
+        margin: 0;
+
+        font-size: $xxxxs;
+
+        @include devices(laptop) {
+            font-size: $xxxs;
         }
     }
 }

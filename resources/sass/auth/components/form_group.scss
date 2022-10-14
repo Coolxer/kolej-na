@@ -7,6 +7,23 @@
     @include flex-center;
     flex-direction: column;
 
+    transition: color 0.25s;
+
+    &:hover {
+        .form-group {
+            &__label,
+            &__icon {
+                color: $accent;
+            }
+
+            &__input {
+                cursor: pointer;
+                border-color: $accent;
+                box-shadow: none;
+            }
+        }
+    }
+
     &__label {
         padding-bottom: 5px;
 
@@ -41,24 +58,23 @@
 
         box-shadow: $shadow-md;
 
-        &:hover {
-            cursor: pointer;
-            border-color: $accent;
-            box-shadow: none;
-        }
-
         &:focus-visible {
             background-color: $accent;
             border-color: $accent;
             box-shadow: none;
-        }
 
-        &:checked {
-            color: $accent;
+            ~ .form-group__icon {
+                color: $secondary;
+                opacity: 0.3;
+            }
         }
 
         &--checkbox {
             width: auto;
+
+            &:checked {
+                color: $accent;
+            }
         }
 
         &--error {

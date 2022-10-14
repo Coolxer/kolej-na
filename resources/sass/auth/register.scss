@@ -1,0 +1,21 @@
+@import '../partials/partials';
+
+.register {
+    &-form {
+        &__names {
+            width: 100%;
+
+            @include flex-center;
+            flex-direction: column;
+
+            @include devices(desktop) {
+                flex-direction: row;
+                gap: 20px;
+            }
+        }
+
+        &__company {
+            display: none;
+        }
+    }
+}

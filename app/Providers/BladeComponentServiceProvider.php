@@ -55,6 +55,10 @@ class BladeComponentServiceProvider extends ServiceProvider
 
         // ################   AUTH   ################ //
 
+        Blade::component(
+            'auth.components.choose_personality',
+            'choose-personality',
+        );
         Blade::component('auth.components.form_group', 'form-group');
         Blade::component('auth.components.form', 'form');
         Blade::component('auth._layout', 'auth-layout');

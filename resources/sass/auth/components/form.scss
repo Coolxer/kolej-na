@@ -22,4 +22,10 @@
         color: $secondary;
         text-align: center;
     }
+
+    &__already-done {
+        @include flex-center;
+
+        gap: 20px;
+    }
 }

@@ -23,8 +23,7 @@
 
             {{-- Password  --}}
             <x-form-group id="password" label="Hasło" type="password"
-                :value="old('email')" autocomplete="current-password"
-                :errors="$errors->get('password')">
+                autocomplete="current-password" :errors="$errors->get('password')">
                 <x-slot:icon>
                     <i class="fa-solid fa-lock"></i>
                 </x-slot:icon>
@@ -51,8 +50,13 @@
                 <i class="fa-solid fa-right-to-bracket"></i>
             </x-button>
 
-            <a href="/rejestracja" class="login-form__registration-link">
-                Nie mam konta!</a>
+            <div class="auth-form__already-done">
+                <span> Nie masz konta?</span>
+                <x-button secondary small>
+                    <a href="/rejestracja">
+                        Zarejestruj się!</a>
+                </x-button>
+            </div>
 
         </x-form>
 

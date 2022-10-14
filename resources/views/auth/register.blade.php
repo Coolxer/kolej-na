@@ -1,70 +1,119 @@
-{{-- <x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo
-                    class="h-20 w-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+@vite('resources/sass/auth/register.scss')
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
+<x-auth-layout class="register">
+    <x-slot:image>
+        <img src="{{ Vite::asset('resources/images/illustrations/register.svg') }}"
+            alt="">
+    </x-slot:image>
 
-            <!-- Name -->
-            <div>
-                <x-input-label for="name" :value="__('Name')" />
+    <x-slot:form>
+        <x-form class="register-form" action="{{ route('login') }}"
+            title="REJESTRACJA">
 
-                <x-text-input id="name" class="mt-1 block w-full"
-                    type="text" name="name" :value="old('name')" required
-                    autofocus />
+            <x-choose-personality />
 
-                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+            {{-- @error('failed')
+                <span class="login-form--failed">{{ $message }}</span>
+            @enderror --}}
+
+            <div class="register-form__names">
+
+                {{--  Imię --}}
+                <x-form-group id="first_name" label="Imię" :errors="[]">
+                    <x-slot:icon>
+                        <i class="fa-solid fa-signature"></i>
+                    </x-slot:icon>
+                </x-form-group>
+
+                {{--  Nazwisko --}}
+                <x-form-group id="last_name" label="Nazwisko" :errors="[]">
+                    <x-slot:icon>
+                        <i class="fa-solid fa-signature"></i>
+                    </x-slot:icon>
+                </x-form-group>
+
             </div>
 
-            <!-- Email Address -->
-            <div class="mt-4">
-                <x-input-label for="email" :value="__('Email')" />
+            {{--  Company --}}
+            <x-form-group class="register-form__company" id="company"
+                label="Nazwa firmy" :errors="[]">
+                <x-slot:icon>
+                    <i class="fa-regular fa-building"></i>
+                </x-slot:icon>
+            </x-form-group>
 
-                <x-text-input id="email" class="mt-1 block w-full"
-                    type="email" name="email" :value="old('email')" required />
+            {{--  Email --}}
+            <x-form-group id="email" label="Email" :value="old('email')"
+                :errors="$errors->get('email')">
+                <x-slot:icon>
+                    <i class="fa-solid fa-at"></i>
+                </x-slot:icon>
+            </x-form-group>
 
-                <x-input-error :messages="$errors->get('email')" class="mt-2" />
+            {{-- Password  --}}
+            <x-form-group id="password" label="Hasło" type="password"
+                autocomplete="new-password" :errors="$errors->get('password')">
+                <x-slot:icon>
+                    <i class="fa-solid fa-lock"></i>
+                </x-slot:icon>
+            </x-form-group>
+
+            {{-- Confirm Password  --}}
+            <x-form-group id="password_confirmation" label="Potwierdzenie hasła"
+                type="password" :errors="$errors->get('password_confirmation')">
+                <x-slot:icon>
+                    <i class="fa-solid fa-lock"></i>
+                </x-slot:icon>
+            </x-form-group>
+
+            {{-- Submit button --}}
+            <x-button>
+                <input type="submit" value="Zarejestruj" />
+                <i class="fa-solid fa-right-to-bracket"></i>
+            </x-button>
+
+            <div class="auth-form__already-done">
+                <span> Masz już konto?</span>
+                <x-button secondary small>
+                    <a href="/logowanie">
+                        Zaloguj się!</a>
+                </x-button>
             </div>
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-input-label for="password" :value="__('Password')" />
+        </x-form>
 
-                <x-text-input id="password" class="mt-1 block w-full"
-                    type="password" name="password" required
-                    autocomplete="new-password" />
+    </x-slot:form>
 
-                <x-input-error :messages="$errors->get('password')" class="mt-2" />
-            </div>
+</x-auth-layout>
 
-            <!-- Confirm Password -->
-            <div class="mt-4">
-                <x-input-label for="password_confirmation" :value="__('Confirm Password')" />
+<script>
+    const personSection = document.getElementsByClassName(
+        'register-form__names')[0];
+    const companySection = document.getElementsByClassName(
+        'register-form__company')[0];
 
-                <x-text-input id="password_confirmation"
-                    class="mt-1 block w-full" type="password"
-                    name="password_confirmation" required />
 
-                <x-input-error :messages="$errors->get('password_confirmation')" class="mt-2" />
-            </div>
+    const chooseButtons = document.getElementsByClassName(
+        'choose-personality__btn');
 
-            <div class="mt-4 flex items-center justify-end">
-                <a class="text-sm text-gray-600 underline hover:text-gray-900"
-                    href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
+    const personButton = document.getElementById(
+        'choose-personality__person-btn');
+    const companyButton = document.getElementById(
+        'choose-personality__company-btn');
 
-                <x-primary-button class="ml-4">
-                    {{ __('Register') }}
-                </x-primary-button>
-            </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout> --}}
+    function amPerson() {
+        personSection.style.display = 'flex';
+        companySection.style.display = 'none';
 
-REJESTRACJA
+        personButton.classList.add('choose-personality__btn--selected');
+        companyButton.classList.remove('choose-personality__btn--selected');
+    }
+
+    function amCompany() {
+        companySection.style.display = 'flex';
+        personSection.style.display = 'none';
+
+        companyButton.classList.add('choose-personality__btn--selected');
+        personButton.classList.remove('choose-personality__btn--selected');
+    }
+</script>

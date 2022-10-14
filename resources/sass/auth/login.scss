@@ -7,7 +7,7 @@
         color: red;
     }
 
-    .login-form {
+    &-form {
         &__forgot-remember {
             width: 100%;
 
@@ -34,8 +34,7 @@
             }
         }
 
-        &__forgot-password,
-        &__registration-link {
+        &__forgot-password {
             text-align: center;
 
             &:hover {
