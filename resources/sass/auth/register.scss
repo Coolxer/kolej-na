@@ -2,6 +2,10 @@
 
 .register {
     &-form {
+        &__is-company {
+            visibility: hidden;
+        }
+
         &__names {
             width: 100%;
 
@@ -15,6 +19,7 @@
         }
 
         &__company {
+            width: 100%;
             display: none;
         }
     }

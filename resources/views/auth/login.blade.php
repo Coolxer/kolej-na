@@ -15,7 +15,7 @@
 
             {{--  Email --}}
             <x-form-group id="email" label="Email" :value="old('email')"
-                :errors="$errors->get('email')">
+                maxlength="50" :errors="$errors->get('email')">
                 <x-slot:icon>
                     <i class="fa-solid fa-at"></i>
                 </x-slot:icon>
@@ -23,7 +23,8 @@
 
             {{-- Password  --}}
             <x-form-group id="password" label="Hasło" type="password"
-                autocomplete="current-password" :errors="$errors->get('password')">
+                maxlength="255" autocomplete="current-password"
+                :errors="$errors->get('password')">
                 <x-slot:icon>
                     <i class="fa-solid fa-lock"></i>
                 </x-slot:icon>

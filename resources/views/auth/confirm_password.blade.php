@@ -15,7 +15,7 @@
 
             {{-- Password  --}}
             <x-form-group id="password" label="Hasło" type="password"
-                autocomplete="current-password" :errors="$errors->get('password')">
+                maxlength="255" autocomplete="current-password" :errors="$errors->get('password')">
                 <x-slot:icon>
                     <i class="fa-solid fa-lock"></i>
                 </x-slot:icon>

@@ -33,23 +33,28 @@ class RegisteredDealerController extends Controller
      */
     public function store(Request $request)
     {
-        // $request->validate([
-        //     'name' => ['required', 'string', 'max:255'],
-        //     'email' => [
-        //         'required',
-        //         'string',
-        //         'email',
-        //         'max:255',
-        //         'unique:dealers',
-        //     ],
-        //     'password' => ['required', 'confirmed', Rules\Password::defaults()],
-        // ]);
+        $request->validate([
+            'first_name' => ['required', 'string', 'min:3', 'max:50'],
+            'last_name' => ['required', 'string', 'min:3', 'max:50'],
+            'company' => ['required', 'string', 'min:3', 'max:50'],
+            'email' => [
+                'required',
+                'string',
+                'email',
+                'max:50',
+                'unique:dealers',
+            ],
+            'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'password_confirmation' => ['required', 'same:password'],
+        ]);
 
-        // $dealer = Dealer::create([
-        //     'name' => $request->name,
-        //     'email' => $request->email,
-        //     'password' => Hash::make($request->password),
-        // ]);
+        $dealer = Dealer::create([
+            'first_name' => !$request->is_company ? $request->first_name : null,
+            'last_name' => !$request->is_company ? $request->last_name : null,
+            'company' => $request->is_company ? $request->company : null,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+        ]);
 
         event(new Registered($dealer));
 

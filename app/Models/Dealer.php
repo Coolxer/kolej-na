@@ -12,6 +12,13 @@ class Dealer extends Authenticatable
     use HasApiTokens, Notifiable;
 
     /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = ['subscription_type', 'subscription_expiring'];
+
+    /**
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>

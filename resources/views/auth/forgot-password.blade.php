@@ -18,7 +18,7 @@
 
             {{--  Email --}}
             <x-form-group id="email" label="Email" :value="old('email')"
-                autofocus :errors="$errors->get('email')">
+                maxlength="50" autofocus :errors="$errors->get('email')">
                 <x-slot:icon>
                     <i class="fa-solid fa-at"></i>
                 </x-slot:icon>

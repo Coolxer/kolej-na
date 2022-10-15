@@ -151,12 +151,30 @@ return [
         'attribute-name' => [
             'rule-name' => 'custom-message',
         ],
+        'first_name' => [
+            'required' => 'Imię jest wymagane!',
+            'min' => 'Imię musi mieć min. długość 3 znaków',
+        ],
+        'last_name' => [
+            'required' => 'Nazwisko jest wymagane!',
+            'min' => 'Nazwisko musi mieć min. długość 3 znaków',
+        ],
+        'company' => [
+            'required' => 'Nazwa firmy jest wymagana!',
+            'min' => 'Nazwa firmy musi mieć min. długość 3 znaków',
+        ],
         'email' => [
             'required' => 'Musimy znać Twój adres e-mail!',
             'email' => 'Niepoprawny adres e-mail!',
         ],
         'password' => [
             'required' => 'Musisz podać swoje hasło!',
+            'confirmed' => '',
+            'min' => 'Hasło musi mieć przynajmniej 8 znaków',
+        ],
+        'password_confirmation' => [
+            'required' => 'Potwierdzenie hasła jest wymagane!',
+            'same' => 'Potwierdzenie hasła musi się zgadzać z hasłem!',
         ],
     ],
     'attributes' => [

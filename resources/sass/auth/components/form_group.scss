@@ -43,6 +43,8 @@
         margin-left: 15px;
 
         font-size: $s;
+
+        z-index: 1;
     }
 
     &__input {
@@ -56,7 +58,10 @@
         font-size: $xxxs;
         text-align: center;
 
+        background-color: transparent;
         box-shadow: $shadow-md;
+
+        z-index: 2;
 
         &:focus-visible {
             background-color: $accent;

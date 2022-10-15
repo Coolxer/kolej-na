@@ -1,6 +1,6 @@
 @vite('resources/sass/auth/components/form_group.scss')
 
-@props(['id', 'label', 'icon' => null, 'type' => 'text', 'disabled' => false, 'errors' => []])
+@props(['id', 'label', 'icon' => null, 'type' => 'text', 'errors' => []])
 
 <div {{ $attributes->merge(['class' => 'form-group']) }}">
     <label class="form-group__label"
@@ -14,7 +14,7 @@
             'form-group__input--error' => count($errors),
         ]) id="{{ $id }}"
             type="{{ $type }}" name="{{ $id }}"
-            {{ $disabled ? 'disabled' : '' }} {{ $attributes }} />
+            {{ $attributes }} />
 
         @if ($icon)
             <div class="form-group__icon">
