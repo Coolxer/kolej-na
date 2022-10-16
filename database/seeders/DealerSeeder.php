@@ -22,7 +22,6 @@ class DealerSeeder extends Seeder
 
         $dealer->first_name = 'Łukasz';
         $dealer->last_name = 'Miłoś';
-        $dealer->company = 'Appeczka';
 
         $dealer->email = 'appeczka@gmail.com';
 

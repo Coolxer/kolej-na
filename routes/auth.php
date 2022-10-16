@@ -25,24 +25,25 @@ Route::middleware('guest')->group(function () {
 
     Route::post('logowanie', [AuthenticatedSessionController::class, 'store']);
 
-    Route::get('przypomnij-haslo', [
+    Route::get('przypominanie-hasla', [
         PasswordResetLinkController::class,
         'create',
     ])->name('password.request');
 
-    Route::post('przypomnij-haslo', [
+    Route::post('przypominanie-hasla', [
         PasswordResetLinkController::class,
         'store',
     ])->name('password.email');
 
-    Route::get('reset-hasla/{token}', [
+    Route::get('resetowanie-hasla/{token}', [
         NewPasswordController::class,
         'create',
     ])->name('password.reset');
 
-    Route::post('reset-hasla', [NewPasswordController::class, 'store'])->name(
-        'password.update',
-    );
+    Route::post('resetowanie-hasla', [
+        NewPasswordController::class,
+        'store',
+    ])->name('password.update');
 });
 
 Route::middleware('auth')->group(function () {
@@ -65,17 +66,17 @@ Route::middleware('auth')->group(function () {
         ->middleware('throttle:6,1')
         ->name('verification.send');
 
-    Route::get('potwierdz-haslo', [
+    Route::get('potwierdzanie-hasla', [
         ConfirmablePasswordController::class,
         'show',
     ])->name('password.confirm');
 
-    Route::post('potwierdz-haslo', [
+    Route::post('potwierdzanie-hasla', [
         ConfirmablePasswordController::class,
         'store',
     ]);
 
-    Route::post('wyloguj', [
+    Route::post('wylogowywanie', [
         AuthenticatedSessionController::class,
         'destroy',
     ])->name('logout');

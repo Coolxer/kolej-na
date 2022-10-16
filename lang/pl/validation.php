@@ -154,18 +154,22 @@ return [
         'first_name' => [
             'required' => 'Imię jest wymagane!',
             'min' => 'Imię musi mieć min. długość 3 znaków',
+            'max' => 'Imię może mieć max. długość 50 znaków',
         ],
         'last_name' => [
             'required' => 'Nazwisko jest wymagane!',
             'min' => 'Nazwisko musi mieć min. długość 3 znaków',
+            'max' => 'Nazwisko może mieć max. długość 50 znaków',
         ],
         'company' => [
             'required' => 'Nazwa firmy jest wymagana!',
             'min' => 'Nazwa firmy musi mieć min. długość 3 znaków',
+            'max' => 'Nazwa firmy może mieć max. długość 50 znaków',
         ],
         'email' => [
             'required' => 'Musimy znać Twój adres e-mail!',
             'email' => 'Niepoprawny adres e-mail!',
+            'max' => 'Email może mieć max. długość 50 znaków',
         ],
         'password' => [
             'required' => 'Musisz podać swoje hasło!',

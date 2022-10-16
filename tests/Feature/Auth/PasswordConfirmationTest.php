@@ -2,9 +2,10 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Models\User;
+use App\Models\Dealer;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
+use Illuminate\Http\Request;
 
 class PasswordConfirmationTest extends TestCase
 {
@@ -12,18 +13,18 @@ class PasswordConfirmationTest extends TestCase
 
     public function test_confirm_password_screen_can_be_rendered()
     {
-        $user = User::factory()->create();
+        $dealer = Dealer::factory()->create();
 
-        $response = $this->actingAs($user)->get('/confirm-password');
+        $response = $this->actingAs($dealer)->get('/potwierdzanie-hasla');
 
         $response->assertStatus(200);
     }
 
     public function test_password_can_be_confirmed()
     {
-        $user = User::factory()->create();
+        $dealer = Dealer::factory()->create();
 
-        $response = $this->actingAs($user)->post('/confirm-password', [
+        $response = $this->actingAs($dealer)->post('/potwierdzanie-hasla', [
             'password' => 'password',
         ]);
 
@@ -33,9 +34,9 @@ class PasswordConfirmationTest extends TestCase
 
     public function test_password_is_not_confirmed_with_invalid_password()
     {
-        $user = User::factory()->create();
+        $dealer = Dealer::factory()->create();
 
-        $response = $this->actingAs($user)->post('/confirm-password', [
+        $response = $this->actingAs($dealer)->post('/potwierdzanie-hasla', [
             'password' => 'wrong-password',
         ]);
 
