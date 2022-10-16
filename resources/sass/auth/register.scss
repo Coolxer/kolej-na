@@ -1,6 +1,10 @@
 @import '../partials/partials';
 
 .register {
+    .auth__image {
+        flex: 0.75;
+    }
+
     &-form {
         &__is-company {
             visibility: hidden;

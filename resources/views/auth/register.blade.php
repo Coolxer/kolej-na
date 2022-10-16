@@ -15,15 +15,11 @@
             <input class="register-form__is-company" id="is-company"
                 name="is-company" type="checkbox" hidden />
 
-            {{-- @error('failed')
-                <span class="register-form--failed">{{ $message }}</span>
-            @enderror --}}
-
             <div class="register-form__names">
 
                 {{--  Imię --}}
                 <x-form-group id="first_name" label="Imię" maxlength="50"
-                    :errors="$errors->get('first_name')">
+                    :value="old('first_name')" :errors="$errors->get('first_name')">
                     <x-slot:icon>
                         <i class="fa-solid fa-signature"></i>
                     </x-slot:icon>
@@ -31,7 +27,7 @@
 
                 {{--  Nazwisko --}}
                 <x-form-group id="last_name" label="Nazwisko" maxlength="50"
-                    :errors="$errors->get('last_name')">
+                    :value="old('last_name')" :errors="$errors->get('last_name')">
                     >
                     <x-slot:icon>
                         <i class="fa-solid fa-signature"></i>
@@ -43,7 +39,7 @@
             {{--  Company --}}
             <div class="register-form__company">
                 <x-form-group c id="company" label="Nazwa firmy"
-                    maxlength="50" :errors="$errors->get('company')">>
+                    maxlength="50" :value="old('company')" :errors="$errors->get('company')">>
                     <x-slot:icon>
                         <i class="fa-regular fa-building"></i>
                     </x-slot:icon>
@@ -89,7 +85,6 @@
             </div>
 
         </x-form>
-
     </x-slot:form>
 
 </x-auth-layout>

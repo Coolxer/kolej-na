@@ -170,6 +170,7 @@ return [
             'required' => 'Musimy znać Twój adres e-mail!',
             'email' => 'Niepoprawny adres e-mail!',
             'max' => 'Email może mieć max. długość 50 znaków',
+            'unique' => 'Już istnieje konto o tym adresie!',
         ],
         'password' => [
             'required' => 'Musisz podać swoje hasło!',

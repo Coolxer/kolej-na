@@ -10,36 +10,50 @@
     &-form {
         &__forgot-remember {
             width: 100%;
+            padding: 0 10px;
 
             @include flex-center;
             justify-content: space-between;
 
             color: $accent;
 
-            @include devices(tablet) {
+            flex-wrap: wrap;
+
+            @include devices(laptop) {
                 padding: 0 20px;
             }
         }
 
-        &__remember-me {
-            width: auto;
-            margin-bottom: 0;
-            gap: 10px;
-
-            flex-direction: row;
-
-            .form-group__label {
-                font-size: $xxxxs;
-                padding: 0;
-            }
-        }
-
         &__forgot-password {
-            text-align: center;
+            flex: 1;
+            text-align: left;
 
             &:hover {
                 text-decoration: underline;
                 text-underline-offset: 5px;
+            }
+        }
+
+        &__remember-me {
+            flex: 1;
+            margin-bottom: 0 !important;
+            gap: 10px;
+
+            justify-content: flex-end !important;
+            flex-direction: row !important;
+
+            .form-group {
+                &__label {
+                    padding: 0;
+
+                    text-align: right;
+                    font-size: $xxxxs;
+                }
+
+                &__row {
+                    width: auto;
+                    justify-content: flex-end;
+                }
             }
         }
     }
