@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
-use App\Models\Dealer;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\Rules;
 
-class RegisteredDealerController extends Controller
+class RegisteredUserController extends Controller
 {
     /**
      * Display the registration view.
@@ -42,13 +42,13 @@ class RegisteredDealerController extends Controller
                 'string',
                 'email',
                 'max:50',
-                'unique:dealers',
+                'unique:users',
             ],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'password_confirmation' => ['required', 'same:password'],
         ]);
 
-        $dealer = Dealer::create([
+        $user = User::create([
             'first_name' => !$request->is_company ? $request->first_name : null,
             'last_name' => !$request->is_company ? $request->last_name : null,
             'company' => $request->is_company ? $request->company : null,
@@ -56,9 +56,9 @@ class RegisteredDealerController extends Controller
             'password' => Hash::make($request->password),
         ]);
 
-        event(new Registered($dealer));
+        event(new Registered($user));
 
-        Auth::login($dealer);
+        Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
     }

@@ -13,7 +13,7 @@ class RouteServiceProvider extends ServiceProvider
     /**
      * The path to the "home" route for your application.
      *
-     * Typically, dealers are redirected here after authentication.
+     * Typically, users are redirected here after authentication.
      *
      * @var string
      */
@@ -46,7 +46,7 @@ class RouteServiceProvider extends ServiceProvider
     {
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by(
-                $request->dealer()?->id ?: $request->ip(),
+                $request->user()?->id ?: $request->ip(),
             );
         });
     }

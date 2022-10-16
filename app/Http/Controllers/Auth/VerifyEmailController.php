@@ -10,21 +10,21 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 class VerifyEmailController extends Controller
 {
     /**
-     * Mark the authenticated dealer's email address as verified.
+     * Mark the authenticated user's email address as verified.
      *
      * @param  \Illuminate\Foundation\Auth\EmailVerificationRequest  $request
      * @return \Illuminate\Http\RedirectResponse
      */
     public function __invoke(EmailVerificationRequest $request)
     {
-        if ($request->dealer()->hasVerifiedEmail()) {
+        if ($request->user()->hasVerifiedEmail()) {
             return redirect()->intended(
                 RouteServiceProvider::HOME . '?verified=1',
             );
         }
 
-        if ($request->dealer()->markEmailAsVerified()) {
-            event(new Verified($request->dealer()));
+        if ($request->user()->markEmailAsVerified()) {
+            event(new Verified($request->user()));
         }
 
         return redirect()->intended(RouteServiceProvider::HOME . '?verified=1');

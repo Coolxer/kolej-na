@@ -1,8 +1,7 @@
 @import '../../partials/partials';
 
 .auth-form {
-    width: 80%;
-
+    //width: 100%;
     @include flex-center;
     flex-direction: column;
 

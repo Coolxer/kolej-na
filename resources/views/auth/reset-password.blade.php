@@ -6,7 +6,6 @@
 
     <x-slot:form>
         <x-form action="{{ route('password.update') }}" title="RESETOWANIE HASŁA">
-
             {{--   Password Reset Token --}}
             <input type="hidden" name="token"
                 value="{{ $request->route('token') }}">

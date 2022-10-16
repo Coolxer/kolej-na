@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Queue extends Model
 {
     /**
-     * Get the dealer that owns the queue.
+     * Get the user that owns the queue.
      */
-    public function dealer()
+    public function user()
     {
-        return $this->belongsTo(Dealer::class);
+        return $this->belongsTo(User::class);
     }
 
     /**

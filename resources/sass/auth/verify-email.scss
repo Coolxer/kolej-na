@@ -1,0 +1,10 @@
+@import '../partials/partials';
+
+.verify-email {
+    @include flex-center;
+    flex-direction: column;
+
+    &__logout-btn {
+        margin-top: 0 !important;
+    }
+}

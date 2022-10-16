@@ -10,7 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Dealer extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;
 
@@ -38,7 +38,7 @@ class Dealer extends Authenticatable implements MustVerifyEmail
     ];
 
     /**
-     * Get the queues for the dealer.
+     * Get the queues for the user.
      */
     public function queues()
     {

@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Models\Dealer;
+use App\Models\User;
 use Illuminate\Auth\Notifications\ResetPassword;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\Notification;
@@ -23,22 +23,22 @@ class PasswordResetTest extends TestCase
     {
         Notification::fake();
 
-        $dealer = Dealer::factory()->create();
+        $user = User::factory()->create();
 
-        $this->post('/przypominanie-hasla', ['email' => $dealer->email]);
+        $this->post('/przypominanie-hasla', ['email' => $user->email]);
 
-        Notification::assertSentTo($dealer, ResetPassword::class);
+        Notification::assertSentTo($user, ResetPassword::class);
     }
 
     public function test_reset_password_screen_can_be_rendered()
     {
         Notification::fake();
 
-        $dealer = Dealer::factory()->create();
+        $user = User::factory()->create();
 
-        $this->post('/przypominanie-hasla', ['email' => $dealer->email]);
+        $this->post('/przypominanie-hasla', ['email' => $user->email]);
 
-        Notification::assertSentTo($dealer, ResetPassword::class, function (
+        Notification::assertSentTo($user, ResetPassword::class, function (
             $notification,
         ) {
             $response = $this->get(
@@ -55,16 +55,16 @@ class PasswordResetTest extends TestCase
     {
         Notification::fake();
 
-        $dealer = Dealer::factory()->create();
+        $user = User::factory()->create();
 
-        $this->post('/przypominanie-hasla', ['email' => $dealer->email]);
+        $this->post('/przypominanie-hasla', ['email' => $user->email]);
 
-        Notification::assertSentTo($dealer, ResetPassword::class, function (
+        Notification::assertSentTo($user, ResetPassword::class, function (
             $notification,
-        ) use ($dealer) {
+        ) use ($user) {
             $response = $this->post('/resetowanie-hasla', [
                 'token' => $notification->token,
-                'email' => $dealer->email,
+                'email' => $user->email,
                 'password' => 'password',
                 'password_confirmation' => 'password',
             ]);

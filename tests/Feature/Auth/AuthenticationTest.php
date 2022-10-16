@@ -2,7 +2,7 @@
 
 namespace Tests\Feature\Auth;
 
-use App\Models\Dealer;
+use App\Models\User;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -18,12 +18,12 @@ class AuthenticationTest extends TestCase
         $response->assertStatus(200);
     }
 
-    public function test_dealers_can_authenticate_using_the_login_screen()
+    public function test_users_can_authenticate_using_the_login_screen()
     {
-        $dealer = Dealer::factory()->create();
+        $user = User::factory()->create();
 
         $response = $this->post('/logowanie', [
-            'email' => $dealer->email,
+            'email' => $user->email,
             'password' => 'password',
         ]);
 
@@ -31,12 +31,12 @@ class AuthenticationTest extends TestCase
         $response->assertRedirect(RouteServiceProvider::HOME);
     }
 
-    public function test_dealers_can_not_authenticate_with_invalid_password()
+    public function test_users_can_not_authenticate_with_invalid_password()
     {
-        $dealer = Dealer::factory()->create();
+        $user = User::factory()->create();
 
         $this->post('/logowanie', [
-            'email' => $dealer->email,
+            'email' => $user->email,
             'password' => 'wrong-password',
         ]);
 
