@@ -1,4 +1,4 @@
-<x-auth-layout>
+<x-auth-layout title="resetowanie">
     <x-slot:image>
         <img src="{{ Vite::asset('resources/images/illustrations/forgot_password.svg') }}"
             alt="">

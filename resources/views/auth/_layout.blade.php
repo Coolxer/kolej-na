@@ -1,8 +1,8 @@
 @vite('resources/sass/auth/_layout.scss')
 
-@props(['image' => null, 'form' => null])
+@props(['title', 'image' => null, 'form' => null])
 
-<x-layout>
+<x-layout :title="$title">
     <div {{ $attributes->merge(['class' => 'auth']) }}>
 
         <div class="auth__navbar">

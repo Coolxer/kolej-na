@@ -1,6 +1,6 @@
 @vite('resources/sass/auth/verify-email.scss')
 
-<x-auth-layout>
+<x-auth-layout title="weryfikowanie">
     <x-slot:image>
         <img src="{{ Vite::asset('resources/images/illustrations/verify_email.svg') }}"
             alt="">

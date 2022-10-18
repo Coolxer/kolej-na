@@ -1,6 +1,6 @@
 @vite('resources/sass/auth/login.scss')
 
-<x-auth-layout class="login">
+<x-auth-layout title="logowanie" class="login">
     <x-slot:image>
         <img src="{{ Vite::asset('resources/images/illustrations/login.svg') }}"
             alt="">

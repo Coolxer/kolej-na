@@ -1,3 +1,5 @@
+@props(['title' => ''])
+
 <!DOCTYPE html>
 {{-- <html lang="pl"> --}}
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
@@ -10,7 +12,7 @@
         content="Wirtualna kolejka deficytowych towarów i długotrwałych usług">
     <meta name="author" content="Łukasz Miłoś, Sebastian Miłoś">
 
-    <title>Kolej-na ...</title>
+    <title>Kolej-na ... {{ $title }}</title>
 
     @vite('resources/sass/app.scss')
 </head>

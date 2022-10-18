@@ -1,10 +1,8 @@
-<x-auth-layout>
+<x-auth-layout title="przypominanie">
     <x-slot:image>
         <img src="{{ Vite::asset('resources/images/illustrations/forgot_password.svg') }}"
             alt="">
     </x-slot:image>
-
-    {{-- <x-auth-session-status class="mb-4" :status="session('status')" /> --}}
 
     <x-slot:form>
         <x-form action="{{ route('password.email') }}"

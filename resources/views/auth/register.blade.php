@@ -1,6 +1,6 @@
 @vite('resources/sass/auth/register.scss')
 
-<x-auth-layout class="register">
+<x-auth-layout title="rejestrację" class="register">
     <x-slot:image>
         <img src="{{ Vite::asset('resources/images/illustrations/register.svg') }}"
             alt="">
