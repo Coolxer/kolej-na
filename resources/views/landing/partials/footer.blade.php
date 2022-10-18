@@ -5,7 +5,7 @@
 
         <header class="brand">
             <div class="brand__box">
-                <x-logo class="brand__logo" />
+                <x-logo class="brand__logo" scrollTo />
                 <span class="brand__name">Kolej-na</span>
             </div>
             <p class="brand__description">Wirtualny system kolejkowy
@@ -14,7 +14,7 @@
         </header>
 
         <header class="brand brand--desktop">
-            <x-logo class="brand__logo" />
+            <x-logo class="brand__logo" scrollTo />
             <div class="brand__box">
                 <span class="brand__name">Kolej-na</span>
                 <p class="brand__description">Wirtualny system kolejkowy

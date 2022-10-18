@@ -1,8 +1,9 @@
 @vite('resources/sass/common/components/logo.scss')
 
-@props(['dark' => false, 'withBrandName' => false])
+@props(['scrollTo' => false, 'dark' => false, 'withBrandName' => false])
 
-<a href="/" {{ $attributes->merge(['class' => 'logo']) }}>
+<a href="{{ $scrollTo ? 'javascript:scroll()' : '/' }}"
+    {{ $attributes->merge(['class' => 'logo']) }}>
     @if ($dark)
         <img src="{{ Vite::asset('resources/images/logo_dark.svg') }}"
             alt="">
