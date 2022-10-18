@@ -1,5 +1,2 @@
-@extends('errors::minimal')
-
-@section('title', __('Not Found'))
-@section('code', '404')
-@section('message', __('Not Found'))
+<x-error-layout title="nie znaleziono" message="Nie ma takiej strony!">
+</x-error-layout>

@@ -69,5 +69,8 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('auth.register', 'register');
         Blade::component('auth.reset_password', 'reset-password');
         Blade::component('auth.verify_email;', 'verify-email');
+
+        // ################   ERRORS   ################ //
+        Blade::component('errors._layout', 'error-layout');
     }
 }
