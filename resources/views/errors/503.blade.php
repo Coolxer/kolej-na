@@ -1,5 +1,3 @@
-@extends('errors::minimal')
-
-@section('title', __('Service Unavailable'))
-@section('code', '503')
-@section('message', __('Service Unavailable'))
+<x-error-layout title="blad"
+    message="Serwis nie jest w tej chwilii dostępny! Przepraszamy za zaistniałą sytuację. Spróbuj ponownie później.">
+</x-error-layout>

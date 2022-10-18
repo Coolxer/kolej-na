@@ -1,5 +1,3 @@
-@extends('errors::minimal')
-
-@section('title', __('Too Many Requests'))
-@section('code', '429')
-@section('message', __('Too Many Requests'))
+<x-error-layout title="przerwe"
+    message="Zbyt duża liczba zgłoszeń! Przepraszamy za zaistniałą sytuację. Spróbuj ponownie później.">
+</x-error-layout>
