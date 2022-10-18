@@ -34,9 +34,27 @@ class RegisteredUserController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'first_name' => ['required', 'string', 'min:3', 'max:50'],
-            'last_name' => ['required', 'string', 'min:3', 'max:50'],
-            'company' => ['required', 'string', 'min:3', 'max:50'],
+            'first_name' => [
+                'required_without:is_company',
+                'nullable',
+                'string',
+                'min:3',
+                'max:50',
+            ],
+            'last_name' => [
+                'required_without:is_company',
+                'nullable',
+                'string',
+                'min:3',
+                'max:50',
+            ],
+            'company' => [
+                'required_with:is_company',
+                'nullable',
+                'string',
+                'min:3',
+                'max:50',
+            ],
             'email' => [
                 'required',
                 'string',
@@ -46,6 +64,8 @@ class RegisteredUserController extends Controller
             ],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'password_confirmation' => ['required', 'same:password'],
+            'terms_of_service' => ['required', 'accepted'],
+            'policy' => ['required', 'accepted'],
         ]);
 
         $user = User::create([

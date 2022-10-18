@@ -16,6 +16,10 @@
                 przejmuj się. Podaj swojego
                 e-maila, a wyślemy ci link do zresetowania hasła.</p>
 
+            @if (session('status'))
+                <p class="auth__status">{{ session('status') }}</p>
+            @endif
+
             {{--  Email --}}
             <x-form-group id="email" label="Email" :value="old('email')"
                 maxlength="50" autofocus :errors="$errors->get('email')">
@@ -26,9 +30,8 @@
 
             {{-- Submit button --}}
             <x-button>
-                <input type="submit" value="Resetuj hasło" />
+                <input type="submit" value="Przypomnij hasło" />
                 <i class="fa-solid fa-key"></i>
-
             </x-button>
 
         </x-form>

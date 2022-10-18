@@ -63,6 +63,7 @@
     }
 
     &__contact-box,
+    &__terms-of-service,
     &__policy {
         @include flex-center;
         justify-content: flex-start;
@@ -75,6 +76,7 @@
         }
     }
 
+    &__terms-of-service,
     &__policy {
         transition: color 0.25s;
 

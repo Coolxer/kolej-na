@@ -6,7 +6,7 @@
         class="choose-personality__btn choose-personality__btn--selected"
         onclick="amPerson()">
         <i class="fa-solid fa-user choose-personality__icon"></i>
-        <span class="choose-personality__text">Prywatna</span>
+        <span class="choose-personality__text">Osoba</span>
     </div>
 
     <div id="choose-personality__company-btn" class="choose-personality__btn"

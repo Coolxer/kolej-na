@@ -12,13 +12,14 @@
 
             <x-choose-personality />
 
-            <input class="register-form__is-company" id="is-company"
-                name="is-company" type="checkbox" hidden />
+            <input class="register-form__is-company" id="is_company"
+                name="is_company" type="checkbox"
+                {{ !empty(old('is_company')) ? 'checked' : '' }} hidden />
 
             <div class="register-form__names">
 
                 {{--  Imię --}}
-                <x-form-group id="first_name" label="Imię" maxlength="50"
+                <x-form-group id="first_name" label="* Imię" maxlength="50"
                     :value="old('first_name')" :errors="$errors->get('first_name')">
                     <x-slot:icon>
                         <i class="fa-solid fa-signature"></i>
@@ -26,7 +27,7 @@
                 </x-form-group>
 
                 {{--  Nazwisko --}}
-                <x-form-group id="last_name" label="Nazwisko" maxlength="50"
+                <x-form-group id="last_name" label="* Nazwisko" maxlength="50"
                     :value="old('last_name')" :errors="$errors->get('last_name')">
                     >
                     <x-slot:icon>
@@ -38,7 +39,7 @@
 
             {{--  Company --}}
             <div class="register-form__company">
-                <x-form-group c id="company" label="Nazwa firmy"
+                <x-form-group c id="company" label="* Nazwa firmy"
                     maxlength="50" :value="old('company')" :errors="$errors->get('company')">>
                     <x-slot:icon>
                         <i class="fa-regular fa-building"></i>
@@ -47,7 +48,7 @@
             </div>
 
             {{--  Email --}}
-            <x-form-group id="email" label="Email" maxlength="255"
+            <x-form-group id="email" label="* Email" maxlength="255"
                 :value="old('email')" :errors="$errors->get('email')">
                 <x-slot:icon>
                     <i class="fa-solid fa-at"></i>
@@ -55,20 +56,64 @@
             </x-form-group>
 
             {{-- Password  --}}
-            <x-form-group id="password" label="Hasło" type="password"
-                maxlength="255" autocomplete="new-password" :errors="$errors->get('password')">
+            <x-form-group id="password" label="* Hasło" type="password"
+                maxlength="255" :errors="$errors->get('password')">
                 <x-slot:icon>
                     <i class="fa-solid fa-lock"></i>
                 </x-slot:icon>
             </x-form-group>
 
             {{-- Confirm Password  --}}
-            <x-form-group id="password_confirmation" label="Potwierdzenie hasła"
+            <x-form-group id="password_confirmation" label="* Powtórzenie hasła"
                 type="password" maxlength="255" :errors="$errors->get('password_confirmation')">
                 <x-slot:icon>
                     <i class="fa-solid fa-lock"></i>
                 </x-slot:icon>
             </x-form-group>
+
+            <div class="register-form__consents">
+                {{-- Terms of service --}}
+                <x-form-group id="terms_of_service" type="checkbox"
+                    :checked="old('terms_of_service')" :errors="$errors->get('terms_of_service')" :displayErrors="false">
+
+                    <x-slot:label>
+                        * Akceptuję
+                        <a class="register-form__document-link"
+                            href="/regulamin" target="_blank">
+                            regulamin
+                        </a>
+                    </x-slot:label>
+
+                </x-form-group>
+
+                {{-- Policy --}}
+                <x-form-group id="policy" type="checkbox" :checked="old('policy')"
+                    :errors="$errors->get('policy')" :displayErrors="false">
+
+                    <x-slot:label>
+                        * Akceptuję
+                        <a class="register-form__document-link"
+                            href="/polityka-prywatnosci" target="_blank">
+                            politykę prywatności
+                        </a>
+                    </x-slot:label>
+
+                </x-form-group>
+            </div>
+
+            @if ($errors->get('terms_of_service') or $errors->get('policy'))
+                <div class="register-form__document-errors">
+                    @error('terms_of_service')
+                        <p class="register-form__failed-message">{{ $message }}
+                        </p>
+                    @enderror
+
+                    @error('policy')
+                        <p class="register-form__failed-message">{{ $message }}
+                        </p>
+                    @enderror
+                </div>
+            @endif
 
             {{-- Submit button --}}
             <x-button>
@@ -91,25 +136,23 @@
 
 <script>
     const personSection = document.getElementsByClassName(
-        'register-form__names')[0];
+        'register-form__names'
+    )[0];
     const companySection = document.getElementsByClassName(
-        'register-form__company')[0];
+        'register-form__company'
+    )[0];
 
     const personButton = document.getElementById(
         'choose-personality__person-btn');
     const companyButton = document.getElementById(
-        'choose-personality__company-btn');
+        'choose-personality__company-btn'
+    );
+    const isCompanyCheckbox = document.getElementById('is_company');
 
-    const firstNameInput = document.getElementById('first_name');
-    const lastNameInput = document.getElementById('last_name');
-    const companyInput = document.getElementById('company');
-    const isCompanyCheckbox = document.getElementById('is-company');
-
-    let firstName = '';
-    let lastName = '';
-    let company = '';
-
-    companyInput.value = 'xxx';
+    if (isCompanyCheckbox.checked)
+        amCompany();
+    else
+        amPerson();
 
     function amPerson() {
         personSection.style.display = 'flex';
@@ -119,19 +162,6 @@
         companyButton.classList.remove('choose-personality__btn--selected');
 
         isCompanyCheckbox.checked = false;
-
-        if (firstName != 'xxx')
-            firstNameInput.value = firstName;
-        else
-            firstNameInput.value = '';
-
-        if (lastName != 'xxx')
-            lastNameInput.value = lastName;
-        else
-            lastNameInput.value = '';
-
-        company = companyInput.value;
-        companyInput.value = 'xxx';
     }
 
     function amCompany() {
@@ -142,16 +172,5 @@
         personButton.classList.remove('choose-personality__btn--selected');
 
         isCompanyCheckbox.checked = true;
-
-        if (company !== 'xxx')
-            companyInput.value = company;
-        else
-            companyInput.value = '';
-
-        firstName = firstNameInput.value;
-        lastName = lastNameInput.value;
-
-        firstNameInput.value = 'xxx';
-        lastNameInput.value = 'xxx';
     }
 </script>

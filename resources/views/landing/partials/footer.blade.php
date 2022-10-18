@@ -43,7 +43,13 @@
                     <span>kontakt@kolej-na.pl</span>
                 </div>
 
-                <a href="/policy" class="footer__policy">
+                <a href="/regulamin" target="_blank"
+                    class="footer__terms-of-service">
+                    <i class="fa-regular fa-file"></i>
+                    <span>Regulamin</span>
+                </a>
+
+                <a href="/policy" target="_blank" class="footer__policy">
                     <i class="fa-regular fa-file"></i>
                     <span>Polityka prywatności</span>
                 </a>

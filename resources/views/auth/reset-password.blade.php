@@ -11,7 +11,7 @@
                 value="{{ $request->route('token') }}">
 
             {{--  Email --}}
-            <x-form-group id="email" label="Email" ::value="old('email', $request - > email)"
+            <x-form-group id="email" label="Email" :value="old('email', $request->email)"
                 maxlength="50" autofocus :errors="$errors->get('email')">
                 <x-slot:icon>
                     <i class="fa-solid fa-at"></i>

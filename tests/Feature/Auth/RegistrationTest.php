@@ -26,6 +26,8 @@ class RegistrationTest extends TestCase
             'email' => 'test@example.com',
             'password' => 'password',
             'password_confirmation' => 'password',
+            'terms_of_service' => true,
+            'policy' => true,
         ]);
 
         $this->assertAuthenticated();

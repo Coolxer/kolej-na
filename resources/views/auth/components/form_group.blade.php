@@ -1,8 +1,8 @@
 @vite('resources/sass/auth/components/form_group.scss')
 
-@props(['id', 'label', 'icon' => null, 'type' => 'text', 'errors' => []])
+@props(['id', 'label', 'icon' => null, 'type' => 'text', 'errors' => [], 'displayErrors' => true])
 
-<div {{ $attributes->merge(['class' => 'form-group']) }}">
+<div @class(['form-group', 'form-group--checkbox' => $type === 'checkbox'])>
     <label class="form-group__label"
         for="{{ $id }}">{{ $label }}</label>
 
@@ -10,7 +10,6 @@
 
         <input @class([
             'form-group__input',
-            'form-group__input--checkbox' => $type === 'checkbox',
             'form-group__input--error' => count($errors),
         ]) id="{{ $id }}"
             type="{{ $type }}" name="{{ $id }}"
@@ -24,7 +23,7 @@
 
     </div>
 
-    @if (count($errors))
+    @if (count($errors) and $displayErrors)
         <ul class="form-group__errors-list">
             @foreach ($errors as $error)
                 <li class="form-group__error">{{ $error }}</li>

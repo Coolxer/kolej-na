@@ -24,6 +24,37 @@
         }
     }
 
+    &--checkbox {
+        flex: 1;
+        margin-bottom: 0;
+        gap: 10px;
+
+        justify-content: flex-end;
+        flex-direction: row;
+
+        .form-group {
+            &__label {
+                padding: 0;
+
+                text-align: right;
+                font-size: $xxxxs;
+            }
+
+            &__row {
+                width: auto;
+                justify-content: flex-end;
+            }
+
+            &__input {
+                width: auto;
+
+                &:checked {
+                    color: $accent;
+                }
+            }
+        }
+    }
+
     &__label {
         padding-bottom: 5px;
 
@@ -74,14 +105,6 @@
             }
         }
 
-        &--checkbox {
-            width: auto;
-
-            &:checked {
-                color: $accent;
-            }
-        }
-
         &--error {
             border-color: red;
         }
@@ -95,6 +118,7 @@
     }
 
     &__error {
+        text-align: center;
         color: red;
     }
 }

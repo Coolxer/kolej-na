@@ -153,16 +153,19 @@ return [
         ],
         'first_name' => [
             'required' => 'Imię jest wymagane!',
+            'required_without' => 'Imię jest wymagane!',
             'min' => 'Imię musi mieć min. długość 3 znaków',
             'max' => 'Imię może mieć max. długość 50 znaków',
         ],
         'last_name' => [
             'required' => 'Nazwisko jest wymagane!',
+            'required_without' => 'Nazwisko jest wymagane!',
             'min' => 'Nazwisko musi mieć min. długość 3 znaków',
             'max' => 'Nazwisko może mieć max. długość 50 znaków',
         ],
         'company' => [
             'required' => 'Nazwa firmy jest wymagana!',
+            'required_with' => 'Nazwa firmy jest wymagana!',
             'min' => 'Nazwa firmy musi mieć min. długość 3 znaków',
             'max' => 'Nazwa firmy może mieć max. długość 50 znaków',
         ],
@@ -180,6 +183,12 @@ return [
         'password_confirmation' => [
             'required' => 'Potwierdzenie hasła jest wymagane!',
             'same' => 'Potwierdzenie hasła musi się zgadzać z hasłem!',
+        ],
+        'terms_of_service' => [
+            'required' => 'Akceptacja regulaminu jest wymagana!',
+        ],
+        'policy' => [
+            'required' => 'Akceptacja polityki prywatności jest wymagana!',
         ],
     ],
     'attributes' => [

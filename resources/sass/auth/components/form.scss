@@ -1,16 +1,14 @@
 @import '../../partials/partials';
 
 .auth-form {
-    //width: 100%;
+    width: 80%;
     @include flex-center;
     flex-direction: column;
 
-    @include devices(tablet) {
-        width: 50%;
-    }
-
     @include devices(laptop) {
-        width: 35%;
+        width: 100%;
+        flex: 1;
+        padding: 0 50px;
     }
 
     &__legend {

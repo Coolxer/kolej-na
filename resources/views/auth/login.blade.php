@@ -9,6 +9,10 @@
     <x-slot:form>
         <x-form class="login-form" action="{{ route('login') }}" title="LOGOWANIE">
 
+            @if (session('status'))
+                <p class="auth__status">{{ session('status') }}</p>
+            @endif
+
             @error('failed')
                 <span class="login-form--failed">{{ $message }}</span>
             @enderror
@@ -23,8 +27,7 @@
 
             {{-- Password  --}}
             <x-form-group id="password" label="Hasło" type="password"
-                maxlength="255" autocomplete="current-password"
-                :errors="$errors->get('password')">
+                maxlength="255" :errors="$errors->get('password')">
                 <x-slot:icon>
                     <i class="fa-solid fa-lock"></i>
                 </x-slot:icon>
@@ -42,7 +45,7 @@
 
                 {{-- Remember me --}}
                 <x-form-group id="remember" label="Zapamiętaj" type="checkbox"
-                    class="login-form__remember-me" :errors="[]" />
+                    :errors="[]" />
             </div>
 
             {{-- Submit button --}}
