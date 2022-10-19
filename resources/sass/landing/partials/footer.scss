@@ -108,18 +108,9 @@
     }
 
     &__logo {
-        padding: 10px;
-
         @include devices(laptop) {
-            width: 50%;
-        }
-
-        img {
-            width: 100%;
-
-            @include devices(laptop) {
-                padding: 10px;
-            }
+            width: 180px !important;
+            height: 180px !important;
         }
     }
 

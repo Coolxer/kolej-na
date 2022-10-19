@@ -24,6 +24,7 @@
 
         width: 100%;
         height: calc(100vh - 80px);
+        max-height: 100vh;
         transform: translateX(-100%);
 
         @include flex-center;
@@ -49,8 +50,6 @@
     }
 
     &__heading {
-        margin-bottom: 30px;
-
         font-size: $xl;
         color: $dominant;
 
@@ -77,101 +76,6 @@
 
         &--open {
             transform: rotate(90deg);
-        }
-    }
-}
-
-.menu {
-    width: 100%;
-
-    @include flex-center;
-    flex-direction: column;
-    gap: 1em;
-
-    @include devices(laptop) {
-        width: 75%;
-        flex-direction: row;
-
-        margin-right: 30px;
-    }
-
-    @include devices(desktop) {
-        width: 50%;
-    }
-
-    &__item {
-        width: 75%;
-        padding: 0.25em;
-
-        border: 3px solid $dominant;
-        border-radius: 15px;
-
-        color: $dominant;
-
-        box-shadow: $shadow-lg;
-        opacity: 0.75;
-
-        transition: color 0.25s, opacity 0.25s;
-
-        &:active {
-            border-color: $accent;
-            color: $accent;
-            opacity: 1;
-        }
-
-        @include devices(tablet) {
-            padding: 0.75em;
-        }
-
-        @include devices(laptop) {
-            position: relative;
-            overflow: hidden;
-
-            &:after {
-                content: '';
-
-                position: absolute;
-                bottom: 10%;
-                left: 0;
-
-                width: 100%;
-                height: 2px;
-                transform: translateX(-100%);
-
-                opacity: 1;
-                background-color: $dominant;
-
-                transition: opacity 0.25s, transform 0.25s;
-            }
-
-            &:hover::after {
-                transform: translateX(0);
-            }
-        }
-
-        @include devices(laptop) {
-            border: none;
-            box-shadow: none;
-
-            color: $secondary;
-
-            &:hover {
-                opacity: 1;
-            }
-        }
-
-        a {
-            width: 100%;
-            height: 100%;
-
-            @include flex-center;
-
-            font-size: $xs;
-            color: $dominant;
-
-            @include devices(laptop) {
-                font-size: $xxs;
-            }
         }
     }
 }

@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('landing/landing');
 });
 
-Route::get('/dashboard', function () {
+Route::get('/panel', function () {
     return view('dashboard.dashboard');
 })
     ->middleware(['auth', 'verified'])

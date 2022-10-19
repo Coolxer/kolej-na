@@ -1,0 +1,47 @@
+@import '../../partials/partials';
+
+.action-panel {
+    width: 100%;
+    background-color: $secondary;
+    @include flex-center;
+    flex-direction: row;
+
+    @include devices(laptop) {
+        display: none;
+    }
+
+    &__button {
+        padding: 10px;
+
+        font-size: $m;
+        color: $accent;
+
+        opacity: 0.75;
+        transition: opacity 0.25s, color 0.25s;
+
+        &:hover {
+            color: $dominant;
+            opacity: 1;
+        }
+
+        &:disabled {
+            opacity: 0.3;
+            color: $dominant;
+        }
+    }
+
+    &--desktop {
+        display: none;
+
+        @include devices(laptop) {
+            display: flex;
+            flex-wrap: wrap;
+
+            .action-panel {
+                &__button {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

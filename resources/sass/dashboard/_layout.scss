@@ -1,0 +1,42 @@
+@import '../partials/partials';
+
+.dashboard {
+    width: 100%;
+    flex: 1 0 auto;
+
+    @include flex-center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: $dominant;
+
+    &__image {
+        display: none;
+
+        flex: 1;
+        padding: 2em;
+
+        @include devices(laptop) {
+            @include flex-center;
+        }
+    }
+
+    &__content {
+        width: 100%;
+        max-width: 1280px;
+        flex: 1;
+
+        margin-top: 20px;
+        gap: 50px;
+
+        @include flex-center;
+    }
+
+    &__lower {
+        width: 100%;
+    }
+
+    &__copyright {
+        margin-top: 0 !important;
+    }
+}

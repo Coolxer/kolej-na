@@ -1,0 +1,72 @@
+@import '../../partials/partials';
+
+.auth-panel {
+    @include flex-center;
+    flex-direction: column;
+
+    border: 2px solid $accent;
+    border-radius: 20px;
+
+    box-shadow: $shadow-md;
+
+    &--mobile {
+        margin-top: 10px;
+        padding: 10px;
+
+        @include devices(laptop) {
+            display: none;
+        }
+    }
+
+    &--desktop {
+        display: none;
+
+        @include devices(laptop) {
+            width: auto;
+            padding: 5px;
+
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    &__email {
+        padding: 5px;
+
+        font-size: $xxs;
+        color: $accent;
+
+        transition: background-color 0.25s, color 0.25s;
+
+        overflow: scroll;
+
+        @include devices(laptop) {
+            font-size: $xxxs;
+        }
+    }
+
+    &__links {
+        @include flex-center;
+        padding: 0 10px;
+        gap: 10px;
+    }
+
+    &__link {
+        padding: 0 5px;
+        font-size: $l;
+
+        color: $dominant;
+        opacity: 0.5;
+
+        transition: color 0.25s, opacity 0.25s;
+
+        @include devices(laptop) {
+            font-size: $s;
+        }
+
+        &:hover {
+            color: $accent;
+            opacity: 1;
+        }
+    }
+}

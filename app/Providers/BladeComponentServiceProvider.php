@@ -37,6 +37,8 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('landing.components.pricing_card', 'pricing-card');
         Blade::component('landing.components.faq_card', 'faq-card');
         Blade::component('landing.components.section', 'section');
+        Blade::component('landing.components.auth_panel', 'landing-auth-panel');
+        Blade::component('landing.components.menu', 'menu');
 
         // Landing page partials
         Blade::component('landing.partials.navbar', 'navbar');
@@ -63,14 +65,17 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('auth.components.form', 'form');
         Blade::component('auth._layout', 'auth-layout');
 
-        Blade::component('auth.confirm_password', 'confirm-password');
-        Blade::component('auth.forgot_password', 'forgot-password');
-        Blade::component('auth.login', 'login');
-        Blade::component('auth.register', 'register');
-        Blade::component('auth.reset_password', 'reset-password');
-        Blade::component('auth.verify_email;', 'verify-email');
-
         // ################   ERRORS   ################ //
         Blade::component('errors._layout', 'error-layout');
+
+        // ################   DASHBOARD   ################ //
+
+        Blade::component('dashboard.components.navbar', 'dashboard-navbar');
+        Blade::component(
+            'dashboard.components.side_menu',
+            'dashboard-side-menu',
+        );
+        Blade::component('dashboard.components.action_panel', 'action-panel');
+        Blade::component('dashboard._layout', 'dashboard-layout');
     }
 }

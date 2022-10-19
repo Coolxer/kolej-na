@@ -1,0 +1,41 @@
+@import '../../partials/partials';
+
+.dashboard {
+    &__navbar {
+        width: 100%;
+        height: 80px;
+
+        @include flex-center;
+        justify-content: space-between;
+
+        background-color: $secondary;
+        box-shadow: $shadow-xl;
+    }
+
+    &__logo {
+        height: 80%;
+    }
+
+    &__email {
+        max-width: 60%;
+        font-size: $xxxs;
+        color: $dominant;
+
+        overflow-x: scroll;
+    }
+
+    &__logout {
+        padding: 10px;
+        font-size: $l;
+
+        color: $accent;
+
+        opacity: 0.75;
+
+        transition: opacity 0.25s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

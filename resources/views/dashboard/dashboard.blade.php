@@ -1,1 +1,3 @@
-<p>You are logged in</p>
+<x-dashboard-layout title="panel">
+
+</x-dashboard-layout>

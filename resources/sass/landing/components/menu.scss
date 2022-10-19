@@ -1,0 +1,110 @@
+@import '../../partials/partials';
+
+.menu {
+    width: 100%;
+    height: 100%;
+
+    @include flex-center;
+    flex-direction: column;
+    gap: 1em;
+
+    overflow-y: scroll;
+
+    @include devices(laptop) {
+        width: 90%;
+        flex-direction: row;
+
+        margin-right: 30px;
+    }
+
+    @include devices(desktop) {
+        width: 50%;
+    }
+
+    &__item {
+        width: 75%;
+
+        border: 3px solid $dominant;
+        border-radius: 15px;
+
+        color: $dominant;
+
+        box-shadow: $shadow-lg;
+        opacity: 0.75;
+
+        transition: color 0.25s, opacity 0.25s;
+
+        @include devices(tablet) {
+            padding: 0.75em;
+        }
+
+        @include devices(laptop) {
+            position: relative;
+            overflow: hidden;
+
+            border: none;
+            box-shadow: none;
+
+            color: $secondary;
+
+            &:hover {
+                opacity: 1;
+            }
+
+            &:after {
+                content: '';
+
+                position: absolute;
+                bottom: 10%;
+                left: 0;
+
+                width: 100%;
+                height: 2px;
+                transform: translateX(-100%);
+
+                opacity: 1;
+                background-color: $dominant;
+
+                transition: opacity 0.25s, transform 0.25s;
+            }
+
+            &:hover::after {
+                transform: translateX(0);
+            }
+        }
+
+        &:active {
+            border-color: $accent;
+            color: $accent;
+            opacity: 1;
+        }
+
+        &:first-child {
+            margin-top: 30px;
+
+            @include devices(laptop) {
+                margin-top: 0;
+            }
+        }
+
+        > a,
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0.25em;
+
+            @include flex-center;
+
+            font-size: $xs;
+            color: $dominant;
+
+            @include devices(laptop) {
+                font-size: $xxxs;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

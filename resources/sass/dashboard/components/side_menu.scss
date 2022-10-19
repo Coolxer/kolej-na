@@ -1,0 +1,36 @@
+@import '../../partials/partials';
+
+.side-menu {
+    width: 100%;
+
+    @include flex-center;
+
+    background-color: $accent;
+
+    box-shadow: $shadow-xl;
+
+    &__buttons {
+        @include flex-center;
+
+        &--mobile {
+        }
+    }
+
+    &__button {
+        padding: 10px;
+
+        font-size: $m;
+        opacity: 0.5;
+
+        transition: opacity 0.25s, color 0.25s;
+
+        &:hover {
+            opacity: 1;
+        }
+
+        &--selected {
+            color: $dominant;
+            opacity: 1;
+        }
+    }
+}
