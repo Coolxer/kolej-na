@@ -1,6 +1,6 @@
 @vite('resources/sass/dashboard/_layout.scss')
 
-@props(['title'])
+@props(['title', 'currentTab' => null, 'possibleActions'])
 
 <x-layout :title="$title">
     <div {{ $attributes->merge(['class' => 'dashboard']) }}>
@@ -9,10 +9,10 @@
 
         <div class="dashboard__content">
             <div class="dashboard__main">
-                <x-dashboard-side-menu />
+                <x-dashboard-side-menu :currentTab="$currentTab" :possibleActions="$possibleActions" />
                 {{ $slot }}
             </div>
-            <x-action-panel :couldAdd="true" />
+            <x-action-panel :possibleActions="$possibleActions" />
         </div>
 
         <x-copyright class="dashboard__copyright" />

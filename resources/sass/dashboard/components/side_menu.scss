@@ -52,6 +52,10 @@
         &--selected {
             color: $dominant;
             opacity: 1;
+
+            &:hover {
+                cursor: default;
+            }
         }
 
         @include devices(laptop) {
