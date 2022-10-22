@@ -3,7 +3,7 @@
 <footer class="footer">
     <div class="footer__container">
 
-        <header class="brand">
+        <header class="brand brand--mobile">
             <div class="brand__box">
                 <x-logo class="brand__logo" scrollTo />
                 <span class="brand__name">Kolej-na</span>

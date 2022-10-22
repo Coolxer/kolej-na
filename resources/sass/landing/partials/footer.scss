@@ -98,10 +98,6 @@
         width: 25%;
     }
 
-    @include devices(laptop) {
-        display: none;
-    }
-
     &__box {
         width: 100%;
         @include flex-center;
@@ -144,6 +140,12 @@
         @include devices(desktop) {
             font-size: $xxs;
         }
+    }
+}
+
+.brand--mobile {
+    @include devices(laptop) {
+        display: none;
     }
 }
 

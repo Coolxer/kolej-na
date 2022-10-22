@@ -1,14 +1,9 @@
 @import '../../partials/partials';
 
 .action-panel {
-    width: 100%;
-    background-color: $secondary;
     @include flex-center;
-    flex-direction: row;
 
-    @include devices(laptop) {
-        display: none;
-    }
+    background-color: $secondary;
 
     &__button {
         padding: 10px;
@@ -30,10 +25,21 @@
         }
     }
 
+    &--mobile {
+        width: 100%;
+        justify-content: space-evenly;
+
+        @include devices(laptop) {
+            display: none;
+        }
+    }
+
     &--desktop {
         display: none;
 
         @include devices(laptop) {
+            width: 75%;
+
             display: flex;
             flex-wrap: wrap;
 

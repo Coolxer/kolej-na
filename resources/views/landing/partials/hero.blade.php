@@ -29,7 +29,9 @@
             </x-button>
         </div>
 
-        <i class="fa-solid fa-users hero__users-icon"></i>
+        <img class="hero__queue-image"
+            src="{{ Vite::asset('resources/images/illustrations/queue.svg') }}"
+            alt="">
 
     </div>
 </section>

@@ -3,15 +3,17 @@
 @props(['desktop' => false, 'couldAdd' => false, 'couldSave' => false, 'couldCancel' => false, 'couldGoBack' => false])
 
 <div
-    {{ $attributes->class(['action-panel', 'action-panel--desktop' => $desktop]) }}>
-    <button class="action-panel__button" {{ !$couldAdd ? 'disabled' : null }}><i
+    {{ $attributes->class(['action-panel', 'action-panel--mobile' => !$desktop, 'action-panel--desktop' => $desktop]) }}>
+    <button class="action-panel__button" title="Dodaj klienta"
+        {{ !$couldAdd ? 'disabled' : null }}><i
             class="fa-solid fa-user-plus"></i></button>
-    <button class="action-panel__button" {{ !$couldSave ? 'disabled' : null }}><i
+    <button class="action-panel__button" title="Zapisz"
+        {{ !$couldSave ? 'disabled' : null }}><i
             class="fa-solid fa-floppy-disk"></i></button>
-    <button class="action-panel__button"
+    <button class="action-panel__button" title="Anuluj"
         {{ !$couldCancel ? 'disabled' : null }}><i
             class="fa-solid fa-ban"></i></button>
-    <button class="action-panel__button"
+    <button class="action-panel__button" title="Powróć"
         {{ !$couldGoBack ? 'disabled' : null }}><i
             class="fa-solid fa-angles-left"></i></button>
 </div>

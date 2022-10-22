@@ -6,18 +6,39 @@
     @include flex-center;
 
     background-color: $accent;
-
     box-shadow: $shadow-xl;
+
+    @include devices(laptop) {
+        width: 25%;
+        height: 100%;
+        padding: 20px 0;
+
+        flex-direction: column;
+        justify-content: space-between;
+
+        background-color: $secondary;
+    }
+
+    @include devices(desktop) {
+        width: 20%;
+    }
 
     &__buttons {
         @include flex-center;
 
-        &--mobile {
+        @include devices(laptop) {
+            width: 80%;
+            flex-direction: column;
+
+            gap: 15px;
         }
     }
 
     &__button {
         padding: 10px;
+
+        @include flex-center;
+        justify-content: space-between;
 
         font-size: $m;
         opacity: 0.5;
@@ -31,6 +52,38 @@
         &--selected {
             color: $dominant;
             opacity: 1;
+        }
+
+        @include devices(laptop) {
+            width: 100%;
+
+            background-color: $dominant;
+            color: $secondary;
+
+            border-radius: 20px;
+            box-shadow: $shadow-md;
+
+            &--selected {
+                background-color: $accent;
+            }
+        }
+    }
+
+    &__button-icon {
+        @include devices(laptop) {
+            padding-left: 20px;
+        }
+    }
+
+    &__button-text {
+        display: none;
+        padding-right: 20px;
+
+        font-size: $xs;
+        color: $secondary;
+
+        @include devices(laptop) {
+            display: inline-block;
         }
     }
 }

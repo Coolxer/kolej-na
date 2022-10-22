@@ -8,18 +8,21 @@
             'side-menu__button',
             'side-menu__button--selected' => $currentTab === 'user',
         ]) title="Moje dane"><i
-                class="fa-solid fa-user"></i></button>
+                class="fa-solid fa-user side-menu__button-icon"></i> <span
+                class="side-menu__button-text">Profil</span></button>
         <button @class([
             'side-menu__button',
             'side-menu__button--selected' => $currentTab === 'queue',
         ]) title="Moje kolejki"><i
-                class="fa-solid fa-table-cells"></i>
+                class="fa-solid fa-table-cells side-menu__button-icon"></i>
+            <span class="side-menu__button-text">Kolejki</span>
         </button>
         <button @class([
             'side-menu__button',
             'side-menu__button--selected' => $currentTab === 'subscription',
         ]) title="Mój plan"><i
-                class="fa-solid fa-file-contract"></i></button>
+                class="fa-solid fa-file-contract side-menu__button-icon""></i><span
+                class="side-menu__button-text">Plan</span></button>
     </div>
-    <x-action-panel desktop />
+    <x-action-panel desktop couldAdd />
 </div>

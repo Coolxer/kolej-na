@@ -8,14 +8,14 @@
         <x-dashboard-navbar />
 
         <div class="dashboard__content">
-            <x-dashboard-side-menu />
-            {{ $slot }}
+            <div class="dashboard__main">
+                <x-dashboard-side-menu />
+                {{ $slot }}
+            </div>
+            <x-action-panel :couldAdd="true" />
         </div>
 
-        <div class="dashboard__lower">
-            <x-action-panel :couldAdd="true" />
-            <x-copyright class="dashboard__copyright" />
-        </div>
+        <x-copyright class="dashboard__copyright" />
 
     </div>
 </x-layout>
