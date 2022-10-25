@@ -9,9 +9,7 @@
     <x-slot:form>
         <x-form class="login-form" action="{{ route('login') }}" title="LOGOWANIE">
 
-            @if (session('status'))
-                <p class="auth__status">{{ session('status') }}</p>
-            @endif
+            <x-session-status />
 
             @error('failed')
                 <span class="login-form--failed">{{ $message }}</span>

@@ -1,6 +1,6 @@
 @vite('resources/sass/dashboard/components/side_menu.scss')
 
-@props(['currentTab' => null, 'possibleActions'])
+@props(['currentTab' => null])
 
 <div class="side-menu">
     <div class="side-menu__buttons">
@@ -19,7 +19,7 @@
                 class="fa-solid fa-table-cells side-menu__button-icon"></i>
             <span class="side-menu__button-text">Kolejki</span>
         </a>
-        <a href="{{ $currentTab === 'subscription' ? 'javascript:void(0)' : '/panel/subskrypcja' }}"
+        <a href="{{ $currentTab === 'subscription' ? 'javascript:void(0)' : '/panel/subskrypcja ' }}"
             @class([
                 'side-menu__button',
                 'side-menu__button--selected' => $currentTab === 'subscription',
@@ -27,5 +27,4 @@
                 class="fa-solid fa-file-contract side-menu__button-icon""></i><span
                 class="side-menu__button-text">Plan</span></a>
     </div>
-    <x-action-panel desktop :possibleActions="$possibleActions" />
 </div>

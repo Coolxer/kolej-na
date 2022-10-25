@@ -25,10 +25,9 @@
                     "Wyślij ponownie"
                 </p>
 
-                @if (session('status') == 'verification-link-sent')
-                    <p class="auth__status">Link aktywacyjny został wysłany na
-                        twojego email'a.</p>
-                @endif
+                <x-session-status status="'verification-link-sent"
+                    message="Link aktywacyjny został wysłany na
+                twojego email'a." />
 
                 {{-- Submit button --}}
                 <x-button>

@@ -10,17 +10,10 @@
 
     @include devices(laptop) {
         width: 25%;
-        height: 100%;
-        padding: 20px 0;
-
-        flex-direction: column;
-        justify-content: space-between;
-
-        background-color: $secondary;
     }
 
     @include devices(desktop) {
-        width: 20%;
+        width: 15%;
     }
 
     &__buttons {
@@ -61,19 +54,22 @@
         @include devices(laptop) {
             width: 100%;
 
-            background-color: $dominant;
-            color: $secondary;
+            background-color: $secondary;
+            color: $dominant;
 
             border-radius: 20px;
             box-shadow: $shadow-md;
 
             &--selected {
-                background-color: $accent;
+                background-color: $dominant;
+                color: $accent;
             }
         }
     }
 
     &__button-icon {
+        color: inherit;
+
         @include devices(laptop) {
             padding-left: 20px;
         }
@@ -84,7 +80,7 @@
         padding-right: 20px;
 
         font-size: $xs;
-        color: $secondary;
+        color: inherit;
 
         @include devices(laptop) {
             display: inline-block;

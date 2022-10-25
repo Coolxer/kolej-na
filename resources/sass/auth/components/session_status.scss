@@ -1,0 +1,15 @@
+@import '../../partials/partials';
+
+.session-status {
+    width: 100%;
+    margin: 15px 0;
+    padding: 0.5em;
+
+    font-size: $xxxs;
+    text-align: center;
+
+    background-color: $secondary;
+    color: $accent;
+
+    box-shadow: $shadow-md;
+}

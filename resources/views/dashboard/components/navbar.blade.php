@@ -1,6 +1,6 @@
 @vite('resources/sass/dashboard/components/navbar.scss')
 
-<div class="dashboard__navbar">
+<nav class="dashboard__navbar">
     <x-logo class="dashboard__logo" />
     <span class="dashboard__email">{{ Auth::user()->email }}</span>
     <form method="POST" action="{{ route('logout') }}">
@@ -9,4 +9,4 @@
             <i class="fa-solid fa-power-off"></i>
         </button>
     </form>
-</div>
+</nav>

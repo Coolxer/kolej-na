@@ -14,9 +14,7 @@
                 przejmuj się. Podaj swojego
                 e-maila, a wyślemy ci link do zresetowania hasła.</p>
 
-            @if (session('status'))
-                <p class="auth__status">{{ session('status') }}</p>
-            @endif
+            <x-session-status />
 
             {{--  Email --}}
             <x-form-group id="email" label="Email" :value="old('email')"

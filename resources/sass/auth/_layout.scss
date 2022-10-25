@@ -49,16 +49,4 @@
 
         @include flex-center;
     }
-
-    &__status {
-        width: 100%;
-        padding: 0.5em;
-        margin-bottom: 15px;
-
-        font-size: $xxxs;
-        text-align: center;
-
-        background-color: $secondary;
-        color: $dominant;
-    }
 }

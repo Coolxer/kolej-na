@@ -184,6 +184,17 @@ return [
             'required' => 'Potwierdzenie hasła jest wymagane!',
             'same' => 'Potwierdzenie hasła musi się zgadzać z hasłem!',
         ],
+        'old_password' => [
+            'required' => 'Musisz podać swoje stare hasło!',
+        ],
+        'new_password' => [
+            'required' => 'Musisz podać swoje nowe hasło!',
+            'min' => 'Hasło musi mieć przynajmniej 8 znaków',
+        ],
+        'confirm_new_password' => [
+            'required' => 'Potwierdzenie nowego hasła jest wymagane!',
+            'same' => 'Potwierdzenie hasła musi się zgadzać z nowym hasłem!',
+        ],
         'terms_of_service' => [
             'required' => 'Akceptacja regulaminu jest wymagana!',
         ],

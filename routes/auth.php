@@ -8,6 +8,7 @@ use App\Http\Controllers\Auth\NewPasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\Auth\ChangePasswordController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -80,4 +81,14 @@ Route::middleware('auth')->group(function () {
         AuthenticatedSessionController::class,
         'destroy',
     ])->name('logout');
+
+    Route::get('/panel/profil/zmiana-hasla', [
+        ChangePasswordController::class,
+        'create',
+    ])->name('change-password');
+
+    Route::post('/panel/profil/zmiana-hasla', [
+        ChangePasswordController::class,
+        'store',
+    ])->name('update-password');
 });

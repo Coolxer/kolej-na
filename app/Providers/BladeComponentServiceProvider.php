@@ -63,6 +63,7 @@ class BladeComponentServiceProvider extends ServiceProvider
         );
         Blade::component('auth.components.form_group', 'form-group');
         Blade::component('auth.components.form', 'form');
+        Blade::component('auth.components.session_status', 'session-status');
         Blade::component('auth._layout', 'auth-layout');
 
         // ################   ERRORS   ################ //

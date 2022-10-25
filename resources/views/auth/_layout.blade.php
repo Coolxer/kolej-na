@@ -5,9 +5,9 @@
 <x-layout :title="$title">
     <div {{ $attributes->merge(['class' => 'auth']) }}>
 
-        <div class="auth__navbar">
+        <nav class="auth__navbar">
             <x-logo class="auth__logo" withBrandName />
-        </div>
+        </nav>
 
         <div class="auth__content">
 
