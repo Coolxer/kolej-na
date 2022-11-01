@@ -11,10 +11,6 @@
 
             <x-session-status />
 
-            @error('failed')
-                <span class="login-form--failed">{{ $message }}</span>
-            @enderror
-
             {{--  Email --}}
             <x-form-group id="email" label="Email" :value="old('email')"
                 maxlength="50" :errors="$errors->get('email')">

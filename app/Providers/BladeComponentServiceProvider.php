@@ -77,6 +77,10 @@ class BladeComponentServiceProvider extends ServiceProvider
             'dashboard-side-menu',
         );
         Blade::component('dashboard.components.action_panel', 'action-panel');
+
         Blade::component('dashboard._layout', 'dashboard-layout');
+
+        // ################   QUEUE   ################ //
+        Blade::component('queue.components.queue_box', 'queue-box');
     }
 }

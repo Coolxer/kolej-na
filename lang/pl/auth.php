@@ -12,7 +12,7 @@
 */
 
 return [
-    'failed' => 'Podane dane nie pasuja do siebie!',
+    'failed' => 'Podane dane nie pasują do siebie!',
     'password' => 'Podane hasło jest nieprawidłowe.',
     'throttle' =>
         'Za dużo nieudanych prób logowania. Proszę spróbować za :seconds sekund.',

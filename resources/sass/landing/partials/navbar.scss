@@ -50,12 +50,8 @@
     }
 
     &__heading {
-        font-size: $xl;
+        font-size: $l;
         color: $dominant;
-
-        @include devices(tablet) {
-            font-size: $xxl;
-        }
 
         @include devices(laptop) {
             display: none;

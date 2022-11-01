@@ -4,10 +4,11 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-
 use Illuminate\Support\Facades\Hash;
 
 use App\Models\User;
+use App\Models\Queue;
+use App\Models\Customer;
 
 class UserSeeder extends Seeder
 {
@@ -18,18 +19,17 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        $user = new User();
+        // User::factory()
+        //     ->count(30)
+        //     ->has(
+        //         Queue::factory()
+        //             ->count(fake()->randomDigit())
+        //             ->has(Customer::factory()->count(fake()->randomDigit())),
+        //     )
+        //     ->create();
 
-        $user->first_name = 'Łukasz';
-        $user->last_name = 'Miłoś';
-
-        $user->email = 'appeczka@gmail.com';
-
-        $user->password = Hash::make('123');
-
-        // $user->remember_token = Str::random(10);
-        // $user->email_verified_at = now();
-
-        $user->save();
+        User::factory()
+            ->count(15)
+            ->create();
     }
 }

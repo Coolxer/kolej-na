@@ -22,14 +22,10 @@
         padding: 0.25em;
         padding-top: 0;
 
-        font-size: $s;
+        font-size: $xs;
         font-weight: 300;
 
         text-align: center;
-
-        @include devices(desktop) {
-            font-size: $l;
-        }
     }
 
     &__properties-list {
@@ -40,11 +36,7 @@
     }
 
     &__property-item {
-        font-size: $xxs;
-
-        @include devices(desktop) {
-            font-size: $xs;
-        }
+        font-size: $xxxs;
     }
 }
 
@@ -54,12 +46,8 @@
     @include flex-center;
 
     &__full {
-        font-size: $xxxl;
+        font-size: $xxl;
         line-height: 100%;
-
-        @include devices(tablet) {
-            font-size: $xxxxl;
-        }
     }
 
     &__rest-wrapper {
@@ -69,10 +57,6 @@
 
     &__rest,
     &__currency {
-        font-size: $s;
-
-        @include devices(tablet) {
-            font-size: $m;
-        }
+        font-size: $xs;
     }
 }

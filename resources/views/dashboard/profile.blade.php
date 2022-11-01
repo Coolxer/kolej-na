@@ -4,7 +4,7 @@
 $user = Auth::user();
 @endphp
 
-<x-dashboard-layout title="profil" currentTab="profile">
+<x-dashboard-layout title="profil" currentTab="profile" shrink>
     <header class="dashboard__header">
         <i class="fa-solid fa-user dashboard__header-icon"></i>
         <span class="dashboard__header-text">MOJE DANE</span>

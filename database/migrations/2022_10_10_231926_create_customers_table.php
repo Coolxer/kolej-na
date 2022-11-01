@@ -19,11 +19,11 @@ return new class extends Migration {
             $table->id();
             $table->foreignIdFor(Queue::class);
 
+            $table->string('identify', 6)->unique();
             $table->string('first_name', 50);
             $table->string('last_name', 50);
             $table->string('phone', 9);
 
-            $table->string('identify', 6)->unique();
             $table
                 ->enum('status', ['waiting', 'in progress', 'done'])
                 ->default('waiting');

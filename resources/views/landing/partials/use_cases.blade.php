@@ -9,6 +9,7 @@ $sentences = [
 maszyn',
     'Kolejka zamówień samochodów',
     'Kolejka do remontu u fachowca',
+    'Kolejka do lekarza',
 ];
 $others = '... i wiele innych sytuacji, gdzie występuje problem oczekiwania z
 powodów deficytowych lub długotrwałego procesu realizacji.';

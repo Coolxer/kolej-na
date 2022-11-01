@@ -15,13 +15,5 @@
 
         opacity: 0.75;
         order: 3;
-
-        @include devices(tablet) {
-            font-size: $xxs;
-        }
-
-        @include devices(desktop) {
-            font-size: $xs;
-        }
     }
 }

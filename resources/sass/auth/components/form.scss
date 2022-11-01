@@ -1,9 +1,13 @@
 @import '../../partials/partials';
 
 .auth-form {
-    width: 80%;
+    width: 90%;
     @include flex-center;
     flex-direction: column;
+
+    @include devices(tablet) {
+        width: 80%;
+    }
 
     @include devices(laptop) {
         width: 100%;
@@ -14,7 +18,7 @@
     &__legend {
         margin-bottom: 20px;
 
-        font-size: $m;
+        font-size: $s;
         font-weight: 300;
         color: $secondary;
         text-align: center;

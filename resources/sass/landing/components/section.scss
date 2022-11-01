@@ -51,13 +51,9 @@
     &__heading {
         margin-bottom: 10px;
 
-        font-size: $l;
+        font-size: $m;
         font-weight: 300;
         text-align: center;
-
-        @include devices(tablet) {
-            font-size: $xl;
-        }
     }
 
     &__image {
@@ -78,7 +74,6 @@
 
         @include devices(laptop) {
             position: static;
-
             opacity: 1;
         }
 

@@ -19,6 +19,7 @@ return new class extends Migration {
             $table->id();
             $table->foreignIdFor(User::class);
 
+            $table->string('identify', 6)->unique();
             $table->string('name', 50);
             $table->string('link', 255);
 

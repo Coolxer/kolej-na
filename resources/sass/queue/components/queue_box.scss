@@ -1,0 +1,55 @@
+@import '../../partials/partials';
+
+.queue-box {
+    width: 80%;
+    @include flex-center;
+
+    @include devices(tablet) {
+        width: 45%;
+    }
+
+    @include devices(desktop) {
+        width: 30%;
+    }
+
+    background-color: $secondary;
+    border-radius: 20px;
+    box-shadow: $shadow-xl;
+
+    &__container {
+        width: 100%;
+        padding: 0 10px;
+
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__property {
+        width: 100%;
+        padding: 10px;
+
+        @include flex-center;
+        justify-content: space-between;
+
+        &-icon {
+            font-size: $s;
+            color: $accent;
+        }
+
+        &-text {
+            font-size: $xxxxs;
+            color: $dominant;
+
+            overflow: scroll;
+        }
+    }
+
+    &__button {
+        width: 90% !important;
+        margin: 20px 0 !important;
+
+        &:last-child {
+            margin-top: 0 !important;
+        }
+    }
+}

@@ -10,6 +10,8 @@ use Laravel\Sanctum\HasApiTokens;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
+use App\Models\Queue;
+
 class User extends Authenticatable implements MustVerifyEmail
 {
     use HasApiTokens, HasFactory, Notifiable;

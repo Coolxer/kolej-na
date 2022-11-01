@@ -111,15 +111,7 @@
     }
 
     &__name {
-        font-size: $xs;
-
-        @include devices(tablet) {
-            font-size: $s;
-        }
-
-        @include devices(desktop) {
-            font-size: $m;
-        }
+        font-size: $xxs;
     }
 
     &__description {
@@ -129,16 +121,8 @@
         text-align: center;
         color: $accent;
 
-        @include devices(tablet) {
-            font-size: $xxxs;
-        }
-
         @include devices(laptop) {
             width: 75%;
-        }
-
-        @include devices(desktop) {
-            font-size: $xxs;
         }
     }
 }
@@ -175,12 +159,12 @@
     gap: 30px;
 
     &__icon {
-        font-size: $m;
+        font-size: $s;
 
         transition: color 0.25s;
 
         @include devices(desktop) {
-            font-size: $xl;
+            font-size: $l;
             padding: 0.2em 0.5em;
         }
 

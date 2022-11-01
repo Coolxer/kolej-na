@@ -41,14 +41,6 @@
         line-height: 100%;
 
         color: $dominant;
-
-        @include devices(tablet) {
-            font-size: $xxxl;
-        }
-
-        @include devices(desktop) {
-            font-size: $xxxxl;
-        }
     }
 
     &__description {
@@ -58,10 +50,6 @@
 
         font-size: $xxs;
         text-align: center;
-
-        @include devices(tablet) {
-            font-size: $xs;
-        }
     }
 
     &__services-list {
@@ -104,18 +92,10 @@
     }
 
     &__icon {
-        font-size: $xxl;
-
-        @include devices(tablet) {
-            font-size: $xxxl;
-        }
+        font-size: $xl;
     }
 
     &__name {
-        font-size: $xxs;
-
-        @include devices(tablet) {
-            font-size: $xs;
-        }
+        font-size: $xxxs;
     }
 }

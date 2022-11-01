@@ -15,9 +15,5 @@
 
     &__paragraph {
         font-size: $xxxs;
-
-        @include devices(tablet) {
-            font-size: $xxs;
-        }
     }
 }

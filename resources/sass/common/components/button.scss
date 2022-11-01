@@ -5,23 +5,19 @@
 
     @include flex-center;
     width: 100%;
-
     margin: 1em auto;
 
     @include flex-center;
 
-    font-size: $xxs;
     border-radius: 25px;
     box-shadow: $shadow-xl;
 
     background-color: $accent;
     color: $secondary;
 
-    transition: background-color 0.25s, color 0.25s;
+    font-size: $xxxs;
 
-    @include devices(laptop) {
-        font-size: $xs;
-    }
+    transition: background-color 0.25s, color 0.25s;
 
     &:hover {
         background-color: $dominant;
@@ -47,22 +43,12 @@
 
         transform: translateY(-50%);
 
-        font-size: $s;
-
-        @include devices(laptop) {
-            font-size: $m;
-        }
+        font-size: $xxxs;
     }
 
     &--secondary {
         background-color: $secondary;
         color: $dominant;
-    }
-
-    &--big {
-        @include devices(desktop) {
-            font-size: $s;
-        }
     }
 
     &--small {
@@ -71,8 +57,8 @@
 
         font-size: $xxxxs;
 
-        @include devices(laptop) {
-            font-size: $xxxs;
+        i {
+            font-size: $xxxxs;
         }
     }
 }

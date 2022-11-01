@@ -7,10 +7,6 @@
         text-align: center;
 
         color: $accent;
-
-        @include devices(tablet) {
-            font-size: $s;
-        }
     }
 }
 
@@ -46,10 +42,6 @@
         box-shadow: $shadow-xl;
 
         outline: none;
-
-        @include devices(tablet) {
-            font-size: $xxxs;
-        }
 
         &:focus {
             border-color: $accent;

@@ -1,4 +1,4 @@
-<x-dashboard-layout title="profil" currentTab="profile">
+<x-dashboard-layout title="profil" currentTab="profile" shrink>
     <x-form action="{{ route('update-password') }}" title="ZMIANA HASŁA"
         style="height: 100%;">
 

@@ -16,17 +16,37 @@
         height: 80%;
     }
 
+    &__account {
+        @include flex-center;
+    }
+
     &__email {
         max-width: 60%;
-        font-size: $xxxs;
+        font-size: $xxxxs;
         color: $dominant;
 
         overflow-x: scroll;
+
+        &--mobile {
+            display: block;
+
+            @include devices(laptop) {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            display: none;
+
+            @include devices(laptop) {
+                display: block;
+            }
+        }
     }
 
     &__logout {
         padding: 10px;
-        font-size: $l;
+        font-size: $s;
 
         color: $accent;
 

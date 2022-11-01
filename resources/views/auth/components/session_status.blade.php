@@ -2,6 +2,10 @@
 
 @props(['status' => null, 'message' => null])
 
+@error('failed')
+    <span class='session-status session-status--error'>{{ $message }}</span>
+@enderror
+
 @if ($status and $message)
     @if (session('status') === $status)
         <span class="session-status">{{ $message }}</span>

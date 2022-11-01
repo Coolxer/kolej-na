@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\QueueController;
+use App\Models\Queue;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,18 +30,16 @@ Route::get('/panel/profil', function () {
     return view('dashboard.profile');
 })
     ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+    ->name('dashboard-profile');
 
-Route::get('/panel/kolejki', function () {
-    return view('dashboard.queue_list');
-})
+Route::get('/panel/kolejki', [QueueController::class, 'index'])
     ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+    ->name('dashboard-queues-index');
 
 Route::get('/panel/subskrypcja', function () {
     return view('dashboard.subscription');
 })
     ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+    ->name('dashboard-subscription');
 
 require __DIR__ . '/auth.php';

@@ -8,10 +8,9 @@
     flex-direction: column;
 
     border-radius: 20px;
+    box-shadow: $shadow-xl;
 
     text-align: center;
-
-    box-shadow: $shadow-xl;
 
     transition: background-color 0.25s, color 0.25s;
 
@@ -29,21 +28,13 @@
     }
 
     &__question {
-        font-size: $xs;
+        font-size: $xxs;
         color: $dominant;
-
-        @include devices(tablet) {
-            font-size: $s;
-        }
     }
 
     &__answer {
         font-size: $xxs;
         color: $secondary;
-
-        @include devices(tablet) {
-            font-size: $xs;
-        }
     }
 }
 

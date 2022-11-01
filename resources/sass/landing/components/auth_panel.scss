@@ -23,7 +23,6 @@
 
         @include devices(laptop) {
             width: auto;
-            padding: 5px;
 
             display: flex;
             flex-direction: row;
@@ -33,16 +32,12 @@
     &__email {
         padding: 5px;
 
-        font-size: $xxs;
+        font-size: $xxxxs;
         color: $accent;
 
         transition: background-color 0.25s, color 0.25s;
 
         overflow: scroll;
-
-        @include devices(laptop) {
-            font-size: $xxxs;
-        }
     }
 
     &__links {
@@ -53,16 +48,12 @@
 
     &__link {
         padding: 0 5px;
-        font-size: $l;
+        font-size: $xs;
 
         color: $dominant;
         opacity: 0.5;
 
         transition: color 0.25s, opacity 0.25s;
-
-        @include devices(laptop) {
-            font-size: $s;
-        }
 
         &:hover {
             color: $accent;

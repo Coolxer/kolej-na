@@ -2,12 +2,6 @@
 
 .login {
     &-form {
-        &--failed {
-            margin-bottom: 20px;
-
-            color: $red;
-        }
-
         &__forgot-remember {
             width: 100%;
             padding: 0 10px;
