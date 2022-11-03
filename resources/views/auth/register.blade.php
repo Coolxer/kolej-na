@@ -124,7 +124,7 @@
             <div class="auth-form__already-done">
                 <span> Masz już konto?</span>
                 <x-button secondary small>
-                    <a href="/logowanie">
+                    <a href="{{ route('login') }}">
                         Zaloguj się!</a>
                 </x-button>
             </div>

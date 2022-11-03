@@ -1,4 +1,4 @@
-@vite('resources/sass/auth/components/form.scss')
+@vite('resources/sass/common/components/form.scss')
 
 @props(['action', 'title' => null])
 

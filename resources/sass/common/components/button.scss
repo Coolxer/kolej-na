@@ -51,6 +51,16 @@
         color: $dominant;
     }
 
+    &--big {
+        padding: 10px;
+
+        font-size: $xxs;
+
+        i {
+            font-size: $xxs;
+        }
+    }
+
     &--small {
         width: auto;
         margin: 0;

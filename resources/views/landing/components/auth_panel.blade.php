@@ -12,7 +12,8 @@
             {{ Auth::user()->email }}
         </span>
         <div class="auth-panel__links">
-            <a class="auth-panel__link" href="/panel" title="Panel">
+            <a class="auth-panel__link" href="{{ route('dashboard') }}"
+                title="Panel">
                 <i class="fa-solid fa-table-columns"></i>
             </a>
             <form method="POST" action="{{ route('logout') }}">

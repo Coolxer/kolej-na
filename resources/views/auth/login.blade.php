@@ -51,7 +51,7 @@
             <div class="auth-form__already-done">
                 <span> Nie masz konta?</span>
                 <x-button secondary small>
-                    <a href="/rejestracja">
+                    <a href="{{ route('register') }}">
                         Zarejestruj się!</a>
                 </x-button>
             </div>

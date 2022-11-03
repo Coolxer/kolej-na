@@ -7,34 +7,22 @@ use App\Models\Queue;
 
 class QueueController extends Controller
 {
-    /**
-     * Store a new Queue in the database.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function index()
     {
-        // Validate the request...
-
-        $queue = new Queue();
-
-        // $queue->name = $request->name;
-
-        $queue->save();
+        return view('queue.index', ['queues' => Queue::all()]);
     }
 
     /**
-     * Show the profile for a given queue.
+     * Show the profile for a given queue [readonly view].
      *
      * @param  int  $id
      * @return \Illuminate\View\View
      */
     public function show($id)
     {
-        // return view('user.profile', [
-        //     'user' => User::findOrFail($id),
-        // ]);
+        return view('queue.show', [
+            'queue' => Queue::findOrFail($id),
+        ]);
     }
 
     /**
@@ -46,18 +34,8 @@ class QueueController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-    }
-
-    public function destroy(Queue $queues)
-    {
-        if ($queues->delete()) {
-            return true;
-        }
-    }
-
-    public function index()
-    {
-        return view('queue.index', ['queues' => Queue::all()]);
+        return view('queue.update', [
+            'queue' => Queue::findOrFail($id),
+        ]);
     }
 }

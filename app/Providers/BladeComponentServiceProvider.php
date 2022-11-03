@@ -27,6 +27,8 @@ class BladeComponentServiceProvider extends ServiceProvider
         // Common things
         Blade::component('common.components.logo', 'logo');
         Blade::component('common.components.button', 'button');
+        Blade::component('common.components.form_group', 'form-group');
+        Blade::component('common.components.form', 'form');
         Blade::component('common.components.copyright', 'copyright');
         Blade::component('common.layout', 'layout');
 
@@ -61,8 +63,6 @@ class BladeComponentServiceProvider extends ServiceProvider
             'auth.components.choose_personality',
             'choose-personality',
         );
-        Blade::component('auth.components.form_group', 'form-group');
-        Blade::component('auth.components.form', 'form');
         Blade::component('auth.components.session_status', 'session-status');
         Blade::component('auth._layout', 'auth-layout');
 

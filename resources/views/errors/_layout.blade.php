@@ -18,7 +18,7 @@
         </x-button>
 
         <x-button>
-            <a href="/">Strona główna</a>
+            <a href="{{ route('home') }}">Strona główna</a>
             <i class="fa-solid fa-house"></i>
         </x-button>
 

@@ -18,7 +18,7 @@ use App\Models\Queue;
 
 Route::get('/', function () {
     return view('landing/landing');
-});
+})->name('home');
 
 Route::get('/panel', function () {
     return view('dashboard.dashboard');
@@ -35,6 +35,14 @@ Route::get('/panel/profil', function () {
 Route::get('/panel/kolejki', [QueueController::class, 'index'])
     ->middleware(['auth', 'verified'])
     ->name('dashboard-queues-index');
+
+Route::get('/panel/kolejki/{id}', [QueueController::class, 'show'])->name(
+    'dashboard-queues-show',
+);
+
+Route::get('/panel/kolejki/{id}', [QueueController::class, 'update'])
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard-queues-update');
 
 Route::get('/panel/subskrypcja', function () {
     return view('dashboard.subscription');

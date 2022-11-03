@@ -25,6 +25,7 @@
 
     &__informations {
         width: 80%;
+        z-index: 2;
 
         @include devices(tablet) {
             width: 70%;
@@ -69,6 +70,7 @@
         @include flex-center;
 
         opacity: 0.1;
+        z-index: 1;
 
         @include devices(laptop) {
             position: static;
@@ -97,5 +99,61 @@
 
     &__name {
         font-size: $xxxs;
+    }
+}
+
+.hero-form {
+    margin-top: 30px;
+
+    @include flex-center;
+    gap: 15px;
+
+    .form-group {
+        margin-bottom: 0 !important;
+        flex-direction: row;
+
+        &__label {
+            font-size: $xxxxs;
+            text-align: center;
+        }
+
+        &__input {
+            font-size: $xxxxs;
+            background-color: $dominant;
+            border-color: $dominant;
+            z-index: 1;
+
+            &:focus-visible {
+                background-color: $secondary;
+                border-color: $secondary;
+                color: $accent;
+
+                ~ .form-group__icon {
+                    color: $accent;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__icon {
+            z-index: 2;
+        }
+    }
+
+    &__icon {
+        padding: 10px;
+        border-radius: 50%;
+
+        font-size: $xs;
+
+        background-color: $secondary;
+        color: $dominant;
+
+        transition: background-color 0.25s, color 0.25s;
+
+        &:hover {
+            background-color: $dominant;
+            color: $secondary;
+        }
     }
 }

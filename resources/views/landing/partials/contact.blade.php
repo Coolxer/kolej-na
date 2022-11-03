@@ -7,33 +7,44 @@ $title = 'Kontakt';
 
 <x-section :id="$id" :title="$title" imageOnRight class="contact">
     <x-slot:content>
+
         <h3 class="contact__question">Masz inne pytania?</h3>
 
-        <form class="contact__form form" method="POST" action="/contact">
-            @csrf
-            <fieldset class="form__fieldset">
-                <legend class="form__legend">Skontakuj się z nami!</legend>
+        <x-form class="contact__form" action="/contact">
 
-                <label for="email" class="form__label">Email</label>
-                <input id="email" name="message" type="email"
-                    placeholder="Wpisz swój e-mail. Odpiszemy!"
-                    class="form__input @error('email') is-invalid @else is-valid @enderror">
+            <legend class="contact__form-legend">Skontakuj się z nami!</legend>
 
-                <label for="message" class="form__label">Wiadomość</label>
-                <textarea id="message" rows="4" cols="50" maxlength="250"
-                    placeholder="Twoja wiadomość. Czekamy na nią!"
-                    class="form__input @error('message') is-invalid @else is-valid @enderror"></textarea>
+            <x-session-status />
 
-                <x-button class="form__send-btn">
-                    <input type="submit" value="Wyślij" />
-                    <i class="fa-solid fa-paper-plane"></i>
-                </x-button>
+            {{--  Email --}}
+            <x-form-group secondary id="email" label="Email"
+                :value="old('email')" maxlength="50" :errors="$errors->get('email')"
+                placeholder="Wpisz swój e-mail. Odpiszemy!">
+                <x-slot:icon>
+                    <i class="fa-solid fa-at"></i>
+                </x-slot:icon>
+            </x-form-group>
 
-            </fieldset>
-        </form>
+            {{-- Message --}}
+            <x-form-group secondary id="message" type="textarea"
+                label="Wiadomość" maxlength="255" :errors="$errors->get('message')"
+                rows="4" cols="50"
+                placeholder="Twoja wiadomość. Czekamy na nią!">
+                <x-slot:icon>
+                    <i class="fa-regular fa-message"></i>
+                </x-slot:icon>
+            </x-form-group>
+
+            <x-button class="form__send-btn">
+                <input type="submit" value="Wyślij" />
+                <i class="fa-solid fa-paper-plane"></i>
+            </x-button>
+        </x-form>
     </x-slot:content>
+
     <x-slot:image>
         <img src="{{ Vite::asset('resources/images/illustrations/contact.svg') }}"
             alt="">
     </x-slot:image>
+
 </x-section>

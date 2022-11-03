@@ -8,47 +8,13 @@
 
         color: $accent;
     }
-}
 
-.form {
-    &__fieldset {
-        @include flex-center;
-        flex-direction: column;
-    }
+    &__form {
+        width: 100% !important;
+        margin: 0 auto;
 
-    &__legend {
-        width: 100%;
-
-        font-size: $xxs;
-        font-weight: 300;
-
-        text-align: center;
-    }
-
-    &__label {
-        margin-top: 1em;
-        font-size: $xs;
-    }
-
-    &__input {
-        width: 90%;
-        padding: 0.5em;
-
-        font-size: $xxxxs;
-        text-align: center;
-
-        border: 3px solid $secondary;
-        border-radius: 15px;
-        box-shadow: $shadow-xl;
-
-        outline: none;
-
-        &:focus {
-            border-color: $accent;
+        &-legend {
+            margin-bottom: 20px;
         }
     }
-}
-
-.button.form__send-btn {
-    width: 90%;
 }

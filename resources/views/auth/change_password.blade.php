@@ -36,7 +36,7 @@
         </x-button>
 
         <x-button secondary>
-            <a href="/panel/profil">
+            <a href="{{ route('dashboard-profile') }}">
                 Moje dane
             </a>
             <i class="fa-solid fa-user"></i>

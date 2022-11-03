@@ -23,10 +23,30 @@
                     <span class="service__name">Ciebie</span>
                 </div>
             </div>
+
             <x-button secondary>
-                <a href="#">Dołącz!</a>
+                <a href="{{ route('register') }}">Dołącz do nas!</a>
                 <i class="fa-solid fa-right-to-bracket"></i>
             </x-button>
+
+            <form action="">
+                <div class="hero-form">
+
+                    <x-form-group id="queue-id" label="Numer kolejki"
+                        class="hero-form__group" :displayErrors="false"
+                        :defaultHoverStyle="false" minlength="6" maxlength="6">
+                        <x-slot:icon>
+                            <i class="fa-regular fa-circle-question"
+                                title="Numer kolejki to zawsze 6 znakowy (liczby i cyfry) identyfikator"></i>
+                        </x-slot:icon>
+                    </x-form-group>
+
+                    <button type="submit" title="Sprawdź kolejkę">
+                        <i class="fa-solid fa-fingerprint hero-form__icon"></i>
+                    </button>
+
+                </div>
+            </form>
         </div>
 
         <img class="hero__queue-image"
