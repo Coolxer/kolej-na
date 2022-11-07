@@ -1,6 +1,6 @@
 @vite('resources/sass/errors/_layout.scss')
 
-@props(['title', 'message'])
+@props(['title', 'message', 'returnBtn' => true])
 
 <x-layout :title="$title" class="error">
     <div class="error__wrapper">
@@ -12,10 +12,14 @@
             {{ $message }}
         </div>
 
-        <x-button>
-            <a href="javascript:history.back()">Powrót</a>
-            <i class="fa-solid fa-rotate-left"></i>
-        </x-button>
+        @if ($returnBtn)
+            <x-button>
+                <a href="javascript:history.back()">Powrót</a>
+                <i class="fa-solid fa-rotate-left"></i>
+            </x-button>
+        @endif
+
+        {{ $slot }}
 
         <x-button>
             <a href="{{ route('home') }}">Strona główna</a>

@@ -71,14 +71,29 @@ class BladeComponentServiceProvider extends ServiceProvider
 
         // ################   DASHBOARD   ################ //
 
+        // Common
         Blade::component('dashboard.components.navbar', 'dashboard-navbar');
         Blade::component(
             'dashboard.components.side_menu',
             'dashboard-side-menu',
         );
-        Blade::component('dashboard.components.action_panel', 'action-panel');
-
         Blade::component('dashboard._layout', 'dashboard-layout');
+
+        // User
+        Blade::component(
+            'dashboard.user.components.side_menu',
+            'dashboard-user-side-menu',
+        );
+        Blade::component(
+            'dashboard.user.components.action_panel',
+            'action-panel',
+        );
+
+        // Quest
+        Blade::component(
+            'dashboard.quest.components.side_menu',
+            'dashboard-quest-side-menu',
+        );
 
         // ################   QUEUE   ################ //
         Blade::component(
@@ -86,5 +101,7 @@ class BladeComponentServiceProvider extends ServiceProvider
             'queue-join-input',
         );
         Blade::component('queue.components.queue_box', 'queue-box');
+
+        Blade::component('queue.quest._layout', 'queue-quest-layout');
     }
 }

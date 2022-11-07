@@ -1,0 +1,26 @@
+@import '../../partials/partials';
+
+.queue-quest-error {
+    width: 100%;
+    //background-color: $accent;
+    padding: 10px;
+
+    &__id {
+        padding: 10px;
+
+        font-size: $xxxxs;
+        text-align: center;
+
+        background-color: $accent;
+        color: $secondary;
+
+        box-shadow: $shadow-md;
+    }
+
+    &__message {
+        margin: 50px 0 10px 0;
+
+        text-align: center;
+        color: $accent;
+    }
+}

@@ -16,34 +16,42 @@ use App\Models\Queue;
 |
 */
 
+// ###################### USER DASHBOARD ######################
 Route::get('/', function () {
     return view('landing/landing');
 })->name('home');
 
+// USER DASHBOARD
 Route::get('/panel', function () {
-    return view('dashboard.dashboard');
+    return view('dashboard.user.default');
 })
     ->middleware(['auth', 'verified'])
-    ->name('dashboard');
+    ->name('dashboard.user');
 
 Route::get('/panel/profil', function () {
-    return view('dashboard.profile');
+    return view('dashboard.user.profile');
 })
     ->middleware(['auth', 'verified'])
-    ->name('dashboard.profile');
+    ->name('dashboard.user.profile');
 
-// ###################### Queue ######################
+Route::get('/panel/subskrypcja', function () {
+    return view('dashboard.user.subscription');
+})
+    ->middleware(['auth', 'verified'])
+    ->name('dashboard.user.subscription');
+
+// ###################### QUEUE ######################
 
 // Service Dealer requests
 Route::resource('/panel/kolejki', QueueController::class, [
     'names' => [
-        'index' => 'dashboard.queue',
-        'create' => 'dashboard.queue.create',
-        'store' => 'dashboard.queue.store',
-        'show' => 'dashboard.queue.show',
-        'edit' => 'dashboard.queue.edit',
-        'update' => 'dashboard.queue.update',
-        'destroy' => 'dashboard.queue.destroy',
+        'index' => 'queue.user.index',
+        'create' => 'queue.user.create',
+        'store' => 'queue.user.store',
+        'edit' => 'queue.user.edit',
+        'update' => 'queue.user.update',
+        'destroy' => 'queue.user.destroy',
+        'show' => 'queue.user.show',
     ],
 ]);
 
@@ -55,19 +63,13 @@ Route::resource('/panel/kolejki', QueueController::class, [
 //     ->name('quest.queue.show');
 
 Route::get('/kolejka/{id?}', [QueueController::class, 'show'])->name(
-    'quest.queue.show',
+    'queue.quest.show',
 );
 
 Route::post('/kolejka/{id?}', [QueueController::class, 'search'])->name(
-    'quest.queue.search',
+    'queue.quest.search',
 );
 
 // #################################################
-
-Route::get('/panel/subskrypcja', function () {
-    return view('dashboard.subscription');
-})
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard.subscription');
 
 require __DIR__ . '/auth.php';

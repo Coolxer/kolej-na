@@ -21,13 +21,13 @@
         </div>
 
         <x-button small class="queue-box__button">
-            <a href="{{ route('dashboard.queue.edit', $id) }}">Zarządzaj</a>
+            <a href="{{ route('queue.user.edit', $id) }}">Zarządzaj</a>
             <i class="fa-solid fa-pen-to-square"></i>
 
         </x-button>
 
         <x-button small class="queue-box__button">
-            <a href="{{ route('dashboard.queue.show', $id) }}"">Podgląd</a>
+            <a href="{{ route('queue.user.show', $id) }}"">Podgląd</a>
             <i class="fa-solid fa-eye"></i>
 
         </x-button>

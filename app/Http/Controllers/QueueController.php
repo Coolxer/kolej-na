@@ -14,7 +14,7 @@ class QueueController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except(['show']);
+        $this->middleware('auth')->except(['search', 'show']);
     }
 
     /**
@@ -24,7 +24,7 @@ class QueueController extends Controller
      */
     public function index()
     {
-        return view('queue.index', ['queues' => Queue::all()]);
+        return view('queue.user.index', ['queues' => Queue::all()]);
     }
 
     /**
@@ -63,10 +63,10 @@ class QueueController extends Controller
                 return view('queue.show', ['queue' => $queue]);
             }
 
-            return view('queue.404');
+            return view('queue.quest.404', ['id' => $id]);
         }
 
-        return view('queue.search');
+        return view('queue.quest.search');
     }
 
     /**
@@ -77,7 +77,7 @@ class QueueController extends Controller
      */
     public function search(Request $request)
     {
-        return redirect()->route('quest.queue.show', $request->queueID);
+        return redirect()->route('queue.quest.show', $request->queueID);
     }
 
     /**
@@ -91,10 +91,10 @@ class QueueController extends Controller
         $queue = Queue::where('identify', $id)->first();
 
         if ($queue) {
-            return view('queue.edit');
+            return view('queue.user.edit');
         }
 
-        return view('queue.404');
+        return view('queue.quest.404');
 
         // no queue found (if dealer type in address bar something manually)
     }

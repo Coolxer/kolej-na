@@ -1,13 +1,14 @@
 @vite('resources/sass/queue/components/queue_join_input.scss')
 
-@props(['routeName'])
+@props(['secondary' => false])
 
-<form method="POST" action="{{ route($routeName) }}">
+<form method="POST" action="{{ route('queue.quest.search') }}">
     @csrf
-    <div class="queue-join">
+    <div @class(['queue-join', 'queue-join--secondary' => $secondary])>
 
-        <x-form-group id="queueID" label="Numer kolejki" :displayErrors="false"
-            :defaultHoverStyle="false" minlength="6" maxlength="6">
+        <x-form-group @class(['form-group--secondary' => $secondary]) id="queueID"
+            label="Numer kolejki" :displayErrors="false" :defaultHoverStyle="false"
+            minlength="6" maxlength="6">
             <x-slot:icon>
                 <i class="fa-regular fa-circle-question"
                     title="Numer kolejki to zawsze 6 znakowy (liczby i cyfry) identyfikator."></i>

@@ -25,10 +25,6 @@
 
     &__header {
         font-size: $m;
-
-        @include devices(desktop) {
-            font-size: $l;
-        }
     }
 
     &__icon {
@@ -41,8 +37,9 @@
     }
 
     &__message {
-        font-size: $xxs;
+        font-size: $xxxs;
         margin-bottom: 20px;
+        text-align: center;
 
         @include devices(desktop) {
             font-size: $xs;
