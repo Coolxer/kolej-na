@@ -7,17 +7,15 @@ $title = 'Kontakt';
 
 <x-section :id="$id" :title="$title" imageOnRight class="contact">
     <x-slot:content>
-
         <h3 class="contact__question">Masz inne pytania?</h3>
 
         <x-form class="contact__form" action="/contact">
-
             <legend class="contact__form-legend">Skontakuj się z nami!</legend>
 
             <x-session-status />
 
             {{--  Email --}}
-            <x-form-group secondary id="email" label="Email"
+            <x-form-group secondary id="email" label="Email" type="email"
                 :value="old('email')" maxlength="50" :errors="$errors->get('email')"
                 placeholder="Wpisz swój e-mail. Odpiszemy!">
                 <x-slot:icon>

@@ -105,6 +105,15 @@
             }
         }
 
+        &:invalid {
+            border-color: $red !important;
+            color: $red !important;
+
+            ~ .form-group__icon {
+                color: $red !important;
+            }
+        }
+
         &--error {
             border-color: $red;
         }
@@ -136,6 +145,15 @@
 
             &:focus-visible {
                 background-color: $accent;
+            }
+
+            &:invalid {
+                background-color: $red !important;
+                color: $dominant !important;
+
+                ~ .form-group__icon {
+                    color: $dominant !important;
+                }
             }
         }
     }

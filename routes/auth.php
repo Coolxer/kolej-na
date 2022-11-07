@@ -85,10 +85,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/panel/profil/zmiana-hasla', [
         ChangePasswordController::class,
         'create',
-    ])->name('change-password');
+    ])->name('password.change');
 
     Route::post('/panel/profil/zmiana-hasla', [
         ChangePasswordController::class,
         'store',
-    ])->name('update-password');
+    ])->name('password.update.dashboard');
 });

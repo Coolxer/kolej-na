@@ -41,7 +41,7 @@ $user = Auth::user();
     </div>
 
     <x-button>
-        <a href="{{ route('change-password') }}">
+        <a href="{{ route('password.change') }}">
             Zmień hasło
         </a>
     </x-button>

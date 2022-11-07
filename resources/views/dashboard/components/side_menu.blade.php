@@ -4,14 +4,14 @@
 
 <div class="side-menu">
     <div class="side-menu__buttons">
-        <a href="{{ $currentTab === 'profile' ? 'javascript:void(0)' : '/panel/profil' }}"
+        <a href="{{ $currentTab === 'profile' ? 'javascript:void(0)' : route('dashboard.profile') }}"
             @class([
                 'side-menu__button',
                 'side-menu__button--selected' => $currentTab === 'profile',
             ]) title="Moje dane"><i
                 class="fa-solid fa-user side-menu__button-icon"></i> <span
                 class="side-menu__button-text">Profil</span></a>
-        <a href="{{ $currentTab === 'queue' ? 'javascript:void(0)' : '/panel/kolejki' }}"
+        <a href="{{ $currentTab === 'queue' ? 'javascript:void(0)' : route('dashboard.queue') }}"
             @class([
                 'side-menu__button',
                 'side-menu__button--selected' => $currentTab === 'queue',
@@ -19,7 +19,7 @@
                 class="fa-solid fa-table-cells side-menu__button-icon"></i>
             <span class="side-menu__button-text">Kolejki</span>
         </a>
-        <a href="{{ $currentTab === 'subscription' ? 'javascript:void(0)' : '/panel/subskrypcja ' }}"
+        <a href="{{ $currentTab === 'subscription' ? 'javascript:void(0)' : route('dashboard.subscription') }}"
             @class([
                 'side-menu__button',
                 'side-menu__button--selected' => $currentTab === 'subscription',

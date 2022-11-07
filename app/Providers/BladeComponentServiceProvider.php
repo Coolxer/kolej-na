@@ -81,6 +81,10 @@ class BladeComponentServiceProvider extends ServiceProvider
         Blade::component('dashboard._layout', 'dashboard-layout');
 
         // ################   QUEUE   ################ //
+        Blade::component(
+            'queue.components.queue_join_input',
+            'queue-join-input',
+        );
         Blade::component('queue.components.queue_box', 'queue-box');
     }
 }

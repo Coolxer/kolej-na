@@ -1,6 +1,6 @@
 <x-dashboard-layout title="profil" currentTab="profile" shrink>
-    <x-form action="{{ route('update-password') }}" title="ZMIANA HASŁA"
-        style="height: 100%;">
+    <x-form action="{{ route('password.update.dashboard') }}"
+        title="ZMIANA HASŁA" style="height: 100%;">
 
         <x-session-status />
 
@@ -36,7 +36,7 @@
         </x-button>
 
         <x-button secondary>
-            <a href="{{ route('dashboard-profile') }}">
+            <a href="{{ route('dashboard.profile') }}">
                 Moje dane
             </a>
             <i class="fa-solid fa-user"></i>
