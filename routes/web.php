@@ -16,7 +16,6 @@ use App\Models\Queue;
 |
 */
 
-// ###################### USER DASHBOARD ######################
 Route::get('/', function () {
     return view('landing/landing');
 })->name('home');
@@ -62,13 +61,22 @@ Route::resource('/panel/kolejki', QueueController::class, [
 //     ->where('queue', ['kolejka', 'kolejki'])
 //     ->name('quest.queue.show');
 
-Route::get('/kolejka/{id?}', [QueueController::class, 'show'])->name(
+Route::get('/kolejka/{id?}', [QueueController::class, 'showForQuest'])->name(
     'queue.quest.show',
 );
 
 Route::post('/kolejka/{id?}', [QueueController::class, 'search'])->name(
     'queue.quest.search',
 );
+
+// QUEST DASHBOARD
+Route::get('/kolejka/{id}/sprzedawca', function () {
+    return view('dashboard.quest.dealer');
+})->name('dashboard.quest.dealer');
+
+Route::get('/kolejka/{id}/statystyki', function () {
+    return view('dashboard.quest.statistics');
+})->name('dashboard.quest.statistics');
 
 // #################################################
 

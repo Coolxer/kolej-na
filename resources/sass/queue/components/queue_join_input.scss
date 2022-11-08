@@ -44,6 +44,8 @@
         background-color: $secondary;
         color: $dominant;
 
+        box-shadow: $shadow-md;
+
         transition: background-color 0.25s, color 0.25s;
 
         &:disabled {
@@ -66,23 +68,15 @@
 
         .form-group {
             flex-direction: column;
-            color: $dominant;
 
-            &__input {
-                color: $secondary;
-
-                &:focus-visible {
-                    background-color: $dominant !important;
-                }
+            &__label {
+                font-size: $xxs;
             }
         }
 
         .queue-join__form-btn {
             width: 100%;
             border-radius: 30px;
-
-            background-color: $accent;
-            color: $secondary;
         }
     }
 }

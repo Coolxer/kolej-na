@@ -14,7 +14,7 @@ class QueueController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth')->except(['search', 'show']);
+        $this->middleware('auth')->except(['search', 'show', 'showForQuest']);
     }
 
     /**
@@ -49,7 +49,7 @@ class QueueController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * Display the specified resource for logged user.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -60,7 +60,28 @@ class QueueController extends Controller
             $queue = Queue::where('identify', $id)->first();
 
             if ($queue) {
-                return view('queue.show', ['queue' => $queue]);
+                return view('queue.user.show', ['queue' => $queue]);
+            }
+
+            return view('queue.user.404', ['id' => $id]);
+        }
+
+        return redirect()->route('queue.user.index');
+    }
+
+    /**
+     * Display the specified resource for quest.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    public function showForQuest($id = null)
+    {
+        if ($id) {
+            $queue = Queue::where('identify', $id)->first();
+
+            if ($queue) {
+                return view('queue.quest.show', ['queue' => $queue]);
             }
 
             return view('queue.quest.404', ['id' => $id]);
@@ -70,7 +91,7 @@ class QueueController extends Controller
     }
 
     /**
-     * Pass queue search id to show view
+     * Pass queue search id to show view (only for quest)
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

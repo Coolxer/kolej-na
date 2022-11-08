@@ -6,9 +6,8 @@
     @csrf
     <div @class(['queue-join', 'queue-join--secondary' => $secondary])>
 
-        <x-form-group @class(['form-group--secondary' => $secondary]) id="queueID"
-            label="Numer kolejki" :displayErrors="false" :defaultHoverStyle="false"
-            minlength="6" maxlength="6">
+        <x-form-group id="queueID" label="Numer kolejki" :displayErrors="false"
+            :defaultHoverStyle="false" minlength="6" maxlength="6">
             <x-slot:icon>
                 <i class="fa-regular fa-circle-question"
                     title="Numer kolejki to zawsze 6 znakowy (liczby i cyfry) identyfikator."></i>

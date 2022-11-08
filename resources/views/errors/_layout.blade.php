@@ -1,9 +1,10 @@
 @vite('resources/sass/errors/_layout.scss')
 
-@props(['title', 'message', 'returnBtn' => true])
+@props(['title', 'message'])
 
-<x-layout :title="$title" class="error">
-    <div class="error__wrapper">
+<x-layout :title="$title">
+    <div class='error__wrapper'>
+
         <p class="error__header">Wystąpił błąd!</p>
 
         <i class="fa-regular fa-face-frown error__icon"></i>
@@ -12,14 +13,10 @@
             {{ $message }}
         </div>
 
-        @if ($returnBtn)
-            <x-button>
-                <a href="javascript:history.back()">Powrót</a>
-                <i class="fa-solid fa-rotate-left"></i>
-            </x-button>
-        @endif
-
-        {{ $slot }}
+        <x-button>
+            <a href="javascript:history.back()">Powrót</a>
+            <i class="fa-solid fa-rotate-left"></i>
+        </x-button>
 
         <x-button>
             <a href="{{ route('home') }}">Strona główna</a>

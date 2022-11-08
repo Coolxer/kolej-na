@@ -25,7 +25,7 @@
             </div>
         </main>
 
-        <x-copyright class="dashboard__copyright" />
+        <x-copyright :margin="false" />
 
     </section>
 </x-layout>

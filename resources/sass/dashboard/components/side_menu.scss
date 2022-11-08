@@ -69,7 +69,7 @@
     }
 
     &__button-icon {
-        font-size: $xs;
+        font-size: $s;
         color: inherit;
 
         @include devices(laptop) {
