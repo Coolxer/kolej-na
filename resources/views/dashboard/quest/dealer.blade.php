@@ -3,4 +3,8 @@
         <i class="fa-solid fa-file-contract dashboard__header-icon"></i>
         <span class="dashboard__header-text">DANE SPRZEDAWCY</span>
     </header>
+
+    <div>
+
+    </div>
 </x-dashboard-layout>

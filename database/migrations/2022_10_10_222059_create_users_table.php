@@ -31,6 +31,7 @@ return new class extends Migration {
 
             $table->rememberToken();
             $table->timestamp('email_verified_at')->nullable();
+            $table->datetime('last_login_at')->nullable();
             // created_at and updated_at columns
             $table->timestamps();
         });
