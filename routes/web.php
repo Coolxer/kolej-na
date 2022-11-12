@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\Dashboard\ProfileController;
+use App\Http\Controllers\Dashboard\SubscriptionController;
+use App\Http\Controllers\Dashboard\StatisticsController;
 use App\Http\Controllers\QueueController;
-use App\Models\Queue;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,30 +18,29 @@ use App\Models\Queue;
 |
 */
 
+// ###################################### LANDING ######################################
+
 Route::get('/', function () {
     return view('landing/landing');
 })->name('home');
 
-// USER DASHBOARD
+// ###################################### USER DASHBOARD ######################################
+
 Route::get('/panel', function () {
     return view('dashboard.user.default');
 })
     ->middleware(['auth', 'verified'])
     ->name('dashboard.user');
 
-Route::get('/panel/profil', function () {
-    return view('dashboard.user.profile');
-})
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard.user.profile');
+Route::get('/panel/profil', [ProfileController::class, 'show'])->name(
+    'dashboard.user.profile',
+);
 
-Route::get('/panel/subskrypcja', function () {
-    return view('dashboard.user.subscription');
-})
-    ->middleware(['auth', 'verified'])
-    ->name('dashboard.user.subscription');
+Route::get('/panel/subskrypcja', [SubscriptionController::class, 'show'])->name(
+    'dashboard.user.subscription',
+);
 
-// ###################### QUEUE ######################
+// ###################################### QUEUE ######################################
 
 // Service Dealer requests
 Route::resource('/panel/kolejki', QueueController::class, [
@@ -69,15 +70,18 @@ Route::post('/kolejka/{id?}', [QueueController::class, 'search'])->name(
     'queue.quest.search',
 );
 
-// QUEST DASHBOARD
-Route::get('/kolejka/{id}/sprzedawca', function () {
-    return view('dashboard.quest.dealer');
-})->name('dashboard.quest.dealer');
+// ###################################### QUEST DASHBOARD ######################################
 
-Route::get('/kolejka/{id}/statystyki', function () {
-    return view('dashboard.quest.statistics');
-})->name('dashboard.quest.statistics');
+Route::get('/kolejka/{id}/sprzedawca', [
+    ProfileController::class,
+    'showForQuest',
+])->name('dashboard.quest.dealer');
 
-// #################################################
+Route::get('/kolejka/{id}/statystyki', [
+    StatisticsController::class,
+    'show',
+])->name('dashboard.quest.statistics');
+
+// ###########################################################################################
 
 require __DIR__ . '/auth.php';

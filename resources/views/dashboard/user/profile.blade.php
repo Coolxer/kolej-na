@@ -1,44 +1,18 @@
-@vite('resources/sass/dashboard/profile.scss')
-
-@php
-$user = Auth::user();
-@endphp
-
-<x-dashboard-layout user title="profil" currentTab="profile" shrink>
+<x-dashboard-layout user title="profil" currentTab="section" shrink>
     <header class="dashboard__header">
         <i class="fa-solid fa-user dashboard__header-icon"></i>
         <span class="dashboard__header-text">MOJE DANE</span>
     </header>
 
-    <div class="user-data">
-
+    <x-dashboard-section-data>
         @if (!$user->company)
-            <div class="user-data__group">
-                <span class="user-data__key">Imię</span>
-                <span class="user-data__value">{{ $user->first_name }}</span>
-                <hr>
-            </div>
-
-            <div class="user-data__group">
-                <span class="user-data__key">Nazwisko</span>
-                <span class="user-data__value">{{ $user->last_name }}</span>
-                <hr>
-            </div>
+            <x-dashboard-section-data-group key="Imię" :value="$user->first_name" />
+            <x-dashboard-section-data-group key="Nazwisko" :value="$user->last_name" />
         @else
-            <div class="user-data__group">
-                <span class="user-data__key">Firma</span>
-                <span class="user-data__value">{{ $user->company }}</span>
-                <hr>
-            </div>
+            <x-dashboard-section-data-group key="Firma" :value="$user->company" />
         @endif
-
-        <div class="user-data__group">
-            <span class="user-data__key">Email</span>
-            <span class="user-data__value">{{ $user->email }}</span>
-            <hr>
-        </div>
-
-    </div>
+        <x-dashboard-section-data-group key="Email" :value="$user->email" />
+    </x-dashboard-section-data>
 
     <x-button>
         <a href="{{ route('password.change') }}">

@@ -37,5 +37,6 @@ if (!Auth::check()) {
             @endif
         </li>
     @endforeach
+
     <x-landing-auth-panel desktop />
 </menu>

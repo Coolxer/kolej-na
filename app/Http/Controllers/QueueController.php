@@ -18,7 +18,7 @@ class QueueController extends Controller
     }
 
     /**
-     * Display a listing of the resource.
+     * Display a listing of the queue.
      *
      * @return \Illuminate\Http\Response
      */
@@ -28,7 +28,7 @@ class QueueController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
+     * Show the form for creating a new queue.
      *
      * @return \Illuminate\Http\Response
      */
@@ -38,7 +38,7 @@ class QueueController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * Store a newly created queue in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -49,7 +49,7 @@ class QueueController extends Controller
     }
 
     /**
-     * Display the specified resource for logged user.
+     * Display the specified queue for logged user.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -70,7 +70,7 @@ class QueueController extends Controller
     }
 
     /**
-     * Display the specified resource for quest.
+     * Display the specified queue for quest.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -102,7 +102,7 @@ class QueueController extends Controller
     }
 
     /**
-     * Show the form for editing the specified resource.
+     * Show the form for editing the specified queue.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
@@ -121,7 +121,7 @@ class QueueController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * Update the specified queue in storage.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
@@ -133,7 +133,7 @@ class QueueController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * Remove the specified queue from storage.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response

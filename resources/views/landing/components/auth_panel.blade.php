@@ -8,8 +8,10 @@
         'auth-panel--mobile' => !$desktop,
         'auth-panel--desktop' => $desktop,
     ])>
-        <span class='auth-panel__email'>
-            {{ Auth::user()->email }}
+
+        <span class='auth-panel__email' title="{{ Auth::user()->email }}">
+            <i class="fa-solid fa-user"></i>
+            Zalogowany
         </span>
         <div class="auth-panel__links">
             <a class="auth-panel__link" href="{{ route('dashboard.user') }}"

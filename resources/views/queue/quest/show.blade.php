@@ -1,3 +1,3 @@
-<x-dashboard-layout title="queue" queueID="{{ $queue->id }}">
-
+<x-dashboard-layout title="liste">
+    Tabelka tutaj
 </x-dashboard-layout>

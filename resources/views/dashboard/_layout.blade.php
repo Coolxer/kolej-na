@@ -1,5 +1,11 @@
 @vite('resources/sass/dashboard/_layout.scss')
 
+{{-- 
+        user:
+            -  [true] -  this should be logged user dashboard content
+            - [false] - this should be quest dashboard content
+    --}}
+
 @props(['user' => false, 'title', 'currentTab' => null, 'shrink' => false])
 
 <x-layout :title="$title">

@@ -2,6 +2,8 @@
 
 .dashboard {
     &__navbar {
+        position: relative;
+
         width: 100%;
         height: 80px;
 
@@ -17,11 +19,11 @@
     }
 
     &__account {
+        width: 100%;
         @include flex-center;
     }
 
     &__email {
-        max-width: 60%;
         font-size: $xxxxs;
         color: $dominant;
 
@@ -29,6 +31,11 @@
 
         &--mobile {
             display: block;
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
 
             @include devices(laptop) {
                 display: none;
@@ -44,7 +51,26 @@
         }
     }
 
-    &__logout {
+    &__queue {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__queue-label {
+        font-size: $xxxxs;
+        color: $dominant;
+    }
+
+    &__queue-identify {
+        font-size: $xxs;
+        color: $accent;
+    }
+
+    &__logout-btn,
+    &__panel-btn {
         padding: 10px;
         font-size: $s;
 

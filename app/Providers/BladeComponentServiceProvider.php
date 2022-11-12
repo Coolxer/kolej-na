@@ -77,6 +77,14 @@ class BladeComponentServiceProvider extends ServiceProvider
             'dashboard.components.side_menu',
             'dashboard-side-menu',
         );
+        Blade::component(
+            'dashboard.components.section_data_group',
+            'dashboard-section-data-group',
+        );
+        Blade::component(
+            'dashboard.components.section_data',
+            'dashboard-section-data',
+        );
         Blade::component('dashboard._layout', 'dashboard-layout');
 
         // User

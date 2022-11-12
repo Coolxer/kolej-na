@@ -1,8 +1,12 @@
 @import '../../partials/partials';
 
 .auth-panel {
+    width: auto;
+    height: 75%;
+
     @include flex-center;
-    flex-direction: column;
+    flex-direction: row;
+    align-self: center;
 
     border: 2px solid $accent;
     border-radius: 20px;
@@ -10,9 +14,6 @@
     box-shadow: $shadow-md;
 
     &--mobile {
-        margin-top: 10px;
-        padding: 10px;
-
         @include devices(laptop) {
             display: none;
         }
@@ -22,15 +23,14 @@
         display: none;
 
         @include devices(laptop) {
-            width: auto;
-
             display: flex;
-            flex-direction: row;
         }
     }
 
     &__email {
         padding: 5px;
+
+        @include flex-center;
 
         font-size: $xxxxs;
         color: $accent;
@@ -38,6 +38,10 @@
         transition: background-color 0.25s, color 0.25s;
 
         overflow: scroll;
+
+        i {
+            padding: 10px;
+        }
     }
 
     &__links {

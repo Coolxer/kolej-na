@@ -5,9 +5,10 @@
 
     <nav class="navbar__nav">
         <h1 class="navbar__heading">KOLEJ - NA</h1>
-        <x-landing-auth-panel />
         <x-menu />
     </nav>
+
+    <x-landing-auth-panel />
 
     <button class='navbar__hamburger' onclick="toggle()">
         <i class="fa-solid fa-bars"></i>

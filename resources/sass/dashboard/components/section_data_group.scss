@@ -1,18 +1,11 @@
-@import '../partials/partials';
+@import '../../partials/partials';
 
-.user-data {
+.section-data-group {
     width: 100%;
+    margin-bottom: 20px;
 
     @include flex-center;
     flex-direction: column;
-
-    &__group {
-        width: 100%;
-        margin-top: 20px;
-
-        @include flex-center;
-        flex-direction: column;
-    }
 
     &__key {
         font-size: $xxs;
