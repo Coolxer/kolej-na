@@ -23,7 +23,7 @@ $queueID = request()->segment(2);
     <a href="{{ $currentTab === 'statistics' ? 'javascript:void(0)' : route('dashboard.quest.statistics', $queueID) }}"
         @class([
             'side-menu__button',
-            'side-menu__button--selected' => $currentTab === 'queue',
+            'side-menu__button--selected' => $currentTab === 'statistics',
         ]) title="Dane statystyczne"><i
             class="fa-solid fa-chart-column side-menu__button-icon"></i>
         <span class="side-menu__button-text">Statystyka</span>
