@@ -33,7 +33,7 @@
 
     </x-dashboard-section-data>
 
-    <x-button>
+    <x-button style="margin-top: 0;">
         <a href="{{ route('queue.quest.show', request()->segment(2)) }}">
             Zobacz listę
         </a>

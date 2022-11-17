@@ -85,11 +85,11 @@ function filterTable(e) {
                 if (typedIdentify.length)
                     rows[i].classList.add('queue-table__matched');
 
-                // show the matched row
-                rows[i].style.display = 'table-row';
+                // remove pottentially existting 'no-matched' class
+                rows[i].classList.remove('queue-table__no-matched');
             } else {
                 //  if  identify's row does not match given pattern, then hide this row
-                rows[i].style.display = 'none';
+                rows[i].classList.add('queue-table__no-matched');
                 hidedRows++;
             }
         }
