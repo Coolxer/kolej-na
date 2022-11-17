@@ -1,0 +1,37 @@
+@import '../../partials/partials';
+
+.search-customer-input {
+    @include flex-center;
+    gap: 15px;
+
+    .form-group {
+        flex-direction: row;
+
+        &__label {
+            flex: 1;
+            font-size: $xxxxs;
+            text-align: center;
+        }
+
+        &__row {
+            flex: 1;
+        }
+
+        &__input {
+            &:focus-visible {
+                background-color: $secondary;
+                border-color: $secondary;
+                color: $accent;
+
+                ~ .form-group__icon {
+                    color: $accent;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__icon {
+            z-index: 2;
+        }
+    }
+}

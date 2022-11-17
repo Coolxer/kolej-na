@@ -105,9 +105,15 @@ class BladeComponentServiceProvider extends ServiceProvider
 
         // ################   QUEUE   ################ //
         Blade::component(
-            'queue.components.queue_join_input',
-            'queue-join-input',
+            'queue.components.search_queue_form',
+            'search-queue-form',
         );
+        Blade::component(
+            'queue.components.search_customer_input',
+            'search-customer-input',
+        );
+        Blade::component('queue.components.table', 'table');
+
         Blade::component('queue.components.queue_box', 'queue-box');
 
         Blade::component('queue.quest._layout', 'queue-quest-layout');

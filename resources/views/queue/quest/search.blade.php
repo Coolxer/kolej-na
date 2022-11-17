@@ -13,7 +13,7 @@
             </div>
 
             <div class="queue-search__interactive">
-                <x-queue-join-input secondary />
+                <x-search-queue-form secondary />
 
                 <x-button secondary>
                     <a href="{{ route('home') }}">Strona główna</a>

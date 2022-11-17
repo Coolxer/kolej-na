@@ -81,7 +81,13 @@ class QueueController extends Controller
             $queue = Queue::where('identify', $id)->first();
 
             if ($queue) {
-                return view('queue.quest.show', ['queue' => $queue]);
+                $name = $queue->name;
+                $customers = $queue->customers()->get();
+
+                return view('queue.quest.show', [
+                    'name' => $name,
+                    'customers' => $customers,
+                ]);
             }
 
             return view('queue.quest.404', ['id' => $id]);
@@ -98,7 +104,7 @@ class QueueController extends Controller
      */
     public function search(Request $request)
     {
-        return redirect()->route('queue.quest.show', $request->queueID);
+        return redirect()->route('queue.quest.show', $request->queueSearchID);
     }
 
     /**

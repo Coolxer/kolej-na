@@ -1,6 +1,6 @@
 @import '../../partials/partials';
 
-.queue-join {
+.search-queue-form {
     margin-bottom: 50px;
     @include flex-center;
     gap: 15px;
@@ -8,7 +8,6 @@
     .form-group {
         margin-bottom: 0 !important;
         flex-direction: row;
-        color: $secondary;
 
         &__label {
             font-size: $xxxxs;
@@ -16,7 +15,6 @@
         }
 
         &__input {
-            font-size: $xxxxs;
             background-color: $dominant;
             border-color: $dominant;
             z-index: 1;
@@ -38,7 +36,7 @@
         }
     }
 
-    &__form-btn {
+    &__btn {
         border-radius: 50%;
 
         background-color: $secondary;
@@ -74,7 +72,7 @@
             }
         }
 
-        .queue-join__form-btn {
+        .search-queue-form__btn {
             width: 100%;
             border-radius: 30px;
         }

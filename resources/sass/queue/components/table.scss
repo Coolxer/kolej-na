@@ -1,0 +1,54 @@
+@import '../../partials/partials';
+
+.queue-table {
+    width: 100%;
+    margin-top: 50px;
+
+    border: 2px solid $secondary;
+    border-collapse: collapse;
+    box-shadow: $shadow-md;
+
+    caption {
+        margin-bottom: 10px;
+        font-size: $xxxs;
+    }
+
+    &__row {
+        &--crossed-out {
+            opacity: 0.5;
+            text-decoration: line-through;
+        }
+    }
+
+    td,
+    th {
+        height: 50px;
+        padding: 5px;
+        text-align: center;
+
+        border: 1px solid $secondary;
+    }
+
+    th {
+        background-color: $secondary;
+        color: $dominant;
+
+        i {
+            padding: 5px;
+        }
+    }
+
+    &__matched {
+        background-color: $accent;
+    }
+
+    &__warning {
+        display: none; // chaning by script (filterQueueTable.js)
+        background-color: $yellow;
+    }
+
+    &__error {
+        display: none; // chaning by script (filterQueueTable.js)
+        background-color: $red;
+    }
+}

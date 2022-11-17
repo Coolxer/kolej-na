@@ -24,7 +24,7 @@
                 </div>
             </div>
 
-            <x-queue-join-input />
+            <x-search-queue-form />
 
             <x-button secondary>
                 <a href="{{ route('register') }}">Dołącz do nas!</a>
