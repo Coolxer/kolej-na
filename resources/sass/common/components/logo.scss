@@ -1,0 +1,29 @@
+@import '../../partials/partials';
+
+.logo {
+    padding: 10px;
+
+    @include flex-center;
+    align-self: center;
+
+    opacity: 0.75;
+
+    transition: opacity 0.25s;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    &__name {
+        padding-left: 10px;
+
+        font-size: $xxs;
+        text-align: center;
+
+        color: $dominant;
+
+        &--dark {
+            color: $secondary;
+        }
+    }
+}

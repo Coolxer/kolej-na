@@ -1,0 +1,35 @@
+@import '../../partials/partials';
+
+.advantages-wrapper {
+    @include flex-center;
+    flex-direction: column;
+    gap: 50px;
+
+    @include devices(laptop) {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    &__side {
+        position: relative;
+
+        width: 100%;
+        padding: 2em;
+
+        @include flex-center;
+        flex-direction: column;
+        gap: 1em;
+
+        color: $dominant;
+
+        & > .article {
+            order: 2;
+        }
+
+        & > .section__image {
+            @include devices(laptop) {
+                width: 70%;
+            }
+        }
+    }
+}

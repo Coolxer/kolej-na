@@ -1,0 +1,95 @@
+@import '../partials/partials';
+
+.dashboard {
+    width: 100%;
+    min-height: 100vh;
+
+    @include flex-center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    background-color: $dominant;
+
+    &__image {
+        display: none;
+
+        flex: 1;
+        padding: 2em;
+
+        @include devices(laptop) {
+            @include flex-center;
+        }
+    }
+
+    &__main {
+        width: 100%;
+        flex: 1;
+
+        @include flex-center;
+        justify-content: space-between;
+        flex-direction: column;
+
+        @include devices(laptop) {
+            flex-direction: row;
+
+            display: -ms-flexbox;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-box;
+        }
+    }
+
+    &__page {
+        width: 100%;
+        flex: 1;
+
+        @include flex-center;
+
+        @include devices(laptop) {
+            width: 75%;
+        }
+
+        @include devices(desktop) {
+            width: 80%;
+        }
+    }
+
+    &__content {
+        width: 80%;
+        margin: 20px 0;
+
+        @include flex-center;
+        flex-direction: column;
+        gap: 20px;
+
+        @include devices(desktop) {
+            width: 75%;
+        }
+
+        &--shrink {
+            @include devices(tablet) {
+                width: 50%;
+            }
+
+            @include devices(tv) {
+                width: 35%;
+            }
+        }
+    }
+
+    &__header {
+        font-size: $xs;
+
+        @include devices(laptop) {
+            margin-top: 0;
+        }
+
+        &-icon {
+            padding: 5px;
+        }
+
+        &-text {
+            //
+        }
+    }
+}

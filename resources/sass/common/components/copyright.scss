@@ -1,0 +1,23 @@
+@import '../../partials/partials';
+
+.copyright {
+    width: 100%;
+    height: 40px;
+
+    padding: 10px;
+
+    @include flex-center;
+
+    background-color: #20252b;
+
+    &__sentence {
+        font-size: $xxxxxs;
+        text-align: center;
+
+        color: $dominant;
+    }
+
+    &--margin {
+        margin-top: 20px;
+    }
+}

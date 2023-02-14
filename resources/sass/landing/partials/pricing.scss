@@ -1,0 +1,16 @@
+@import '../../partials/partials';
+
+.pricing {
+    padding-top: 0 !important;
+
+    &__box {
+        @include flex-center;
+        flex-direction: column;
+        gap: 50px;
+
+        @include devices(laptop) {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+}

@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Authentication Defaults
@@ -44,7 +43,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | User Providers
+    | user Providers
     |--------------------------------------------------------------------------
     |
     | All authentication drivers have a user provider. This defines how the
@@ -107,5 +106,4 @@ return [
     */
 
     'password_timeout' => 10800,
-
 ];

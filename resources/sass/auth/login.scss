@@ -1,0 +1,31 @@
+@import '../partials/partials';
+
+.login {
+    &-form {
+        &__forgot-remember {
+            width: 100%;
+            padding: 0 10px;
+
+            @include flex-center;
+            justify-content: space-between;
+
+            color: $accent;
+
+            flex-wrap: wrap;
+
+            @include devices(laptop) {
+                padding: 0 20px;
+            }
+        }
+
+        &__forgot-password {
+            flex: 1;
+            text-align: left;
+
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: 5px;
+            }
+        }
+    }
+}

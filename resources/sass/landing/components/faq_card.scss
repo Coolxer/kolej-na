@@ -1,0 +1,50 @@
+@import '../../partials/partials';
+
+.faq-card {
+    width: 100%;
+    padding: 0.75em;
+
+    @include flex-center;
+    flex-direction: column;
+
+    border-radius: 20px;
+    box-shadow: $shadow-xl;
+
+    text-align: center;
+
+    transition: background-color 0.25s, color 0.25s;
+
+    &:hover {
+        background-color: $dominant;
+        cursor: pointer;
+
+        .faq-card__question {
+            color: $accent;
+        }
+    }
+
+    &[open] summary ~ * {
+        animation: toggle 0.5s;
+    }
+
+    &__question {
+        font-size: $xxs;
+        color: $dominant;
+    }
+
+    &__answer {
+        font-size: $xxs;
+        color: $secondary;
+    }
+}
+
+@keyframes toggle {
+    0% {
+        opacity: 0;
+        margin-top: -20px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}

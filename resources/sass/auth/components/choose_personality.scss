@@ -1,0 +1,55 @@
+@import '../../partials/partials';
+
+.choose-personality {
+    width: 100%;
+    height: 100%;
+
+    padding: 1em;
+    padding-top: 0;
+
+    @include flex-center;
+    gap: 20px;
+
+    &__btn {
+        flex: 1;
+        padding: 15px;
+
+        @include flex-center;
+        flex-direction: column;
+
+        background-color: $secondary;
+        color: $dominant;
+
+        border-radius: 20px;
+        box-shadow: $shadow-xl;
+        opacity: 0.3;
+
+        transition: background-color 0.1s, opacity 0.1s;
+
+        &:hover {
+            background-color: $accent;
+            cursor: pointer;
+        }
+
+        &--selected {
+            background-color: $accent;
+            opacity: 1;
+
+            &:hover {
+                cursor: auto;
+            }
+        }
+    }
+
+    &__icon {
+        font-size: $s;
+    }
+
+    &__text {
+        margin-top: 10px;
+
+        font-size: $xxxs;
+        text-align: center;
+        user-select: none;
+    }
+}

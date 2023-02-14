@@ -1,0 +1,80 @@
+@import '../../partials/partials';
+
+.search-queue-form {
+    margin-bottom: 50px;
+    @include flex-center;
+    gap: 15px;
+
+    .form-group {
+        margin-bottom: 0 !important;
+        flex-direction: row;
+
+        &__label {
+            font-size: $xxxxs;
+            text-align: center;
+        }
+
+        &__input {
+            background-color: $dominant;
+            border-color: $dominant;
+            z-index: 1;
+
+            &:focus-visible {
+                background-color: $secondary;
+                border-color: $secondary;
+                color: $accent;
+
+                ~ .form-group__icon {
+                    color: $accent;
+                    opacity: 1;
+                }
+            }
+        }
+
+        &__icon {
+            z-index: 2;
+        }
+    }
+
+    &__btn {
+        border-radius: 50%;
+
+        background-color: $secondary;
+        color: $dominant;
+
+        box-shadow: $shadow-md;
+
+        transition: background-color 0.25s, color 0.25s;
+
+        &:disabled {
+            opacity: 0.3;
+        }
+
+        &:enabled:hover {
+            background-color: $dominant;
+            color: $secondary;
+        }
+
+        &-icon {
+            padding: 10px;
+            font-size: $xs;
+        }
+    }
+
+    &--secondary {
+        flex-direction: column;
+
+        .form-group {
+            flex-direction: column;
+
+            &__label {
+                font-size: $xxs;
+            }
+        }
+
+        .search-queue-form__btn {
+            width: 100%;
+            border-radius: 30px;
+        }
+    }
+}

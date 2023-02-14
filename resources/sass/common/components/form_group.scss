@@ -1,0 +1,160 @@
+@import '../../partials/partials';
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+
+    @include flex-center;
+    flex-direction: column;
+
+    transition: color 0.25s;
+
+    &--hover {
+        &:hover {
+            .form-group {
+                &__label,
+                &__icon {
+                    color: $accent;
+                }
+
+                &__input {
+                    cursor: pointer;
+                    border-color: $accent;
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+
+    &--checkbox {
+        flex: 1;
+        margin-bottom: 0;
+        gap: 10px;
+
+        justify-content: flex-end;
+        flex-direction: row;
+
+        .form-group {
+            &__label {
+                padding: 0;
+
+                text-align: right;
+                font-size: $xxxxs;
+            }
+
+            &__row {
+                width: auto;
+                justify-content: flex-end;
+            }
+
+            &__input {
+                width: auto;
+
+                &:checked {
+                    color: $accent;
+                }
+            }
+        }
+    }
+
+    &__label {
+        padding-bottom: 5px;
+        font-size: $xxxs;
+    }
+
+    &__row {
+        position: relative;
+
+        width: 100%;
+        @include flex-center;
+    }
+
+    &__icon {
+        position: absolute;
+        left: 0;
+        margin-left: 15px;
+
+        font-size: $xs;
+
+        z-index: 1;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 10px;
+
+        outline: none;
+        border: 3px solid $secondary;
+        border-radius: 25px;
+
+        font-size: $xxxxs;
+        text-align: center;
+
+        background-color: transparent;
+        box-shadow: $shadow-md;
+
+        z-index: 2;
+
+        &:focus-visible {
+            background-color: $accent;
+            box-shadow: none;
+
+            ~ .form-group__icon {
+                color: $secondary;
+                opacity: 0.3;
+            }
+        }
+
+        &:invalid {
+            border-color: $red !important;
+            color: $red !important;
+
+            ~ .form-group__icon {
+                color: $red !important;
+            }
+        }
+
+        &--error {
+            border-color: $red;
+        }
+    }
+
+    &__errors-list {
+        margin-top: 5px;
+
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__error {
+        text-align: center;
+        color: $red;
+    }
+}
+
+.form-group--secondary {
+    .form-group {
+        &__icon {
+            color: $dominant;
+            z-index: 2;
+        }
+
+        &__input {
+            background-color: $secondary;
+            color: $dominant;
+
+            &:focus-visible {
+                background-color: $accent;
+            }
+
+            &:invalid {
+                background-color: $red !important;
+                color: $dominant !important;
+
+                ~ .form-group__icon {
+                    color: $dominant !important;
+                }
+            }
+        }
+    }
+}

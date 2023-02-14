@@ -1,0 +1,32 @@
+@import '../../partials/partials';
+
+.auth-form {
+    width: 90%;
+    @include flex-center;
+    flex-direction: column;
+
+    @include devices(tablet) {
+        width: 80%;
+    }
+
+    @include devices(laptop) {
+        width: 100%;
+        flex: 1;
+        padding: 0 50px;
+    }
+
+    &__legend {
+        margin-bottom: 20px;
+
+        font-size: $s;
+        font-weight: 300;
+        color: $secondary;
+        text-align: center;
+    }
+
+    &__already-done {
+        @include flex-center;
+
+        gap: 20px;
+    }
+}

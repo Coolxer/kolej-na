@@ -1,0 +1,103 @@
+@import '../../partials/partials';
+
+.hero {
+    width: 100%;
+    height: calc(100vh - 80px);
+
+    @include flex-center;
+
+    background-color: $accent;
+
+    &__container {
+        position: relative;
+
+        width: 100%;
+        height: 100%;
+        max-width: 1280px;
+
+        @include flex-center;
+        gap: 50px;
+
+        @include devices(laptop) {
+            padding: 0 3em;
+        }
+    }
+
+    &__informations {
+        width: 80%;
+        z-index: 2;
+
+        @include devices(tablet) {
+            width: 70%;
+        }
+    }
+
+    &__header {
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__heading {
+        font-size: $xxl;
+        line-height: 100%;
+
+        color: $dominant;
+    }
+
+    &__description {
+        width: 100%;
+
+        margin: 5vh 0;
+
+        font-size: $xxs;
+        text-align: center;
+    }
+
+    &__services-list {
+        width: 100%;
+        margin-bottom: 20px;
+
+        @include flex-center;
+    }
+
+    &__queue-image {
+        position: absolute;
+        top: -25%;
+
+        width: 80%;
+        height: 100%;
+
+        @include flex-center;
+
+        opacity: 0.1;
+        z-index: 1;
+
+        @include devices(laptop) {
+            position: static;
+            width: 100%;
+            transform: translate(0);
+
+            color: $dominant;
+            opacity: 0.75;
+        }
+    }
+}
+
+.service {
+    @include flex-center;
+    flex-direction: column;
+
+    padding: 0em 1.5em;
+
+    @include devices(tablet) {
+        padding: 1.2em 2em;
+    }
+
+    &__icon {
+        font-size: $xl;
+    }
+
+    &__name {
+        font-size: $xxxs;
+    }
+}

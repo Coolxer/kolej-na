@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="60.000004"
+   height="43.519478"
+   viewBox="0 0 15.875001 11.514529"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="g670">
+    <g
+       id="g1084"
+       transform="translate(-2.3841858e-7,-2.3082445)"
+       style="stroke:#292f36">
+      <path
+         style="fill:none;stroke:#292f36;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 2.3673288,10.663509 2.785086,2.785086 2.785088,-2.785086 2.7850862,2.785086 2.785088,-2.785086"
+         id="path3038" />
+      <path
+         style="fill:none;stroke:#292f36;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 12.115134,12.056052 1.392543,1.392543"
+         id="path3040" />
+      <path
+         style="fill:none;stroke:#292f36;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="m 3.7598718,12.056052 1.392543,-1.392543"
+         id="path3042" />
+      <path
+         style="fill:none;stroke:#292f36;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="M 7.9375028,10.663509 V 6.4858778"
+         id="path3044" />
+      <path
+         style="fill:none;stroke:#292f36;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:none;stroke-opacity:1"
+         d="M 7.9375028,8.5746902 H 9.9068373"
+         id="path3046" />
+    </g>
+    <circle
+       style="fill:#292f36;stroke:none;stroke-width:0.835524;stroke-linecap:round;stroke-linejoin:round"
+       id="circle3099"
+       cx="7.9375029"
+       cy="2.1218884"
+       r="2.0888155" />
+    <circle
+       style="fill:#292f36;stroke:none;stroke-width:0.557017;stroke-linecap:round;stroke-linejoin:round"
+       id="circle3101"
+       cx="14.449467"
+       cy="7.4136667"
+       r="1.3925437" />
+    <circle
+       style="fill:#292f36;stroke:none;stroke-width:0.557017;stroke-linecap:round;stroke-linejoin:round"
+       id="circle3333"
+       cx="1.4256166"
+       cy="7.4136667"
+       r="1.3925437" />
+  </g>
+</svg>

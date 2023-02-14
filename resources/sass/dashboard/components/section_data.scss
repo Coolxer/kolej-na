@@ -1,0 +1,8 @@
+@import '../../partials/partials';
+
+.section-data {
+    width: 100%;
+
+    @include flex-center;
+    flex-direction: column;
+}

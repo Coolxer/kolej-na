@@ -1,0 +1,48 @@
+@import '../partials/partials';
+
+.error {
+    @include flex-center;
+
+    background-color: $secondary;
+
+    &__wrapper {
+        width: 80%;
+        height: 100%;
+
+        @include flex-center;
+        flex-direction: column;
+
+        color: $red;
+
+        @include devices(laptop) {
+            width: 50%;
+        }
+
+        @include devices(desktop) {
+            width: 30%;
+        }
+    }
+
+    &__header {
+        font-size: $m;
+    }
+
+    &__icon {
+        padding: 20px;
+        font-size: 20rem;
+
+        @include devices(desktop) {
+            font-size: 25rem;
+        }
+    }
+
+    &__message {
+        font-size: $xxxs;
+        margin-bottom: 20px;
+        text-align: center;
+
+        @include devices(desktop) {
+            font-size: $xs;
+        }
+    }
+}

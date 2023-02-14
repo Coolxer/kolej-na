@@ -1,0 +1,53 @@
+@import '../../partials/partials';
+
+.action-panel {
+    @include flex-center;
+
+    background-color: $secondary;
+
+    &__button {
+        padding: 10px;
+
+        font-size: $m;
+        color: $accent;
+
+        opacity: 0.75;
+        transition: opacity 0.25s, color 0.25s;
+
+        &:hover {
+            color: $dominant;
+            opacity: 1;
+        }
+
+        &:disabled {
+            opacity: 0.3;
+            color: $dominant;
+        }
+    }
+
+    &--mobile {
+        width: 100%;
+        justify-content: space-evenly;
+
+        @include devices(laptop) {
+            display: none;
+        }
+    }
+
+    &--desktop {
+        display: none;
+
+        @include devices(laptop) {
+            width: 75%;
+
+            display: flex;
+            flex-wrap: wrap;
+
+            .action-panel {
+                &__button {
+                    width: 50%;
+                }
+            }
+        }
+    }
+}

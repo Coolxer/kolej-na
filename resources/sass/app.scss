@@ -1,0 +1,44 @@
+@import './partials/partials';
+
+// Font awesome
+@import '@fortawesome/fontawesome-free/css/all.css';
+
+// Tailwind css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Reset styles
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%; // make 10px is base font-size to easy calculating
+}
+
+body {
+    font-size: 1.6rem; // restore basic 16px font-size
+    color: $secondary;
+
+    // be sure that scroll is enablled when switches from mobile to desktop
+    @include devices(laptop) {
+        overflow: scroll !important;
+    }
+}
+
+#app-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    text-decoration: none;
+}

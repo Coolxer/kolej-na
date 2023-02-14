@@ -1,0 +1,77 @@
+@import '../../partials/partials';
+
+.navbar {
+    position: sticky;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: $secondary;
+
+    box-shadow: $shadow-xl;
+
+    z-index: 99;
+
+    &__nav {
+        position: absolute;
+        left: 0;
+        top: 80px;
+
+        width: 100%;
+        height: calc(100vh - 80px);
+        max-height: 100vh;
+        transform: translateX(-100%);
+
+        @include flex-center;
+        flex-direction: column;
+
+        background-color: $secondary;
+
+        transition: transform 0.5s;
+
+        @include devices(laptop) {
+            position: static;
+            height: 80px;
+            transform: translateX(0);
+
+            align-items: flex-end;
+
+            background-color: transparent;
+        }
+
+        &--open {
+            transform: translateX(0);
+        }
+    }
+
+    &__heading {
+        font-size: $l;
+        color: $dominant;
+
+        @include devices(laptop) {
+            display: none;
+        }
+    }
+
+    &__hamburger {
+        padding: 10px;
+
+        font-size: $l;
+        color: $dominant;
+
+        transition: transform 0.25s;
+
+        @include devices(laptop) {
+            display: none;
+        }
+
+        &--open {
+            transform: rotate(90deg);
+        }
+    }
+}

@@ -1,0 +1,45 @@
+@import '../../partials/partials';
+
+.section-data-group {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+
+    @include flex-center;
+    flex-direction: column;
+
+    outline: 1px solid $secondary;
+
+    box-shadow: $shadow-md;
+
+    &__key {
+        width: 75%;
+        margin-bottom: 10px;
+        padding: 5px;
+
+        font-size: $xxs;
+        text-align: center;
+
+        // background-color: $secondary;
+        color: $secondary;
+        text-decoration: underline;
+        text-underline-offset: 10px;
+        text-decoration-thickness: 1px;
+
+        i {
+            padding: 5px;
+        }
+    }
+
+    &__value {
+        font-size: $xxxxs;
+    }
+
+    hr {
+        width: 100%;
+        margin-top: 10px;
+
+        border-color: $secondary;
+        opacity: 0.2;
+    }
+}

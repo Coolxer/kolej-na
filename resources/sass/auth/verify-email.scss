@@ -1,0 +1,18 @@
+@import '../partials/partials';
+
+.verify-email {
+    flex: 1.5;
+
+    @include flex-center;
+    flex-direction: column;
+
+    &__sentence {
+        margin-bottom: 20px;
+        font-size: $xxxs;
+        text-align: justify;
+    }
+
+    &__logout-btn {
+        margin-top: 0 !important;
+    }
+}

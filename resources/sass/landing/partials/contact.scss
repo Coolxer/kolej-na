@@ -1,0 +1,20 @@
+@import '../../partials/partials';
+
+.contact {
+    &__question {
+        font-size: $xs;
+        font-weight: 300;
+        text-align: center;
+
+        color: $accent;
+    }
+
+    &__form {
+        width: 100% !important;
+        margin: 0 auto;
+
+        &-legend {
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+@import '../../partials/partials';
+
+.dashboard {
+    &__navbar {
+        position: relative;
+
+        width: 100%;
+        height: 80px;
+
+        @include flex-center;
+        justify-content: space-between;
+
+        background-color: $secondary;
+        box-shadow: $shadow-xl;
+    }
+
+    &__logo {
+        height: 80%;
+    }
+
+    &__account {
+        width: 100%;
+        @include flex-center;
+    }
+
+    &__email {
+        font-size: $xxxxs;
+        color: $dominant;
+
+        overflow-x: scroll;
+
+        &--mobile {
+            display: block;
+            position: absolute;
+
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @include devices(laptop) {
+                display: none;
+            }
+        }
+
+        &--desktop {
+            display: none;
+
+            @include devices(laptop) {
+                display: block;
+            }
+        }
+    }
+
+    &__queue {
+        position: absolute;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__queue-label {
+        font-size: $xxxxs;
+        color: $dominant;
+    }
+
+    &__queue-identify {
+        font-size: $xxs;
+        color: $accent;
+    }
+
+    &__logout-btn,
+    &__panel-btn {
+        padding: 10px;
+        font-size: $s;
+
+        color: $accent;
+
+        opacity: 0.75;
+
+        transition: opacity 0.25s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

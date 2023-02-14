@@ -1,0 +1,62 @@
+@import '../../partials/partials';
+
+.pricing-card {
+    width: 100%;
+    padding: 2em;
+
+    border-radius: 25px;
+
+    @include flex-center;
+    flex-direction: column;
+
+    background-color: $secondary;
+    color: $dominant;
+
+    box-shadow: $shadow-2xl;
+
+    @include devices(laptop) {
+        width: 50%;
+    }
+
+    &__heading {
+        padding: 0.25em;
+        padding-top: 0;
+
+        font-size: $xs;
+        font-weight: 300;
+
+        text-align: center;
+    }
+
+    &__properties-list {
+        @include flex-center;
+        flex-direction: column;
+
+        color: $accent;
+    }
+
+    &__property-item {
+        font-size: $xxxs;
+    }
+}
+
+.price {
+    color: $accent;
+
+    @include flex-center;
+
+    &__full {
+        font-size: $xxl;
+        line-height: 100%;
+    }
+
+    &__rest-wrapper {
+        @include flex-center;
+        flex-direction: column;
+    }
+
+    &__rest,
+    &__currency {
+        font-size: $xs;
+    }
+}
